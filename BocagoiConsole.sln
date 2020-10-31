@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BocagoiConsole", "BocagoiConsole\BocagoiConsole.csproj", "{56E4A2D8-7252-414C-93C5-2F31F3832C42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{482FAE19-F083-4796-BA92-3E3CBC2BDF34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56E4A2D8-7252-414C-93C5-2F31F3832C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E4A2D8-7252-414C-93C5-2F31F3832C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E4A2D8-7252-414C-93C5-2F31F3832C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E4A2D8-7252-414C-93C5-2F31F3832C42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{482FAE19-F083-4796-BA92-3E3CBC2BDF34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{482FAE19-F083-4796-BA92-3E3CBC2BDF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{482FAE19-F083-4796-BA92-3E3CBC2BDF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{482FAE19-F083-4796-BA92-3E3CBC2BDF34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE9A709D-D472-468C-A885-29F8C67306D2}
+	EndGlobalSection
+EndGlobal
