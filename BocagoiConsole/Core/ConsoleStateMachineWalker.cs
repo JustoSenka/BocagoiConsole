@@ -1,39 +1,53 @@
 ﻿using BocagoiConsole.States;
+using System;
 using System.Collections.Generic;
 
 namespace BocagoiConsole.Core
 {
     public class ConsoleStateMachineWalker
     {
-        private Dictionary<State, BaseState> m_StateMap;
-        private Stack<State> m_StateStack = new Stack<State>();
+        private readonly Dictionary<StateID, BaseState> m_StateMap;
 
-        public ConsoleStateMachineWalker(Bocagoi Bocagoi, StateMachine StateMachine)
+        public ConsoleStateMachineWalker(Dictionary<StateID, BaseState> stateMap)
         {
-            m_StateMap = StateMachine.Generate(Bocagoi);
+            m_StateMap = stateMap;
         }
 
-        public void Start()
+        public void Start(PracticeSettings pr)
         {
-            var pr = new PracticeSettings();
-
-            m_StateStack.Push(State.Menu);
+            var stateStack = new Stack<StateID>();
+            stateStack.Push(StateID.Menu);
 
             while (true)
             {
-                if (m_StateStack.Count == 0)
+                if (stateStack.Count == 0)
                     break;
 
-                var currentState = m_StateStack.Peek();
+                var currentState = stateStack.Peek();
                 var stateAction = m_StateMap[currentState];
                 var newState = stateAction.Run(pr);
 
-                if (newState == State.Exit)
-                    m_StateStack.Pop();
-                else if (newState == State.None)
+                if (newState == StateID.Exit)
+                    stateStack.Pop();
+                
+                else if (newState == StateID.None)
                     continue;
-                else
-                    m_StateStack.Push(newState);
+                
+                else if (m_StateMap.ContainsKey(newState) && !stateStack.Contains(newState))
+                    stateStack.Push(newState);
+
+                else if (m_StateMap.ContainsKey(newState) && stateStack.Contains(newState))
+                {
+                    while (stateStack.Peek() != newState)
+                        stateStack.Pop();
+                }
+
+                else // does not contain
+                {
+                    Console.WriteLine("Action not yet supported");
+                    Console.WriteLine("Press enter to continue...");
+                    Console.ReadLine();
+                }
             }
         }
     }

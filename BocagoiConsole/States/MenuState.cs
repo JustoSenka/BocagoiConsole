@@ -9,13 +9,13 @@ namespace BocagoiConsole.States
         private Action<PracticeSettings> m_ActionBeforePrint;
         private Action<PracticeSettings> m_ActionAfterPrint;
         private Action<PracticeSettings, int> m_ActionAfterUserInput;
-        private Func<PracticeSettings, int, State> m_FuncNextState;
+        private Func<PracticeSettings, int, StateID> m_FuncNextState;
 
         private string m_TextToPrint;
-        private Dictionary<int, State> m_Transitions;
+        private Dictionary<int, StateID> m_Transitions;
         public MenuState(Action<PracticeSettings> actionBeforePrint = null, Action<PracticeSettings> actionAfterPrint = null,
-            Action<PracticeSettings, int> actionAfterUserInput = null, Func<PracticeSettings, int, State> funcNextState = null,
-            string textToPrint = "", Dictionary<int, State> transitions = null)
+            Action<PracticeSettings, int> actionAfterUserInput = null, Func<PracticeSettings, int, StateID> funcNextState = null,
+            string textToPrint = "", Dictionary<int, StateID> transitions = null)
         {
             m_ActionBeforePrint = actionBeforePrint;
             m_ActionAfterPrint = actionAfterPrint;
@@ -26,7 +26,7 @@ namespace BocagoiConsole.States
             m_Transitions = transitions;
         }
 
-        public State Run(PracticeSettings pr)
+        public StateID Run(PracticeSettings pr)
         {
             Console.Clear();
 
@@ -46,7 +46,7 @@ namespace BocagoiConsole.States
             if (m_FuncNextState != null)
                 return m_FuncNextState.Invoke(pr, op);
 
-            return State.None;
+            return StateID.None;
         }
     }
 }

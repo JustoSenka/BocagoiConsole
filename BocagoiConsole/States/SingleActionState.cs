@@ -6,21 +6,21 @@ namespace BocagoiConsole.States
     public class SingleActionState : BaseState
     {
         private Action<PracticeSettings> m_Action;
-        private Func<PracticeSettings, State> m_FuncNextState;
+        private Func<PracticeSettings, StateID> m_FuncNextState;
 
         public SingleActionState(
             Action<PracticeSettings> action = null, 
-            Func<PracticeSettings, State> funcNextState = null)
+            Func<PracticeSettings, StateID> funcNextState = null)
         {
             m_Action = action;
             m_FuncNextState = funcNextState;
         }
 
-        public State Run(PracticeSettings pr)
+        public StateID Run(PracticeSettings pr)
         {
             Console.Clear();
             m_Action?.Invoke(pr);
-            return m_FuncNextState != null ? m_FuncNextState.Invoke(pr) : State.None;
+            return m_FuncNextState != null ? m_FuncNextState.Invoke(pr) : StateID.None;
         }
     }
 }

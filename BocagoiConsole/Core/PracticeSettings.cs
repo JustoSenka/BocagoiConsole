@@ -16,8 +16,8 @@
         {
             return pr switch
             {
-                PracticeSettings.PracticeMode.Normal => pair.Item1,
-                PracticeSettings.PracticeMode.Reverse => pair.Item2,
+                PracticeSettings.PracticeMode.Normal => pair.Item2,
+                PracticeSettings.PracticeMode.Reverse => pair.Item1,
                 _ => null,
             };
         }
@@ -26,8 +26,8 @@
         {
             return pr switch
             {
-                PracticeSettings.PracticeMode.Normal => pair.Item2,
-                PracticeSettings.PracticeMode.Reverse => pair.Item1,
+                PracticeSettings.PracticeMode.Normal => pair.Item1,
+                PracticeSettings.PracticeMode.Reverse => pair.Item2,
                 _ => null,
             };
         }

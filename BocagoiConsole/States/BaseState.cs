@@ -4,16 +4,17 @@ namespace BocagoiConsole.States
 {
     public interface BaseState
     {
-        public State Run(PracticeSettings pr);
+        public StateID Run(PracticeSettings pr);
     }
 
-    public enum State
+    public enum StateID
     {
         None,
         Menu,
         PracticeSelectBox, PracticeSelectWords, PracticeSelectMode, RunPractice,
         AddWords,
         CreateBox,
+        Search,
         History,
         Settings,
         Exit,

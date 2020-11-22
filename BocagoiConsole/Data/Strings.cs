@@ -1,4 +1,6 @@
-﻿namespace BocagoiConsole.Core
+﻿using System;
+
+namespace BocagoiConsole.Core
 {
     public static class Strings
     {
@@ -9,8 +11,9 @@ Enter a command number:
 1. Practice words
 2. Add/Modify Words in Box
 3. Create new word Box
-4. History
-5. Settings
+4. Search
+5. History
+6. Settings
 
 0. Quit
 
@@ -54,5 +57,21 @@ Select a box which too add words to:
 0. Go back
 
 ...";
+
+        public static readonly string AddingWordsToBoxExample = @"foreignWords1 - nativeTranslation1" + Environment.NewLine + "foreign - native";
+
+        public const string SearchWords = @"Bocagoi Language Learning by Justas Glodenis
+
+Enter part of a words or phrase to search for:
+
+...";
+
+        public const string History = @"Bocagoi Language Learning by Justas Glodenis
+
+History:sudo ap
+
+{0}
+
+Press enter to go back...";
     }
 }
