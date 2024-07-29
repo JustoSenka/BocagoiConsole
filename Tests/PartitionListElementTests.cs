@@ -14,11 +14,11 @@ namespace Tests
 
             var newList = list.PartitionListElements(elsInPartition);
 
-            Assert.AreEqual(elsInPartition, newList.Count, "New list should have " + elsInPartition + " elements");
-            Assert.AreEqual(elements.Length - elsInPartition, list.Count, "Original list should have removed elements: " + (elements.Length - elsInPartition));
+            Assert.That(elsInPartition == newList.Count, "New list should have " + elsInPartition + " elements");
+            Assert.That(elements.Length - elsInPartition == list.Count, "Original list should have removed elements: " + (elements.Length - elsInPartition));
         }
 
-        
+
         [Test]
         public void PartitioningListElements_IfPartitionIsBiggerThatListCount_ReturnsEverythingAndLeavesTheOtherListEmpty()
         {
@@ -26,8 +26,8 @@ namespace Tests
 
             var newList = list.PartitionListElements(15);
 
-            Assert.AreEqual(5, newList.Count, "New list should have 5 lements");
-            Assert.AreEqual(0, list.Count, "Original list should be empty");
+            Assert.That(5 == newList.Count, "New list should have 5 lements");
+            Assert.That(0 == list.Count, "Original list should be empty");
         }
     }
 }

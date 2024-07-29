@@ -68,7 +68,7 @@ Enter part of a words or phrase to search for:
 
         public const string History = @"Bocagoi Language Learning by Justas Glodenis
 
-History:sudo ap
+History:
 
 {0}
 

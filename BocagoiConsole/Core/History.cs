@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace BocagoiConsole.Core
@@ -39,8 +40,11 @@ namespace BocagoiConsole.Core
             return Save(m_FilePath);
         }
 
-        public Task Save(string filePath)
+        private Task Save(string filePath)
         {
+            if (Runs.Count == 0)
+                throw new Exception("Not saving empty history file due to safety reasons");
+
             var str = JsonConvert.SerializeObject(Runs);
             m_FilePath = filePath;
 

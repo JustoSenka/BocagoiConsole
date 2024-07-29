@@ -75,6 +75,7 @@ namespace BocagoiConsole.Core
                         {
                             var run = Bocagoi.RunGame(pr);
                             Bocagoi.AppendHistory(run);
+                            Bocagoi.AppendFailBox(run);
                         },
                         funcNextState: _ => StateID.Menu)
                 },
@@ -86,7 +87,9 @@ namespace BocagoiConsole.Core
 
                     }, actionAfterUserInput: (pr, op) =>
                     {
-                        Bocagoi.TryOpenBox(op);
+                        if (op != 0)
+                            Bocagoi.TryOpenBox(op);
+
                     }, funcNextState: (_, __) => StateID.Menu)
                 },
                 {

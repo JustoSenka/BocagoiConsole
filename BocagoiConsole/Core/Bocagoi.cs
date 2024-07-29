@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace BocagoiConsole.Core
 {
@@ -34,7 +35,7 @@ namespace BocagoiConsole.Core
             var words = LoadAllWords();
             var totalWordsForPractice = words[pr.Box].Skip(pr.WordsMin - 1).Take(pr.WordsMax - pr.WordsMin + 1).ToList();
 
-            var rand = new Random();
+            var rand = new UniqueRandom();
             var score = new Score();
             var startTime = DateTime.Now;
 
@@ -98,16 +99,13 @@ namespace BocagoiConsole.Core
 
         private static (string, string) SelectRandomWord(Random rand, IList<(string, string)> wordsLeft)
         {
-            // TODO: Improve to not return the same word twice in the row
-
-            return wordsLeft[rand.Next() % wordsLeft.Count];
+            var nextWordIndex = rand.Next(0, wordsLeft.Count - 1);
+            return wordsLeft[nextWordIndex % wordsLeft.Count];
         }
 
         public static bool IsAnswerCorrect(PracticeSettings pr, (string, string) word, string answer)
         {
-            // TODO: improve with culture invariant case, maybe allow typos?
-
-            return answer == word.Right(pr.Mode);
+            return string.Equals(answer, word.Right(pr.Mode), StringComparison.InvariantCultureIgnoreCase);
         }
 
         public static Run CreateAndPrintResults(PracticeSettings pr, Score score, DateTime startTime, DateTime endTime)
@@ -144,6 +142,17 @@ namespace BocagoiConsole.Core
                 h.Runs.Add(run);
                 h.Save();
             });
+        }
+
+        public static Task AppendFailBox(Run run)
+        {
+            if (run.Score < 80)
+                return Task.CompletedTask;
+
+            
+
+             var words = LoadAllWords();
+            return Task.CompletedTask;
         }
 
         public static void TryOpenBox(int num)
@@ -225,11 +234,13 @@ namespace BocagoiConsole.Core
             foreach (var boxName in GetAllBoxNames())
             {
                 var pairs = File.ReadAllLines(boxName)
-                    .Select(line => line.Trim(' ', '\r', '\t').Split('_', '-'))
-                    .Select(els => (els[0].Trim(), els[1].Trim()))
+                    .Select(line => line.Trim(' ', '\r', '\t').Split('_', '-', '–'))
+                    .Where(words => words.Length > 1) // Just in case no separator, so it works
+                    .Select(words => (words[0].Trim(), words[1].Trim()))
                     .ToArray();
 
-                Words[i++] = pairs;
+                Words[i] = pairs;
+                i++;
             }
 
             return Words;
