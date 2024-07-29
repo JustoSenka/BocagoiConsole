@@ -13,7 +13,9 @@ Enter a command number:
 3. Create new word Box
 4. Search
 5. History
-6. Settings
+6. Most practiced words
+7. Most failed words
+8. Settings
 
 0. Quit
 
@@ -69,6 +71,22 @@ Enter part of a words or phrase to search for:
         public const string History = @"Bocagoi Language Learning by Justas Glodenis
 
 History:
+
+{0}
+
+Press enter to go back...";
+
+        public const string MostPracticedWords = @"Bocagoi Language Learning by Justas Glodenis
+
+Most Practiced Words (times made no mistakes):
+
+{0}
+
+Press enter to go back...";
+
+        public const string MostFailedWords = @"Bocagoi Language Learning by Justas Glodenis
+
+Most Failed Words (times answer was incorrect):
 
 {0}
 

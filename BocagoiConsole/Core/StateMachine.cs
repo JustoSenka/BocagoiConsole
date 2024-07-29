@@ -23,7 +23,9 @@ namespace BocagoiConsole.Core
                         {3,  StateID.CreateBox},
                         {4,  StateID.Search},
                         {5,  StateID.History},
-                        {6,  StateID.Settings},
+                        {6,  StateID.MostPracticedWords},
+                        {7,  StateID.MostFailedWords},
+                        {8,  StateID.Settings},
                         {0,  StateID.Exit },
                     })
                 },
@@ -75,7 +77,6 @@ namespace BocagoiConsole.Core
                         {
                             var run = Bocagoi.RunGame(pr);
                             Bocagoi.AppendHistory(run);
-                            Bocagoi.AppendFailBox(run);
                         },
                         funcNextState: _ => StateID.Menu)
                 },
@@ -142,6 +143,44 @@ namespace BocagoiConsole.Core
                         {
                             var entries = string.Join(Environment.NewLine, history.Runs.Select(r => r.ToString()));
                             var str = string.Format(Strings.History, entries);
+
+                            Console.WriteLine(str);
+                        });
+
+                        Console.ReadLine();
+                    }, funcNextState: _ => StateID.Menu)
+                },
+                {
+                    StateID.MostPracticedWords,  new SingleActionState(action: (pr) =>
+                    {
+                        var redBox = new RedBox();
+                        redBox.LoadFromFile(RedBox.RedBoxFile).ContinueWith(task =>
+                        {
+                            var entries = string.Join(Environment.NewLine, redBox.Words.Values
+                                .OrderByDescending(word => word.Correct)
+                                .Select(word => string.Format(" {0, -5}  |  {1} - {2}", 
+                                    word.Correct, word.Left, word.Right)));
+
+                            var str = string.Format(Strings.MostPracticedWords, entries);
+
+                            Console.WriteLine(str);
+                        });
+
+                        Console.ReadLine();
+                    }, funcNextState: _ => StateID.Menu)
+                },
+                {
+                    StateID.MostFailedWords,  new SingleActionState(action: (pr) =>
+                    {
+                        var redBox = new RedBox();
+                        redBox.LoadFromFile(RedBox.RedBoxFile).ContinueWith(task =>
+                        {
+                            var entries = string.Join(Environment.NewLine, redBox.Words.Values
+                                .OrderByDescending(word => word.Fails)
+                                .Select(word => string.Format(" {0, -5}  |  {1} - {2}",
+                                    word.Fails, word.Left, word.Right)));
+
+                            var str = string.Format(Strings.MostFailedWords, entries);
 
                             Console.WriteLine(str);
                         });

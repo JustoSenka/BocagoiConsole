@@ -16,6 +16,8 @@ namespace BocagoiConsole.States
         CreateBox,
         Search,
         History,
+        MostPracticedWords,
+        MostFailedWords,
         Settings,
         Exit,
     }

@@ -6,7 +6,6 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Formats.Asn1.AsnWriter;
 
 namespace BocagoiConsole.Core
 {
@@ -37,30 +36,35 @@ namespace BocagoiConsole.Core
 
             var rand = new UniqueRandom();
             var score = new Score();
+            var redBox = new RedBox();
+            redBox.LoadFromFile(RedBox.RedBoxFile);
+
             var startTime = DateTime.Now;
 
             while (totalWordsForPractice.Count > 0)
             {
                 var wordsLeft = totalWordsForPractice.PartitionListElements(20, rand);
 
-                RunGameWithPartitionedWords(pr, rand, score, wordsLeft);
+                RunGameWithPartitionedWords(pr, rand, score, redBox, wordsLeft);
             }
 
             var result = CreateAndPrintResults(pr, score, startTime, endTime: DateTime.Now);
-            
+
+            SaveRedBox(redBox, score);
+
             Console.WriteLine("Press enter to continue...");
             Console.ReadLine();
             return result;
         }
 
-        private static void RunGameWithPartitionedWords(PracticeSettings pr, Random rand, Score score, IList<(string, string)> wordsLeft)
+        private static void RunGameWithPartitionedWords(PracticeSettings pr, Random rand, Score score, RedBox redBox, IList<(string, string)> wordsLeft)
         {
             while (wordsLeft.Count > 0)
             {
                 var word = SelectRandomWord(rand, wordsLeft);
                 var answer = AskToInputAnswer(pr, word);
 
-                VerifyAnswer(pr, score, wordsLeft, word, answer);
+                VerifyAnswer(pr, score, redBox, wordsLeft, word, answer);
 
                 Console.WriteLine("Press enter to continue...");
                 Console.ReadLine();
@@ -68,12 +72,13 @@ namespace BocagoiConsole.Core
             }
         }
 
-        public static void VerifyAnswer(PracticeSettings pr, Score score, IList<(string, string)> wordsLeft, (string, string) word, string answer)
+        public static void VerifyAnswer(PracticeSettings pr, Score score, RedBox redBox, IList<(string, string)> wordsLeft, (string, string) word, string answer)
         {
             if (IsAnswerCorrect(pr, word, answer))
             {
                 wordsLeft.Remove(word);
                 score.Correct();
+                score.CorrectWords.Add(word);
 
                 Console.WriteLine();
                 Console.WriteLine("Correct!");
@@ -110,7 +115,7 @@ namespace BocagoiConsole.Core
 
         public static Run CreateAndPrintResults(PracticeSettings pr, Score score, DateTime startTime, DateTime endTime)
         {
-            Console.WriteLine("Final score: " + score.DecimalScore());
+            Console.WriteLine($"Final score: {score.DecimalScore()}");
             Console.WriteLine();
             Console.WriteLine("Words in which mistakes were made:");
             Console.WriteLine();
@@ -144,15 +149,18 @@ namespace BocagoiConsole.Core
             });
         }
 
-        public static Task AppendFailBox(Run run)
+        public static void SaveRedBox(RedBox redBox, Score score)
         {
-            if (run.Score < 80)
-                return Task.CompletedTask;
+            if (score.DecimalScore() < 50)
+                return;
 
-            
+            foreach (var miss in score.Mistakes)
+                redBox.Fail(miss);
 
-             var words = LoadAllWords();
-            return Task.CompletedTask;
+            foreach (var correct in score.CorrectWords)
+                redBox.Succeed(correct);
+
+            redBox.Save();
         }
 
         public static void TryOpenBox(int num)

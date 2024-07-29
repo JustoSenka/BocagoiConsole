@@ -22,7 +22,7 @@ namespace BocagoiConsole.Core
             if (File.Exists(filePath))
                 return RepeatUntilSuccess(() => LoadFromJson(File.ReadAllText(filePath)), 5);
 
-            var file = File.Create(filePath);
+            using var file = File.Create(filePath);
             file.Close();
             return Task.CompletedTask;
         }
@@ -83,7 +83,7 @@ namespace BocagoiConsole.Core
 
         public override string ToString()
         {
-            return string.Format("{0, -17} | WBox{1} | From: {2,4}, To: {3,4} | Duration: {4,3} mins | Mode: {5,7} | Score: {6,3}",
+            return string.Format("{0, -17} | WBox{1} | From: {2,4}, To: {3,4} | Duration: {4,3} mins | Mode: {5,7} | Score: {6,3}%",
                 Time.ToString("yyyy-MM-dd HH:mm"),
                 Box,
                 From,

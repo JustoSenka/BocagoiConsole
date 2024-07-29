@@ -8,6 +8,7 @@ namespace BocagoiConsole.Core
         public int m_Correct = 0;
         public int m_Incorrect = 0;
 
+        public ISet<(string, string)> CorrectWords = new HashSet<(string, string)>();
         public ISet<(string, string)> Mistakes = new HashSet<(string, string)>();
 
         public void Correct() => m_Correct++;
