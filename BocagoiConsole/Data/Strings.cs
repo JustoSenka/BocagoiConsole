@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace BocagoiConsole.Core
+namespace BocagoiConsole.Core;
+
+public static class Strings
 {
-    public static class Strings
-    {
-        public const string Menu = @"Bocagoi Language Learning by Justas Glodenis
+    public const string Menu = @"Bocagoi Language Learning by Justas Glodenis
 
 Enter a command number:
 
@@ -21,7 +21,7 @@ Enter a command number:
 
 ...";
 
-        public const string PracticeSelectBox = @"Bocagoi Language Learning by Justas Glodenis
+    public const string PracticeSelectBox = @"Bocagoi Language Learning by Justas Glodenis
 
 Select a box from which to write words:
 
@@ -31,15 +31,15 @@ Select a box from which to write words:
 
 ...";
 
-        public const string PracticeSelectWords1 = @"Bocagoi Language Learning by Justas Glodenis
+    public const string PracticeSelectWords1 = @"Bocagoi Language Learning by Justas Glodenis
 
 There are {0} words in total, enter a range which ones you would like to practice:
 ";
 
-        public const string PracticeSelectWords2 = @"From: ";
-        public const string PracticeSelectWords3 = @"To: ";
+    public const string PracticeSelectWords2 = @"From: ";
+    public const string PracticeSelectWords3 = @"To: ";
 
-        public const string PracticeSelectMode = @"Bocagoi Language Learning by Justas Glodenis
+    public const string PracticeSelectMode = @"Bocagoi Language Learning by Justas Glodenis
 
 Select translation style:
 
@@ -50,7 +50,7 @@ Select translation style:
 
 ...";
 
-        public const string AddWordsToBox = @"Bocagoi Language Learning by Justas Glodenis
+    public const string AddWordsToBox = @"Bocagoi Language Learning by Justas Glodenis
 
 Select a box which too add words to:
 
@@ -60,15 +60,15 @@ Select a box which too add words to:
 
 ...";
 
-        public static readonly string AddingWordsToBoxExample = @"foreignWords1 - nativeTranslation1" + Environment.NewLine + "foreign - native";
+    public static readonly string AddingWordsToBoxExample = @"foreignWords1 - nativeTranslation1" + Environment.NewLine + "foreign - native";
 
-        public const string SearchWords = @"Bocagoi Language Learning by Justas Glodenis
+    public const string SearchWords = @"Bocagoi Language Learning by Justas Glodenis
 
 Enter part of a words or phrase to search for:
 
 ...";
 
-        public const string History = @"Bocagoi Language Learning by Justas Glodenis
+    public const string History = @"Bocagoi Language Learning by Justas Glodenis
 
 History:
 
@@ -76,7 +76,7 @@ History:
 
 Press enter to go back...";
 
-        public const string MostPracticedWords = @"Bocagoi Language Learning by Justas Glodenis
+    public const string MostPracticedWords = @"Bocagoi Language Learning by Justas Glodenis
 
 Most Practiced Words (times made no mistakes):
 
@@ -84,12 +84,11 @@ Most Practiced Words (times made no mistakes):
 
 Press enter to go back...";
 
-        public const string MostFailedWords = @"Bocagoi Language Learning by Justas Glodenis
+    public const string MostFailedWords = @"Bocagoi Language Learning by Justas Glodenis
 
 Most Failed Words (times answer was incorrect):
 
 {0}
 
 Press enter to go back...";
-    }
 }

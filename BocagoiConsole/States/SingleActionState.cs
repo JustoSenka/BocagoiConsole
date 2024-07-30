@@ -1,25 +1,24 @@
 ﻿using System;
 
-namespace BocagoiConsole.States
+namespace BocagoiConsole.States;
+
+public class SingleActionState : IBaseState
 {
-    public class SingleActionState : BaseState
+    private readonly Action m_Action;
+    private readonly Func<StateID> m_FuncNextState;
+
+    public SingleActionState(
+        Action action = null,
+        Func<StateID> funcNextState = null)
     {
-        private Action m_Action;
-        private Func<StateID> m_FuncNextState;
+        m_Action = action;
+        m_FuncNextState = funcNextState;
+    }
 
-        public SingleActionState(
-            Action action = null,
-            Func<StateID> funcNextState = null)
-        {
-            m_Action = action;
-            m_FuncNextState = funcNextState;
-        }
-
-        public StateID Run()
-        {
-            Console.Clear();
-            m_Action?.Invoke();
-            return m_FuncNextState != null ? m_FuncNextState.Invoke() : StateID.None;
-        }
+    public StateID Run()
+    {
+        Console.Clear();
+        m_Action?.Invoke();
+        return m_FuncNextState != null ? m_FuncNextState.Invoke() : StateID.None;
     }
 }
