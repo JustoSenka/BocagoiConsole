@@ -1,20 +1,19 @@
-﻿using BocagoiConsole.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace BocagoiConsole.States
 {
     public class MenuState : BaseState
     {
-        private Action<PracticeSettings> m_ActionBeforePrint;
-        private Action<PracticeSettings> m_ActionAfterPrint;
-        private Action<PracticeSettings, int> m_ActionAfterUserInput;
-        private Func<PracticeSettings, int, StateID> m_FuncNextState;
+        private Action m_ActionBeforePrint;
+        private Action m_ActionAfterPrint;
+        private Action<int> m_ActionAfterUserInput;
+        private Func<int, StateID> m_FuncNextState;
 
         private string m_TextToPrint;
         private Dictionary<int, StateID> m_Transitions;
-        public MenuState(Action<PracticeSettings> actionBeforePrint = null, Action<PracticeSettings> actionAfterPrint = null,
-            Action<PracticeSettings, int> actionAfterUserInput = null, Func<PracticeSettings, int, StateID> funcNextState = null,
+        public MenuState(Action actionBeforePrint = null, Action actionAfterPrint = null,
+            Action<int> actionAfterUserInput = null, Func<int, StateID> funcNextState = null,
             string textToPrint = "", Dictionary<int, StateID> transitions = null)
         {
             m_ActionBeforePrint = actionBeforePrint;
@@ -26,25 +25,25 @@ namespace BocagoiConsole.States
             m_Transitions = transitions;
         }
 
-        public StateID Run(PracticeSettings pr)
+        public StateID Run()
         {
             Console.Clear();
 
-            m_ActionBeforePrint?.Invoke(pr);
+            m_ActionBeforePrint?.Invoke();
             Console.Write(m_TextToPrint);
-            m_ActionAfterPrint?.Invoke(pr);
+            m_ActionAfterPrint?.Invoke();
 
             int op = -1;
             while (!int.TryParse(Console.ReadLine(), out op)) { }
 
-            m_ActionAfterUserInput?.Invoke(pr, op);
+            m_ActionAfterUserInput?.Invoke(op);
 
             // return next state
             if (m_Transitions != null && m_Transitions.ContainsKey(op))
                 return m_Transitions[op];
 
             if (m_FuncNextState != null)
-                return m_FuncNextState.Invoke(pr, op);
+                return m_FuncNextState.Invoke(op);
 
             return StateID.None;
         }

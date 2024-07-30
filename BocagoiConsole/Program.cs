@@ -1,4 +1,5 @@
 ﻿using BocagoiConsole.Core;
+using BocagoiConsole.Singletons;
 
 namespace BocagoiConsole
 {
@@ -6,13 +7,14 @@ namespace BocagoiConsole
     {
         static void Main(string[] args)
         {
-            var boc = new Bocagoi();
-            var machine = new StateMachine();
-            var stateMap = machine.Generate(boc);
+            Boxes.Init();
+            History.Init();
+            RedBox.Init();
+            Bocagoi.Init();
 
+            var stateMap = StateMachine.Generate();
             var walker = new ConsoleStateMachineWalker(stateMap);
-
-            walker.Start(boc.PracticeSettings);
+            walker.Start();
         }
     }
 }

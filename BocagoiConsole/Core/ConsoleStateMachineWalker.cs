@@ -13,7 +13,7 @@ namespace BocagoiConsole.Core
             m_StateMap = stateMap;
         }
 
-        public void Start(PracticeSettings pr)
+        public void Start()
         {
             var stateStack = new Stack<StateID>();
             stateStack.Push(StateID.Menu);
@@ -25,7 +25,7 @@ namespace BocagoiConsole.Core
 
                 var currentState = stateStack.Peek();
                 var stateAction = m_StateMap[currentState];
-                var newState = stateAction.Run(pr);
+                var newState = stateAction.Run();
 
                 if (newState == StateID.Exit)
                     stateStack.Pop();

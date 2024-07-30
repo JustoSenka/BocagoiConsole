@@ -1,10 +1,8 @@
-﻿using BocagoiConsole.Core;
-
-namespace BocagoiConsole.States
+﻿namespace BocagoiConsole.States
 {
     public interface BaseState
     {
-        public StateID Run(PracticeSettings pr);
+        public StateID Run();
     }
 
     public enum StateID

@@ -1,26 +1,25 @@
-﻿using BocagoiConsole.Core;
-using System;
+﻿using System;
 
 namespace BocagoiConsole.States
 {
     public class SingleActionState : BaseState
     {
-        private Action<PracticeSettings> m_Action;
-        private Func<PracticeSettings, StateID> m_FuncNextState;
+        private Action m_Action;
+        private Func<StateID> m_FuncNextState;
 
         public SingleActionState(
-            Action<PracticeSettings> action = null, 
-            Func<PracticeSettings, StateID> funcNextState = null)
+            Action action = null,
+            Func<StateID> funcNextState = null)
         {
             m_Action = action;
             m_FuncNextState = funcNextState;
         }
 
-        public StateID Run(PracticeSettings pr)
+        public StateID Run()
         {
             Console.Clear();
-            m_Action?.Invoke(pr);
-            return m_FuncNextState != null ? m_FuncNextState.Invoke(pr) : StateID.None;
+            m_Action?.Invoke();
+            return m_FuncNextState != null ? m_FuncNextState.Invoke() : StateID.None;
         }
     }
 }

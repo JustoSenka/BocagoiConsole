@@ -1,4 +1,4 @@
-﻿using BocagoiConsole.Files;
+﻿using BocagoiConsole.Singletons;
 using BocagoiConsole.States;
 using System;
 using System.Collections.Generic;
@@ -10,7 +10,7 @@ namespace BocagoiConsole.Core
 {
     public class StateMachine
     {
-        public Dictionary<StateID, BaseState> Generate(Bocagoi bocagoi)
+        public static Dictionary<StateID, BaseState> Generate()
         {
             return new Dictionary<StateID, BaseState>
             {
@@ -31,39 +31,39 @@ namespace BocagoiConsole.Core
                     })
                 },
                 {
-                    StateID.PracticeSelectBox,  new MenuState(actionBeforePrint: (pr) =>
+                    StateID.PracticeSelectBox,  new MenuState(actionBeforePrint: () =>
                     {
-                        var availableBoxes = Bocagoi.ComputeAvailableBoxesString();
+                        var availableBoxes = Boxes.Instance.ToString();
                         Console.Write(string.Format(Strings.PracticeSelectBox, availableBoxes));
 
-                    }, actionAfterUserInput: (pr, op) =>
+                    }, actionAfterUserInput: (op) =>
                     {
-                        pr.Box = op;
+                        Bocagoi.Instance.Settings.Box = op;
 
                     }, transitions: new Dictionary<int, StateID>
                     {
                         {0,  StateID.Exit },
                     },
-                        funcNextState: (_, __) => StateID.PracticeSelectWords)
+                        funcNextState: _ => StateID.PracticeSelectWords)
                 },
                 {
-                    StateID.PracticeSelectWords,  new SingleActionState(action: (pr) =>
+                    StateID.PracticeSelectWords,  new SingleActionState(action: () =>
                     {
-                        var wordCount = File.ReadAllLines(string.Format(Bocagoi.WordBoxFileName, pr.Box)).Length;
+                        var wordCount = Boxes.Instance.Words[Bocagoi.Instance.Settings.Box].Count;
                         Console.Write(string.Format(Strings.PracticeSelectWords1, wordCount));
 
-                        Bocagoi.GetDictionaryBoundsForPracticing(wordCount, out int from, out int to);
+                        Bocagoi.Instance.GetDictionaryBoundsForPracticing(wordCount, out int from, out int to);
 
-                        pr.WordsMax = to;
-                        pr.WordsMin = from;
+                        Bocagoi.Instance.Settings.WordsMax = to;
+                        Bocagoi.Instance.Settings.WordsMin = from;
 
-                    }, funcNextState: pr => pr.WordsMin == -1 ? StateID.Exit : StateID.PracticeSelectMode)
+                    }, funcNextState: () => Bocagoi.Instance.Settings.WordsMin == -1 ? StateID.Exit : StateID.PracticeSelectMode)
                 },
                 {
                     StateID.PracticeSelectMode,  new MenuState(textToPrint: Strings.PracticeSelectMode,
-                        actionAfterUserInput: (pr, op) =>
+                        actionAfterUserInput: (op) =>
                     {
-                        pr.Mode = op == 1 ? PracticeSettings.PracticeMode.Normal : PracticeSettings.PracticeMode.Reverse;
+                        Bocagoi.Instance.Settings.Mode = op == 1 ? PracticeSettings.PracticeMode.Normal : PracticeSettings.PracticeMode.Reverse;
 
                     }, transitions: new Dictionary<int, StateID>
                     {
@@ -74,46 +74,47 @@ namespace BocagoiConsole.Core
                 },
                 {
                     StateID.RunPractice,  new SingleActionState(
-                        action: (pr) =>
+                        action: () =>
                         {
-                            var run = Bocagoi.RunGame(pr);
-                            Bocagoi.AppendHistory(run);
+                            var run = Bocagoi.Instance.RunGame();
+                            History.Instance.Runs.Add(run);
+                            History.Instance.Save();
                         },
-                        funcNextState: _ => StateID.Menu)
+                        funcNextState: () => StateID.Menu)
                 },
                 {
-                    StateID.AddWords,  new MenuState(actionBeforePrint: (pr) =>
+                    StateID.AddWords,  new MenuState(actionBeforePrint: () =>
                     {
-                        var availableBoxes = Bocagoi.ComputeAvailableBoxesString();
+                        var availableBoxes = Boxes.Instance.ToString();
                         Console.Write(string.Format(Strings.AddWordsToBox, availableBoxes));
 
-                    }, actionAfterUserInput: (pr, op) =>
+                    }, actionAfterUserInput: (op) =>
                     {
                         if (op != 0)
-                            Bocagoi.TryOpenBox(op);
+                            Bocagoi.Instance.TryOpenBox(op);
 
-                    }, funcNextState: (_, __) => StateID.Menu)
+                    }, funcNextState: (_) => StateID.Menu)
                 },
                 {
-                    StateID.CreateBox,  new MenuState(actionBeforePrint: (pr) =>
+                    StateID.CreateBox,  new MenuState(actionBeforePrint: () =>
                     {
-                        var newBoxNumber = Bocagoi.GetAllBoxNames().Count + 1;
-                        File.WriteAllText(string.Format(Bocagoi.WordBoxFileName, newBoxNumber), Strings.AddingWordsToBoxExample);
-                        Bocagoi.TryOpenBox(newBoxNumber);
+                        var newBoxNumber = Boxes.Instance.GetAllBoxNames().Count() + 1;
+                        File.WriteAllText(Boxes.Instance.GetBoxName(newBoxNumber), Strings.AddingWordsToBoxExample);
+                        Bocagoi.Instance.TryOpenBox(newBoxNumber);
 
-                    }, funcNextState: (_, __) => StateID.Menu)
+                    }, funcNextState: _ => StateID.Menu)
                 },
                 {
-                    StateID.Search,  new SingleActionState(action: (pr) =>
+                    StateID.Search,  new SingleActionState(action: () =>
                     {
                         Console.WriteLine(Strings.SearchWords);
                         var str = Console.ReadLine();
                         Console.WriteLine();
 
                         // TODO: Slow
-                        var wordBoxesMap = Bocagoi.LoadAllWords()
+                        var wordBoxesMap = Boxes.Instance.Words
                             .Select(pairarray => (pairarray.Key, Words: pairarray.Value
-                            .Where(pair => pair.Item1.Contains(str) || pair.Item2.Contains(str))
+                            .Where(pair => pair.Left.Contains(str) || pair.Right.Contains(str))
                             .ToList()));
 
                         var sb = new StringBuilder();
@@ -122,7 +123,7 @@ namespace BocagoiConsole.Core
                             if (wordsFound.Count == 0)
                                 continue;
 
-                            sb.AppendLine(string.Format(Bocagoi.WordBoxFileName, box) + ":");
+                            sb.AppendLine(Boxes.Instance.GetBoxName(box) + ":");
                             sb.AppendLine();
                             foreach(var word in wordsFound)
                                 sb.AppendLine(word.Item1 + " - " + word.Item2);
@@ -134,60 +135,48 @@ namespace BocagoiConsole.Core
                         Console.WriteLine("Press enter to continue...");
                         Console.ReadLine();
 
-                    }, funcNextState: _ => StateID.Menu)
+                    }, funcNextState: () => StateID.Menu)
                 },
                 {
-                    StateID.History,  new SingleActionState(action: (pr) =>
+                    StateID.History,  new SingleActionState(action: () =>
                     {
-                        var history = new History();
-                        history.LoadFromFile(History.DefaultHistoryFile).ContinueWith(task =>
-                        {
-                            var entries = string.Join(Environment.NewLine, history.Runs.Select(r => r.ToString()));
-                            var str = string.Format(Strings.History, entries);
+                        var entries = string.Join(Environment.NewLine, History.Instance.Runs.Select(run => run.ToString()));
+                        var str = string.Format(Strings.History, entries);
 
-                            Console.WriteLine(str);
-                        });
+                        Console.WriteLine(str);
 
                         Console.ReadLine();
-                    }, funcNextState: _ => StateID.Menu)
+                    }, funcNextState: () => StateID.Menu)
                 },
                 {
-                    StateID.MostPracticedWords,  new SingleActionState(action: (pr) =>
+                    StateID.MostPracticedWords,  new SingleActionState(action: () =>
                     {
-                        var redBox = new RedBox();
-                        redBox.LoadFromFile(RedBox.RedBoxFile).ContinueWith(task =>
-                        {
-                            var entries = string.Join(Environment.NewLine, redBox.Words.Values
-                                .OrderByDescending(word => word.Correct)
-                                .Select(word => string.Format(" {0, -5}  |  {1} - {2}", 
-                                    word.Correct, word.Left, word.Right)));
+                        var entries = string.Join(Environment.NewLine, RedBox.Instance.Words.Values
+                            .OrderByDescending(word => word.Correct)
+                            .Select(word => string.Format(" {0, -5}  |  {1} - {2}",
+                                word.Correct, word.Left, word.Right)));
 
-                            var str = string.Format(Strings.MostPracticedWords, entries);
+                        var str = string.Format(Strings.MostPracticedWords, entries);
 
-                            Console.WriteLine(str);
-                        });
+                        Console.WriteLine(str);
 
                         Console.ReadLine();
-                    }, funcNextState: _ => StateID.Menu)
+                    }, funcNextState: () => StateID.Menu)
                 },
                 {
-                    StateID.MostFailedWords,  new SingleActionState(action: (pr) =>
+                    StateID.MostFailedWords,  new SingleActionState(action: () =>
                     {
-                        var redBox = new RedBox();
-                        redBox.LoadFromFile(RedBox.RedBoxFile).ContinueWith(task =>
-                        {
-                            var entries = string.Join(Environment.NewLine, redBox.Words.Values
-                                .OrderByDescending(word => word.Fails)
-                                .Select(word => string.Format(" {0, -5}  |  {1} - {2}",
-                                    word.Fails, word.Left, word.Right)));
+                        var entries = string.Join(Environment.NewLine, RedBox.Instance.Words.Values
+                            .OrderByDescending(word => word.Fails)
+                            .Select(word => string.Format(" {0, -5}  |  {1} - {2}",
+                                word.Fails, word.Left, word.Right)));
 
-                            var str = string.Format(Strings.MostFailedWords, entries);
+                        var str = string.Format(Strings.MostFailedWords, entries);
 
-                            Console.WriteLine(str);
-                        });
+                        Console.WriteLine(str);
 
                         Console.ReadLine();
-                    }, funcNextState: _ => StateID.Menu)
+                    }, funcNextState: () => StateID.Menu)
                 },
             };
         }
