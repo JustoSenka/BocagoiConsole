@@ -13,8 +13,8 @@ Enter a command number:
 3. Create new word Box
 4. Search
 5. History
-6. Most practiced words
-7. Most failed words
+6. Most failed words
+7. Least practiced words
 8. Settings
 
 0. Quit
@@ -26,6 +26,9 @@ Enter a command number:
 Select a box from which to write words:
 
 {0}
+
+101. Practice 'Most failed words'.
+102. Practice 'Least practiced words'.
 
 0. Go back
 
@@ -76,9 +79,9 @@ History:
 
 Press enter to go back...";
 
-    public const string MostPracticedWords = @"Bocagoi Language Learning by Justas Glodenis
+    public const string LeastPracticedWords = @"Bocagoi Language Learning by Justas Glodenis
 
-Most Practiced Words (times made no mistakes):
+Least practiced words:
 
 {0}
 
@@ -86,7 +89,7 @@ Press enter to go back...";
 
     public const string MostFailedWords = @"Bocagoi Language Learning by Justas Glodenis
 
-Most Failed Words (times answer was incorrect):
+Most Failed Words:
 
 {0}
 

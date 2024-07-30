@@ -2,10 +2,8 @@
 using BocagoiConsole.States;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
-using static System.Collections.Specialized.BitVector32;
 
 namespace BocagoiConsole.Core;
 
@@ -25,8 +23,8 @@ public class StateMachine
                     {3,  StateID.CreateBox},
                     {4,  StateID.Search},
                     {5,  StateID.History},
-                    {6,  StateID.MostPracticedWords},
-                    {7,  StateID.MostFailedWords},
+                    {6,  StateID.MostFailedWords},
+                    {7,  StateID.LeastPracticedWords},
                     {8,  StateID.Settings},
                     {0,  StateID.Exit },
                 })
@@ -50,7 +48,7 @@ public class StateMachine
             {
                 StateID.PracticeSelectWords, new SingleActionState(action: () =>
                 {
-                    var wordCount = Boxes.Instance.Words[Bocagoi.Instance.Settings.Box].Count;
+                    var wordCount = Boxes.Instance.GetWords(Bocagoi.Instance.Settings.Box).Count;
                     Console.Write(string.Format(Strings.PracticeSelectWords1, wordCount));
 
                     Bocagoi.Instance.GetDictionaryBoundsForPracticing(wordCount, out int from, out int to);
@@ -111,7 +109,7 @@ public class StateMachine
                     var str = Console.ReadLine();
                     Console.WriteLine();
 
-                    var wordBoxesMap = Boxes.Instance.Words
+                    var wordBoxesMap = Boxes.Instance.GetAllWords()
                         .Select(pairarray => (pairarray.Key, Words: pairarray.Value
                         .Where(pair => pair.Left.Contains(str) || pair.Right.Contains(str))
                         .ToList()));
@@ -148,14 +146,15 @@ public class StateMachine
                 }, funcNextState: () => StateID.Menu)
             },
             {
-                StateID.MostPracticedWords, new SingleActionState(action: () =>
+                StateID.MostFailedWords, new SingleActionState(action: () =>
                 {
                     var entries = string.Join(Environment.NewLine, RedBox.Instance.Words.Values
-                        .OrderByDescending(word => word.Correct)
-                        .Select(word => string.Format(" {0, -5}  |  {1} - {2}",
-                            word.Correct, word.Left, word.Right)));
+                        .OrderByDescending(word => word.Fails - word.Correct)
+                        .Select(word => string.Format(" {0, -5} | {1, -5} | {2, -7} |  {3} - {4}",
+                            word.Fails - word.Correct, word.Fails, word.Correct, word.Left, word.Right))
+                        .Prepend(string.Format(" {0, -5} | {1, -5} | {2, -7} |  {3}", "score", "fails", "correct", "Word")));
 
-                    var str = string.Format(Strings.MostPracticedWords, entries);
+                    var str = string.Format(Strings.MostFailedWords, entries);
 
                     Console.WriteLine(str);
 
@@ -163,14 +162,15 @@ public class StateMachine
                 }, funcNextState: () => StateID.Menu)
             },
             {
-                StateID.MostFailedWords, new SingleActionState(action: () =>
+                StateID.LeastPracticedWords, new SingleActionState(action: () =>
                 {
                     var entries = string.Join(Environment.NewLine, RedBox.Instance.Words.Values
-                        .OrderByDescending(word => word.Fails)
-                        .Select(word => string.Format(" {0, -5}  |  {1} - {2}",
-                            word.Fails, word.Left, word.Right)));
+                        .OrderBy(word => word.Correct + word.Fails)
+                        .Select(word => string.Format(" {0, -5} | {1, -5} | {2, -7} |  {3} - {4}",
+                            word.Correct + word.Fails, word.Fails, word.Correct, word.Left, word.Right))
+                        .Prepend(string.Format(" {0, -5} | {1, -5} | {2, -7} |  {3}", "score", "fails", "correct", "Word")));
 
-                    var str = string.Format(Strings.MostFailedWords, entries);
+                    var str = string.Format(Strings.LeastPracticedWords, entries);
 
                     Console.WriteLine(str);
 

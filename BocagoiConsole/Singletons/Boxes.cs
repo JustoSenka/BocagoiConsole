@@ -12,7 +12,7 @@ public class Boxes
     public static void Init() { Instance = new Boxes(); }
     public static Boxes Instance { get; private set; }
 
-    public IDictionary<int, List<(string Left, string Right)>> Words { get; }
+    private IDictionary<int, List<(string Left, string Right)>> Words { get; }
 
     public string GetBoxName(int index) => string.Format("WBox{0}.txt", index);
 
@@ -23,6 +23,25 @@ public class Boxes
 
         Words = new Dictionary<int, List<(string, string)>>();
         ReloadWords();
+    }
+
+    public IDictionary<int, List<(string Left, string Right)>> GetAllWords() => Words;
+
+    public List<(string Left, string Right)> GetWords(int boxIndex)
+    {
+        if (boxIndex == 101) // Most failed
+            return RedBox.Instance.Words.Values
+                .OrderByDescending(word => word.Fails - word.Correct)
+                .Select(word => (word.Left, word.Right))
+                .ToList();
+
+        if (boxIndex == 102) // Least practiced
+            return RedBox.Instance.Words.Values
+                .OrderBy(word => word.Correct + word.Fails)
+                .Select(word => (word.Left, word.Right))
+                .ToList();
+
+        return Words[boxIndex];
     }
 
     private void CreateBoxIfNotExist(int index)

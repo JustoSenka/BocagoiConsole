@@ -21,7 +21,7 @@ public class Bocagoi
 
     public Run RunGame()
     {
-        var totalWordsForPractice = Boxes.Instance.Words[Settings.Box]
+        var totalWordsForPractice = Boxes.Instance.GetWords(Settings.Box)
             .Skip(Settings.WordsMin - 1)
             .Take(Settings.WordsMax - Settings.WordsMin + 1)
             .ToList();
@@ -205,6 +205,7 @@ public class Bocagoi
 public class PracticeSettings
 {
     public int Box { get; set; }
+    public char RedBoxMode { get; set; }
     public int WordsMin { get; set; }
     public int WordsMax { get; set; }
     public PracticeMode Mode { get; set; }

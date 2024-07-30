@@ -14,7 +14,7 @@ public enum StateID
     CreateBox,
     Search,
     History,
-    MostPracticedWords,
+    LeastPracticedWords,
     MostFailedWords,
     Settings,
     Exit,
