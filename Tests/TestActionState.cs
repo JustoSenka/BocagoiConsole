@@ -1,8 +1,6 @@
 ﻿using BocagoiConsole.Core;
 using BocagoiConsole.States;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Tests
 {

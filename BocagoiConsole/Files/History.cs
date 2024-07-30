@@ -1,11 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using BocagoiConsole.Core;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace BocagoiConsole.Core
+namespace BocagoiConsole.Files
 {
     public class History
     {
@@ -14,6 +14,11 @@ namespace BocagoiConsole.Core
         public IList<Run> Runs { get; private set; } = new List<Run>();
 
         private string m_FilePath;
+
+        public History()
+        {
+
+        }
 
         public Task LoadFromFile(string filePath)
         {

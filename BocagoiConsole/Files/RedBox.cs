@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BocagoiConsole.Core
+namespace BocagoiConsole.Files
 {
     public class RedBox
     {
