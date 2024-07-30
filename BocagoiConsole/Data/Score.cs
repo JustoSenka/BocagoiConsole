@@ -5,8 +5,8 @@ namespace BocagoiConsole.Core;
 
 public class Score
 {
-    public int m_Correct = 0;
-    public int m_Incorrect = 0;
+    private int m_Correct = 0;
+    private int m_Incorrect = 0;
 
     public ISet<(string Left, string Right)> CorrectWords = new HashSet<(string Left, string Right)>();
     public ISet<(string Left, string Right)> Mistakes = new HashSet<(string Left, string Right)>();

@@ -44,6 +44,9 @@ public class Bocagoi
 
         Console.WriteLine("Press enter to continue...");
         Console.ReadLine();
+
+        ConsoleControl.Instance.ResetTitle();
+
         return result;
     }
 
@@ -51,6 +54,8 @@ public class Bocagoi
     {
         while (wordsLeft.Count > 0)
         {
+            UpdateTitle(score);
+
             var word = SelectRandomWord(rand, wordsLeft);
             var answer = AskToInputAnswer(word);
 
@@ -60,6 +65,16 @@ public class Bocagoi
             Console.ReadLine();
             Console.Clear();
         }
+    }
+
+    private void UpdateTitle(Score score)
+    {
+        ConsoleControl.Instance.TitlePracticeWordsFrom = Settings.WordsMin;
+        ConsoleControl.Instance.TitlePracticeWordsTo = Settings.WordsMax;
+        ConsoleControl.Instance.TitlePracticeBoxName = Boxes.Instance.GetBoxName(Settings.Box);
+        ConsoleControl.Instance.TitlePracticeWordsCompleted = score.CorrectWords.Count;
+        ConsoleControl.Instance.TitlePracticeWordsFailed = score.Mistakes.Count;
+        ConsoleControl.Instance.SetPracticeTitle();
     }
 
     public void VerifyAnswer(Score score, IList<(string, string)> wordsLeft, (string, string) word, string answer)

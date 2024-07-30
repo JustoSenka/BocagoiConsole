@@ -1,6 +1,7 @@
 ﻿using BocagoiConsole.Core;
 using BocagoiConsole.Singletons;
 using BocagoiConsole.States;
+using System;
 
 namespace BocagoiConsole
 {
@@ -12,6 +13,9 @@ namespace BocagoiConsole
             History.Init();
             RedBox.Init();
             Bocagoi.Init();
+            ConsoleControl.Init();
+
+            ConsoleControl.Instance.UpdateTitle();
 
             var stateMap = StateMachine.Generate();
             var walker = new ConsoleStateMachineWalker(stateMap);
