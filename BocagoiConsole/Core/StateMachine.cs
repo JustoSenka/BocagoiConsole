@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using static System.Collections.Specialized.BitVector32;
 
 namespace BocagoiConsole.Core;
 
@@ -33,7 +34,7 @@ public class StateMachine
             {
                 StateID.PracticeSelectBox, new MenuState(actionBeforePrint: () =>
                 {
-                    var availableBoxes = Boxes.Instance.ToString();
+                    var availableBoxes = Boxes.Instance.BuildBoxNameListWithWordCount();
                     Console.Write(string.Format(Strings.PracticeSelectBox, availableBoxes));
 
                 }, actionAfterUserInput: (op) =>
@@ -85,7 +86,7 @@ public class StateMachine
             {
                 StateID.AddWords, new MenuState(actionBeforePrint: () =>
                 {
-                    var availableBoxes = Boxes.Instance.ToString();
+                    var availableBoxes = Boxes.Instance.BuildBoxNameListWithWordCount();
                     Console.Write(string.Format(Strings.AddWordsToBox, availableBoxes));
 
                 }, actionAfterUserInput: (op) =>
@@ -93,16 +94,15 @@ public class StateMachine
                     if (op != 0)
                         Bocagoi.Instance.TryOpenBox(op);
 
-                }, funcNextState: (_) => StateID.Menu)
+                }, funcNextState: _ => StateID.Menu)
             },
             {
-                StateID.CreateBox, new MenuState(actionBeforePrint: () =>
+                StateID.CreateBox, new SingleActionState(action: () =>
                 {
-                    var newBoxNumber = Boxes.Instance.GetAllBoxNames().Count() + 1;
-                    File.WriteAllText(Boxes.Instance.GetBoxName(newBoxNumber), Strings.AddingWordsToBoxExample);
-                    Bocagoi.Instance.TryOpenBox(newBoxNumber);
+                    var index = Boxes.Instance.CreateNewBox();
+                    Bocagoi.Instance.TryOpenBox(index);
 
-                }, funcNextState: _ => StateID.Menu)
+                }, funcNextState: () => StateID.Menu)
             },
             {
                 StateID.Search, new SingleActionState(action: () =>
@@ -111,7 +111,6 @@ public class StateMachine
                     var str = Console.ReadLine();
                     Console.WriteLine();
 
-                    // TODO: Slow
                     var wordBoxesMap = Boxes.Instance.Words
                         .Select(pairarray => (pairarray.Key, Words: pairarray.Value
                         .Where(pair => pair.Left.Contains(str) || pair.Right.Contains(str))

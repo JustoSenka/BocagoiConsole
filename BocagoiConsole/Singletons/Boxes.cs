@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using BocagoiConsole.Core;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -19,7 +21,8 @@ public class Boxes
         CreateBoxIfNotExist(1);
         CreateBoxIfNotExist(2);
 
-        Words = LoadWords();
+        Words = new Dictionary<int, List<(string, string)>>();
+        ReloadWords();
     }
 
     private void CreateBoxIfNotExist(int index)
@@ -29,9 +32,9 @@ public class Boxes
             File.Create(fileName);
     }
 
-    private IDictionary<int, List<(string, string)>> LoadWords()
+    private void ReloadWords()
     {
-        var words = new Dictionary<int, List<(string, string)>>();
+        Words.Clear();
 
         int i = 1;
         foreach (var boxName in GetAllBoxNames())
@@ -43,11 +46,9 @@ public class Boxes
                 .Select(words => (words[0].Trim(), words[1].Trim()))
                 .ToList();
 
-            words[i] = pairs;
+            Words[i] = pairs;
             i++;
         }
-
-        return words;
     }
 
     public IEnumerable<string> GetAllBoxNames()
@@ -62,13 +63,17 @@ public class Boxes
         }
     }
 
-    public override string ToString()
+    public int CreateNewBox()
     {
-        var sb = new StringBuilder();
-        int i = 1;
-        foreach (var boxName in GetAllBoxNames())
-            sb.AppendLine($"{i++}. {boxName}");
-
-        return sb.ToString();
+        var index = GetAllBoxNames().Count() + 1;
+        File.WriteAllText(GetBoxName(index), Strings.AddingWordsToBoxExample);
+        ReloadWords();
+        return index;
     }
+
+    public string BuildBoxNameListWithWordCount()
+        => string.Join(Environment.NewLine, Words.Keys.Select(index => $"{index}. {GetBoxName(index)} ({Words[index].Count})"));
+
+    public string BuildBoxNameList()
+        => string.Join(Environment.NewLine, Words.Keys.Select(index => $"{index}. {GetBoxName(index)}"));
 }

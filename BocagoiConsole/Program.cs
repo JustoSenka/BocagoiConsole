@@ -1,5 +1,6 @@
 ﻿using BocagoiConsole.Core;
 using BocagoiConsole.Singletons;
+using BocagoiConsole.States;
 
 namespace BocagoiConsole
 {

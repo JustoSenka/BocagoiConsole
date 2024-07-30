@@ -35,10 +35,10 @@ public class Bocagoi
         {
             var wordsLeft = totalWordsForPractice.PartitionListElements(20, rand);
 
-            RunGameWithPartitionedWords(Settings, rand, score, wordsLeft);
+            RunGameWithPartitionedWords(rand, score, wordsLeft);
         }
 
-        var result = CreateAndPrintResults(Settings, score, startTime, endTime: DateTime.Now);
+        var result = CreateAndPrintResults(score, startTime, endTime: DateTime.Now);
 
         SaveRedBox(score);
 
@@ -47,14 +47,14 @@ public class Bocagoi
         return result;
     }
 
-    private void RunGameWithPartitionedWords(PracticeSettings pr, Random rand, Score score, IList<(string, string)> wordsLeft)
+    private void RunGameWithPartitionedWords(Random rand, Score score, IList<(string, string)> wordsLeft)
     {
         while (wordsLeft.Count > 0)
         {
             var word = SelectRandomWord(rand, wordsLeft);
-            var answer = AskToInputAnswer(pr, word);
+            var answer = AskToInputAnswer(word);
 
-            VerifyAnswer(pr, score, wordsLeft, word, answer);
+            VerifyAnswer(score, wordsLeft, word, answer);
 
             Console.WriteLine("Press enter to continue...");
             Console.ReadLine();
@@ -62,9 +62,9 @@ public class Bocagoi
         }
     }
 
-    public void VerifyAnswer(PracticeSettings pr, Score score, IList<(string, string)> wordsLeft, (string, string) word, string answer)
+    public void VerifyAnswer(Score score, IList<(string, string)> wordsLeft, (string, string) word, string answer)
     {
-        if (IsAnswerCorrect(pr, word, answer))
+        if (IsAnswerCorrect(word, answer))
         {
             wordsLeft.Remove(word);
             score.Correct();
@@ -80,14 +80,14 @@ public class Bocagoi
             score.Mistakes.Add(word);
 
             Console.WriteLine();
-            Console.WriteLine($"Incorrect! It was: {word.Right(pr.Mode)}");
+            Console.WriteLine($"Incorrect! It was: {word.Right(Settings.Mode)}");
             Console.WriteLine();
         }
     }
 
-    private string AskToInputAnswer(PracticeSettings pr, (string, string) word)
+    private string AskToInputAnswer((string, string) word)
     {
-        Console.Write($"{word.Left(pr.Mode)} - ");
+        Console.Write($"{word.Left(Settings.Mode)} - ");
         var answer = Console.ReadLine();
         return answer;
     }
@@ -98,12 +98,12 @@ public class Bocagoi
         return wordsLeft[nextWordIndex % wordsLeft.Count];
     }
 
-    public bool IsAnswerCorrect(PracticeSettings pr, (string, string) word, string answer)
+    public bool IsAnswerCorrect((string, string) word, string answer)
     {
-        return string.Equals(answer, word.Right(pr.Mode), StringComparison.InvariantCultureIgnoreCase);
+        return string.Equals(answer, word.Right(Settings.Mode), StringComparison.InvariantCultureIgnoreCase);
     }
 
-    public Run CreateAndPrintResults(PracticeSettings pr, Score score, DateTime startTime, DateTime endTime)
+    public Run CreateAndPrintResults(Score score, DateTime startTime, DateTime endTime)
     {
         Console.WriteLine($"Final score: {score.DecimalScore()}");
         Console.WriteLine();
@@ -111,17 +111,17 @@ public class Bocagoi
         Console.WriteLine();
 
         foreach (var word in score.Mistakes)
-            Console.WriteLine($"{word.Left(pr.Mode)} - {word.Right(pr.Mode)}");
+            Console.WriteLine($"{word.Left(Settings.Mode)} - {word.Right(Settings.Mode)}");
 
         Console.WriteLine();
 
         return new Run()
         {
-            Box = pr.Box,
-            From = pr.WordsMin,
-            To = pr.WordsMax,
+            Box = Settings.Box,
+            From = Settings.WordsMin,
+            To = Settings.WordsMax,
             Score = score.DecimalScore(),
-            Mode = pr.Mode,
+            Mode = Settings.Mode,
             Time = startTime,
             Duration = endTime - startTime
         }; ;

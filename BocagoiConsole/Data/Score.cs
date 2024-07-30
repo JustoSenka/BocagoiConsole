@@ -8,8 +8,8 @@ public class Score
     public int m_Correct = 0;
     public int m_Incorrect = 0;
 
-    public ISet<(string, string)> CorrectWords = new HashSet<(string, string)>();
-    public ISet<(string, string)> Mistakes = new HashSet<(string, string)>();
+    public ISet<(string Left, string Right)> CorrectWords = new HashSet<(string Left, string Right)>();
+    public ISet<(string Left, string Right)> Mistakes = new HashSet<(string Left, string Right)>();
 
     public void Correct() => m_Correct++;
     public void Incorrect() => m_Incorrect++;

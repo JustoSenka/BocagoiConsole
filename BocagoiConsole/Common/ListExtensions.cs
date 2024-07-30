@@ -7,8 +7,7 @@ public static class ListExtensions
 {
     public static IList<T> PartitionListElements<T>(this List<T> list, int elementsInPartition, Random rand = null)
     {
-        if (rand == null)
-            rand = new UniqueRandom();
+        rand ??= new UniqueRandom();
 
         var wordsLeft = new List<T>();
 
