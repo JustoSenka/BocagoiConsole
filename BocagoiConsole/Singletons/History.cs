@@ -8,11 +8,12 @@ namespace BocagoiConsole.Singletons;
 public class History
 {
     public static void Init() { Instance = new History(); }
-    public static History Instance { get; private set; } 
+    public static History Instance { get; private set; }
 
     public IList<Run> Runs { get; }
 
     private const string m_FilePath = "History.json";
+    private const string m_FilePathBackup = "History-Backup.json";
 
     private History()
     {
@@ -34,7 +35,21 @@ public class History
             throw new Exception("Not saving empty history file due to safety reasons");
 
         var text = JsonConvert.SerializeObject(Runs);
+        TrySaveBackup(text);
+
         File.WriteAllText(m_FilePath, text);
+    }
+
+    private void TrySaveBackup(string text)
+    {
+        try
+        {
+            var oldText = File.ReadAllText(m_FilePathBackup);
+
+            if (oldText.Length <= text.Length)
+                File.WriteAllText(m_FilePathBackup, text);
+        }
+        catch { }
     }
 }
 
@@ -50,13 +65,13 @@ public struct Run
 
     public override string ToString()
     {
-        return string.Format("{0, -17} | WBox{1, -3} | From: {2,4}, To: {3,4} | Duration: {4,3} mins | Mode: {5,7} | Score: {6,3}%",
+        return string.Format("{0, -16} | WBox{1, -3} | From: {2,4}, To: {3,4} | Duration: {4,3} mins | Mode: {5,1} | Score: {6,3}%",
             Time.ToString("yyyy-MM-dd HH:mm"),
             Box,
             From,
             To,
             (int)Duration.TotalMinutes,
-            Mode.ToString(),
+            Mode.ToString()[0],
             Score);
     }
 }

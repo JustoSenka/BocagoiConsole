@@ -41,28 +41,43 @@ public class ConsoleControl : IDisposable
 
     public void Dispose()
     {
-        if (m_Settings == null)
-            m_Settings = new ConsoleSettings();
-
-        m_Settings.WindowTop = Console.WindowTop;
-        m_Settings.WindowLeft = Console.WindowLeft;
-        m_Settings.WindowWidth = Console.WindowWidth;
-        m_Settings.WindowHeight = Console.WindowHeight;
-
-        var fontSize = GetFontSize();
-        m_Settings.FontWidth = fontSize.Value.Item1;
-        m_Settings.FontHeight = fontSize.Value.Item2;
+        CollectCurrentSettings();
 
         var text = JsonConvert.SerializeObject(m_Settings);
         File.WriteAllText(m_FilePath, text);
     }
 
+    private void CollectCurrentSettings()
+    {
+        m_Settings ??= new ConsoleSettings();
+
+        try
+        {
+            m_Settings.WindowTop = Console.WindowTop;
+            m_Settings.WindowLeft = Console.WindowLeft;
+            m_Settings.WindowWidth = Console.WindowWidth;
+            m_Settings.WindowHeight = Console.WindowHeight;
+
+            var fontSize = GetFontSize();
+            m_Settings.FontWidth = fontSize.Item1;
+            m_Settings.FontHeight = fontSize.Item2;
+        }
+        catch { }
+    }
+
     public void RestoreSize()
     {
 #pragma warning disable CA1416 // Validate platform compatibility
-        SetFontSize(m_Settings.FontWidth, m_Settings.FontHeight);
-        Console.SetWindowSize(m_Settings.WindowWidth, m_Settings.WindowHeight);
-        Console.SetWindowPosition(m_Settings.WindowLeft, m_Settings.WindowTop);
+        try
+        {
+            SetFontSize(m_Settings.FontWidth, m_Settings.FontHeight);
+            Console.SetWindowSize(m_Settings.WindowWidth, m_Settings.WindowHeight);
+            Console.SetWindowPosition(m_Settings.WindowLeft, m_Settings.WindowTop);
+        }
+        catch
+        {
+            CollectCurrentSettings();
+        }
 #pragma warning restore CA1416 // Validate platform compatibility
     }
 
@@ -106,17 +121,17 @@ public class ConsoleControl : IDisposable
     private const int STD_OUTPUT_HANDLE = -11;
     private static IntPtr INVALID_HANDLE_VALUE = new IntPtr(-1);
 
-    public static unsafe (short, short)? GetFontSize()
+    public static unsafe (short, short) GetFontSize()
     {
         var hnd = GetStdHandle(STD_OUTPUT_HANDLE);
         if (hnd == INVALID_HANDLE_VALUE)
-            return null;
+            return (8, 16);
 
         var info = new CONSOLE_FONT_INFO_EX();
         info.cbSize = (uint)Marshal.SizeOf(info);
 
         if (!GetCurrentConsoleFontEx(hnd, false, ref info))
-            return null;
+            return (8, 16);
 
         return (info.dwFontSize.X, info.dwFontSize.Y);
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BocagoiConsole.Singletons;
 
@@ -13,6 +14,7 @@ public class RedBox
     public IDictionary<string, Word> Words { get; }
 
     private const string m_FilePath = "RedBox.txt";
+    private const string m_FilePathBackup = "RedBox-Backup.txt";
 
     private RedBox()
     {
@@ -57,8 +59,21 @@ public class RedBox
             throw new Exception("Not saving empty Red Box file due to safety reasons");
 
         var lines = Words.Values.Select(word => word.ToString());
+        TrySaveBackup(lines);
 
         File.WriteAllLines(m_FilePath, lines);
+    }
+
+    private void TrySaveBackup(IEnumerable<string> lines)
+    {
+        try
+        {
+            var oldLines = File.ReadAllLines(m_FilePathBackup);
+
+            if (oldLines.Count() <= lines.Count())
+                File.WriteAllLines(m_FilePathBackup, lines);
+        }
+        catch { }
     }
 }
 
