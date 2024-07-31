@@ -1,0 +1,307 @@
+ser - to be (profession)
+estar - to be (temporary)
+tener - to have
+hacer - to make (to do)
+poder - to be able to, can
+decir - to say
+ir - to go
+dar - to give
+ver - to see
+saber - to know
+pasar - to pass (by)
+deber - to must
+querer - to want
+llegar - to arrive
+dejar - to leave
+llevar - to carry
+encontrar - to find (to meet, encounter)
+hallar - to find (to discover)
+seguir - to follow
+poner - to put
+quedar - to stay
+parecer - to seem
+hablar - to speak
+pensar - to think
+volver - to back to
+conocer - to know
+salir - to exit
+realizar - to make
+tomar - to take
+tratar - to try
+contar - to count
+llamar - to call
+venir - to come
+mirar - to see
+presentar - to present
+permitir - to allow
+esperar - to wait
+sentir - to feel
+vivir - to live
+buscar - to search for
+creer - to believe
+crear - to create
+perder - to lose
+existir - to exist
+considerar - to consider
+abrir - to open
+trabajar - to work (like a job)
+recibir - to receive
+mantener - to maintain
+explicar - to explain
+lograr - to achieve
+empezar - to start (less formal)
+comenzar - to start (formal)
+recordar - to remember
+pedir - to ask for
+preguntar - to ask
+producir - to produce
+convertir - to convert
+entrar - to enter
+mostrar - to show
+señalar - to point out
+escribir - to write
+utilizar - to utilize
+entender - to understand
+terminar - to finish (a task etc)
+ganar - to win
+incluir - to include
+morir - to die
+asegurar - to ensure
+ocurrir - to occur
+ofrecer - to offer
+jugar - to play
+gustar - to like
+escuchar - to listen to
+sentar - to sit
+cambiar - to change
+aparecer - to appear
+acabar - to end (to finish, having done something)
+decidir - to decide
+resultar - to result
+caer - to fall
+desarrollar - to develop
+necesitar - to need
+sacar - to take out
+establecer - to establish
+conseguir - to get
+indicar - to indicate
+formar - to form
+reconocer - to recognize
+dirigir - to direct (to address)
+servir - to serve
+alcanzar - to reach
+intentar - to try
+cumplir - to achieve (to accomplish)
+leer - to read
+obtener - to obtain
+ayudar - to help
+usar - to use
+observar - to observe
+responder - to answer (to respond)
+afirmar - to affirm
+evitar - to avoid
+suponer - to suppose
+afectar - to affect
+generar - to generate
+continuar - to continue
+cerrar - to close
+pagar - to pay
+acercar - to get closer
+levantar - to raise (to get up)
+participar - to participate
+representar - to represent
+tocar - to touch
+informar - to inform
+destacar - to highlight (distinguish, stand out)
+iniciar - to start
+dedicar - to dedicate
+oír - to hear
+acompañar - to accompany
+referir - to refer to
+sufrir - to suffer
+nacer - to birth
+comer - to eat
+bajar - to lower
+descargar - to download
+cargar - to load
+suceder - to succeed
+dormir - to sleep
+preparar - to prepare
+agregar - to add (to aggregate)
+añadir - to add (to append)
+correr - to run
+subir - to go up (rise, upload)
+publicar - to publish
+traer - to bring
+anunciar - to announce
+descubrir - to discover
+construir - to build
+detener - to stop
+aceptar - to accept
+meter - to put (stick, fit something into)
+ocupar - to occupy
+demostrar - to show
+proponer - to propose
+estudiar - to study
+comprar - to buy
+expresar - to express
+olvidar - to forget
+aumentar - to increase
+definir - to define
+regresar - to return
+mover - to move
+entregar - to deliver
+sostener - to hold
+reducir - to reduce
+aprender - to learn
+provocar - to provoke
+mejorar - to improve
+unir - to join
+constituir - to constitute
+compartir - to share
+enfrentar - to confront
+imaginar - to imagine
+crecer - to grow
+comprender - to understand
+apoyar - to support
+comentar - to comment
+vender - to sell
+faltar - to fail
+aplicar - to apply
+colocar - to place
+cubrir - to cover
+repetir - to repeat
+disponer - to arrange
+obligar - to force
+celebrar - to celebrate
+echar - to throw out (to expel)
+relacionar - to link
+marcar - to mark
+desear - to wish
+significar - to mean
+caminar - to walk
+superar - to get over (to beat, to pass)
+organizar - to organize
+registrar - to register
+andar - to walk
+identificar - to identify
+elegir - to choose
+abandonar - to leave
+soler - to be used to (usually)
+plantear - to raise
+ubicar - to locate
+requerir - to request
+partir - to cut (to break off)
+reunir - to gather
+actuar - to act
+lanzar - to throw (to launch)
+importar - to import
+analizar - to analyze
+mencionar - to mention
+sumar - to add up
+pretender - to pretend
+enviar - to send
+declarar - to declare
+manifestar - to manifest
+atender - to attend
+basar - to base
+recuperar - to retrieve
+aprovechar - to make good use of
+asumir - to assume
+desaparecer - to disappear
+funcionar - to work (to not be broken electronics etc)
+permanecer - to stay
+preocupar - to worry
+preferir - to prefer
+confirmar - to confirm
+advertir - to warn
+imponer - to impose
+integrar - to integrate
+recoger - to pick up (to collect)
+parar - to stop
+proteger - to protect
+depender - to depend
+negar - to deny
+resolver - to solve
+surgir - to come up (arise, emerge, appear)
+corresponder - to correspond
+determinar - to determine
+concluir - to conclude
+visitar - to visit
+exigir - to demand
+contener - to contain
+aprobar - to approve
+romper - to break
+viajar - to travel
+quitar - to remove
+interesar - to interest
+defender - to defend
+avanzar - to advance
+prever - to foresee
+implicar - to involve
+apuntar - to point out
+invitar - to invite
+causar - to cause
+vestir - to dress
+controlar - to control
+adquirir - to acquire (to purchase)
+incorporar - to incorporate
+guardar - to save
+insistir - to insist
+conducir - to drive
+acordar - to agree
+contestar - to answer (provide answer)
+tirar - to throw away
+despertar - to wake up
+reír - to laugh
+sorprender - to surprise
+llorar - to cry
+situar - to put (place, locate, post)
+garantizar - to guarantee
+separar - to separate
+impedir - to prevent
+gritar - to shout
+costar - to cost
+cruzar - to cross
+disfrutar - to enjoy
+cantar - to sing
+citar - to quote
+sonreír - to smile
+extender - to extend
+poseer - to own
+contribuir - to contribute
+exponer - to exhibit
+instalar - to install
+notar - to note
+sonar - to sound
+convencer - to convince
+mandar - to send
+asociar - to link
+aportar - to provide
+acudir - to go to
+asistir - to attend
+firmar - to sign
+pertenecer - to belong to
+solicitar - to request
+enseñar - to teach (to show)
+cortar - to cut (with sharp objects)
+recorrer - to tour (to travel)
+fijar - to set (to fix on, put, secure in place)
+promover - to promote
+describir - to describe
+revelar - to reveal
+retirar - to take away (to withdraw)
+contemplar - to observe (to consider)
+elaborar - to elaborate
+ordenar - to order
+reflejar - to reflect
+limitar - to limit
+rodear - to surround
+transformar - to transform
+interpretar - to interpret
+llenar - to fill
+consistir - to consist of
+cuidar - to care
+someter - to subjugate (to subdue)
+avisar - to warn
+emplear - to employ
