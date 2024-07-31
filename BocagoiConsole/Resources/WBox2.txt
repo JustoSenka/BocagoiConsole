@@ -27,7 +27,9 @@ conocer - to know (know or recognize someone)
 salir - to leave (to exit, leave home etc)
 realizar - to make
 tomar - to take (to eat food or when ordering)
-tratar - to try
+tratar - to try (do smth, have an attempt at it)
+intentar - to try (have an intent of doing it)
+probar - to try (try out, test something)
 contar - to count
 llamar - to call
 venir - to come
@@ -90,7 +92,6 @@ reconocer - to recognize
 dirigir - to direct (to address)
 servir - to serve
 alcanzar - to reach
-intentar - to try
 cumplir - to achieve (to accomplish)
 leer - to read
 obtener - to obtain
