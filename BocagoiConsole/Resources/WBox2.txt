@@ -7,12 +7,12 @@ decir - to say
 ir - to go
 dar - to give
 ver - to see
-saber - to know
+saber - to know (things, information)
 pasar - to pass (by)
 deber - to must
 querer - to want
 llegar - to arrive
-dejar - to leave
+dejar - to leave (something somewhere, to let, allow)
 llevar - to carry
 encontrar - to find (to meet, encounter)
 hallar - to find (to discover)
@@ -22,16 +22,16 @@ quedar - to stay
 parecer - to seem
 hablar - to speak
 pensar - to think
-volver - to back to
-conocer - to know
-salir - to exit
+volver - to return (go back)
+conocer - to know (know or recognize someone)
+salir - to leave (to exit, leave home etc)
 realizar - to make
-tomar - to take
+tomar - to take (to eat food or when ordering)
 tratar - to try
 contar - to count
 llamar - to call
 venir - to come
-mirar - to see
+mirar - to watch
 presentar - to present
 permitir - to allow
 esperar - to wait
@@ -52,8 +52,8 @@ lograr - to achieve
 empezar - to start (less formal)
 comenzar - to start (formal)
 recordar - to remember
-pedir - to ask for
-preguntar - to ask
+pedir - to ask for (something or order food etc)
+preguntar - to ask (a question)
 producir - to produce
 convertir - to convert
 entrar - to enter
@@ -186,7 +186,7 @@ registrar - to register
 andar - to walk
 identificar - to identify
 elegir - to choose
-abandonar - to leave
+abandonar - to leave (to abandon)
 soler - to be used to (usually)
 plantear - to raise
 ubicar - to locate

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace BocagoiConsole.Singletons;
 
@@ -116,7 +117,12 @@ public class Bocagoi
 
     public bool IsAnswerCorrect((string, string) word, string answer)
     {
-        return string.Equals(answer, word.Right(Settings.Mode), StringComparison.InvariantCultureIgnoreCase);
+        var trimmedAnswer = answer.Trim();
+
+        var wordToUse = word.Right(Settings.Mode);
+        var trimmedWord = Regex.Replace(wordToUse, @"\(.*\)", "").Trim();
+
+        return string.Equals(trimmedAnswer, trimmedWord, StringComparison.InvariantCultureIgnoreCase);
     }
 
     public Run CreateAndPrintResults(Score score, DateTime startTime, DateTime endTime)
