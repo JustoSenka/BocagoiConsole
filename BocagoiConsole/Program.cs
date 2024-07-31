@@ -10,16 +10,21 @@ namespace BocagoiConsole
     {
         static void Main(string[] args)
         {
+            GlobalSettings.Init();
+
             Boxes.Init();
             History.Init();
             RedBox.Init();
             Bocagoi.Init();
-            ConsoleControl.Init();
 
+            ConsoleControl.Init();
             ConsoleControl.Instance.UpdateTitle();
 
-            handler = new ConsoleEventDelegate(ConsoleEventCallback);
-            SetConsoleCtrlHandler(handler, true);
+            if (GlobalSettings.Instance.Data.RememberConsoleFontSize)
+            {
+                handler = new ConsoleEventDelegate(ConsoleEventCallback);
+                SetConsoleCtrlHandler(handler, true);
+            }
 
             var stateMap = StateMachine.Generate();
             var walker = new ConsoleStateMachineWalker(stateMap);

@@ -37,18 +37,25 @@ public class ConsoleControl : IDisposable
 
         if (m_Settings != null)
             RestoreSize();
+
     }
 
     public void Dispose()
     {
+        if (!GlobalSettings.Instance.Data.RememberConsoleFontSize)
+            return;
+
         CollectCurrentSettings();
 
-        var text = JsonConvert.SerializeObject(m_Settings);
+        var text = JsonConvert.SerializeObject(m_Settings, Formatting.Indented);
         File.WriteAllText(m_FilePath, text);
     }
 
     private void CollectCurrentSettings()
     {
+        if (!GlobalSettings.Instance.Data.RememberConsoleFontSize)
+            return;
+
         m_Settings ??= new ConsoleSettings();
 
         try
@@ -67,6 +74,9 @@ public class ConsoleControl : IDisposable
 
     public void RestoreSize()
     {
+        if (!GlobalSettings.Instance.Data.RememberConsoleFontSize)
+            return;
+
 #pragma warning disable CA1416 // Validate platform compatibility
         try
         {
@@ -86,7 +96,7 @@ public class ConsoleControl : IDisposable
         var title = m_DefaultTitle;
 
         if (m_PracticeTitle)
-            title = $"{m_DefaultTitle} | {TitlePracticeBoxName} | {TitlePracticeWordsFrom} - {TitlePracticeWordsTo} | {TitlePracticeWordsCompleted} / {TitlePracticeWordsTo - TitlePracticeWordsFrom + 1} | Misstakes: {TitlePracticeWordsFailed}";
+            title = $"{m_DefaultTitle} | {TitlePracticeBoxName} | {TitlePracticeWordsFrom} - {TitlePracticeWordsTo} | {TitlePracticeWordsCompleted} / {TitlePracticeWordsTo - TitlePracticeWordsFrom + 1} | Mistakes: {TitlePracticeWordsFailed}";
 
         Console.Title = title;
     }

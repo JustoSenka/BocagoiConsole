@@ -34,7 +34,7 @@ public class History
         if (Runs.Count == 0)
             throw new Exception("Not saving empty history file due to safety reasons");
 
-        var text = JsonConvert.SerializeObject(Runs);
+        var text = JsonConvert.SerializeObject(Runs, Formatting.Indented);
         TrySaveBackup(text);
 
         File.WriteAllText(m_FilePath, text);
@@ -65,7 +65,7 @@ public struct Run
 
     public override string ToString()
     {
-        return string.Format("{0, -16} | WBox{1, -3} | From: {2,4}, To: {3,4} | Duration: {4,3} mins | Mode: {5,1} | Score: {6,3}%",
+        return string.Format("{0, -16} | WBox{1, -3} | {2,4} - {3,-4} | Duration: {4,3} mins | Mode: {5,1} | Score: {6,3}%",
             Time.ToString("yyyy-MM-dd HH:mm"),
             Box,
             From,

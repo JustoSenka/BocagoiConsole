@@ -61,8 +61,8 @@ public class Bocagoi
 
             VerifyAnswer(score, wordsLeft, word, answer);
 
-            Console.WriteLine("Press enter to continue...");
-            Console.ReadLine();
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
             Console.Clear();
         }
     }
@@ -102,7 +102,8 @@ public class Bocagoi
 
     private string AskToInputAnswer((string, string) word)
     {
-        Console.Write($"{word.Left(Settings.Mode)} - ");
+        Console.WriteLine();
+        Console.Write($"     {word.Left(Settings.Mode)} - ");
         var answer = ConsoleHelper.ReadLine();
         return answer;
     }

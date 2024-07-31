@@ -2,6 +2,7 @@
 
 namespace BocagoiConsole.Common;
 
+using BocagoiConsole.Singletons;
 using System.Collections.Generic;
 
 public static class ConsoleHelper
@@ -10,8 +11,7 @@ public static class ConsoleHelper
 
     public static string ReadLine()
     {
-        // TODO: have this under feature flag : Console.ReadLine()
-        return CustomReadLine();
+        return GlobalSettings.Instance.Data.UseDoubleSpaceConsole ? CustomReadLine() : Console.ReadLine();
     }
 
     public static string CustomReadLine()
