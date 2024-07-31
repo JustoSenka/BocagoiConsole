@@ -103,7 +103,7 @@ public class Bocagoi
     private string AskToInputAnswer((string, string) word)
     {
         Console.Write($"{word.Left(Settings.Mode)} - ");
-        var answer = Console.ReadLine();
+        var answer = ConsoleHelper.ReadLine();
         return answer;
     }
 

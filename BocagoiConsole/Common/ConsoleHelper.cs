@@ -6,7 +6,13 @@ using System.Collections.Generic;
 
 public static class ConsoleHelper
 {
-    public static char shownCharacter = '*';
+    private const char emptyChar = ' ';
+
+    public static string ReadLine()
+    {
+        // TODO: have this under feature flag : Console.ReadLine()
+        return CustomReadLine();
+    }
 
     public static string CustomReadLine()
     {
@@ -14,17 +20,19 @@ public static class ConsoleHelper
         CustomReadLineInternal(
             GetLength: () => list.Count,
             GetFullStringChars: () => list,
+            GetLastChar: () => list.Count == 0 ? '\0' : list[list.Count - 1],
             Append: list.Add,
             InsertAt: list.Insert,
             RemoveAt: list.RemoveAt,
             RemoveRange: list.RemoveRange,
             Clear: list.Clear);
-        return string.Concat(list);
+        return string.Concat(list).TrimEnd();
     }
 
-    internal static void CustomReadLineInternal(
+    private static void CustomReadLineInternal(
         Func<int> GetLength,
         Func<IEnumerable<char>> GetFullStringChars,
+        Func<char> GetLastChar,
         Action<char> Append,
         Action<int, char> InsertAt,
         Action<int> RemoveAt,
@@ -91,6 +99,9 @@ public static class ConsoleHelper
 
         static void ConsoleWriteChar(char @char)
         {
+            // TODO: This does not need to write to console,
+            // but we need to deal with cursor position somehow
+
             int temp = Console.CursorLeft;
             Console.Write(@char);
             if (Console.CursorLeft == temp)
@@ -101,6 +112,9 @@ public static class ConsoleHelper
 
         static void ConsoleWriteString(string @string)
         {
+            // TODO: This does not need to write to console,
+            // but we need to deal with cursor position somehow
+
             foreach (char c in @string)
             {
                 ConsoleWriteChar(c);
@@ -112,7 +126,14 @@ public static class ConsoleHelper
             MoveToOrigin();
 
             foreach (char c in GetFullStringChars())
-                ConsoleWriteChar(c);
+            {
+                int temp = Console.CursorLeft;
+                Console.Write(c);
+                if (Console.CursorLeft == temp)
+                {
+                    MovePositive(1);
+                }
+            }
 
             MoveNegative(GetLength() - position);
         }
@@ -138,7 +159,7 @@ public static class ConsoleHelper
                 if (keyInfo.Modifiers.HasFlag(ConsoleModifiers.Control))
                 {
                     MoveToOrigin();
-                    ConsoleWriteString(new string(shownCharacter, GetLength() - position) + new string(' ', position));
+                    ConsoleWriteString(new string(emptyChar, GetLength() - position) + new string(' ', position));
                     MoveNegative(GetLength());
                     RemoveRange(0, position);
                     position = 0;
@@ -206,7 +227,7 @@ public static class ConsoleHelper
                     if (keyInfo.Modifiers.HasFlag(ConsoleModifiers.Control))
                     {
                         MoveToOrigin();
-                        ConsoleWriteString(new string(shownCharacter, GetLength() - position) + new string(' ', position));
+                        ConsoleWriteString(new string(emptyChar, GetLength() - position) + new string(' ', position));
                         MoveNegative(GetLength());
                         RemoveRange(0, position);
                         position = 0;
@@ -226,7 +247,7 @@ public static class ConsoleHelper
                     if (keyInfo.Modifiers.HasFlag(ConsoleModifiers.Control))
                     {
                         MoveToOrigin();
-                        ConsoleWriteString(new string(shownCharacter, position) + new string(' ', GetLength() - position));
+                        ConsoleWriteString(new string(emptyChar, position) + new string(' ', GetLength() - position));
                         MoveNegative(GetLength() - position);
                         RemoveRange(position, GetLength() - position);
                     }
@@ -281,6 +302,13 @@ public static class ConsoleHelper
             {
                 if (!(keyInfo.KeyChar is '\0'))
                 {
+                    if (keyInfo.KeyChar == ' ' && GetLastChar() == ' ')
+                    {
+                        MovePositive(GetLength() - position);
+                        Console.WriteLine();
+                        break;
+                    }
+
                     if (position == GetLength())
                     {
                         ConsoleWriteChar(keyInfo.KeyChar);
