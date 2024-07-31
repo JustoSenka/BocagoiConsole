@@ -68,7 +68,7 @@ public class RedBox
     {
         try
         {
-            var oldLines = File.ReadAllLines(m_FilePathBackup);
+            var oldLines = File.Exists(m_FilePathBackup) ? File.ReadAllLines(m_FilePathBackup) : Array.Empty<string>();
 
             if (oldLines.Count() <= lines.Count())
                 File.WriteAllLines(m_FilePathBackup, lines);

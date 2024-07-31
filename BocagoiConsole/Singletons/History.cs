@@ -44,7 +44,7 @@ public class History
     {
         try
         {
-            var oldText = File.ReadAllText(m_FilePathBackup);
+            var oldText = File.Exists(m_FilePathBackup) ? File.ReadAllText(m_FilePathBackup) : string.Empty;
 
             if (oldText.Length <= text.Length)
                 File.WriteAllText(m_FilePathBackup, text);

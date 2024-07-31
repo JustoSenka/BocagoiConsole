@@ -1,4 +1,5 @@
-﻿using BocagoiConsole.Singletons;
+﻿using BocagoiConsole.Common;
+using BocagoiConsole.Singletons;
 using BocagoiConsole.States;
 using System;
 using System.Collections.Generic;

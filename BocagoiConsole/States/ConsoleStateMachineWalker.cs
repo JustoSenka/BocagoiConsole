@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BocagoiConsole.Common;
+using System;
 using System.Collections.Generic;
 
 namespace BocagoiConsole.States;
