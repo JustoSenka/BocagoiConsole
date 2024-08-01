@@ -50,9 +50,13 @@ trabajar - to work (like a job)
 recibir - to receive
 mantener - to maintain
 explicar - to explain
-lograr - to achieve
+alcanzar - to reach
+cumplir - to achieve (to accomplish)
+lograr - managed to get (be able to get)
+conseguir - to get (a thing or object)
+obtener - to obtain
 empezar - to start (less formal)
-comenzar - to start (formal)
+comenzar - to begin (more formal)
 recordar - to remember
 pedir - to ask for (something or order food etc)
 preguntar - to ask (a question)
@@ -65,6 +69,7 @@ escribir - to write
 utilizar - to utilize
 entender - to understand
 terminar - to finish (a task etc)
+acabar - to end (to finish, having done something)
 ganar - to win
 incluir - to include
 morir - to die
@@ -77,7 +82,6 @@ escuchar - to listen to
 sentar - to sit
 cambiar - to change
 aparecer - to appear
-acabar - to end (to finish, having done something)
 decidir - to decide
 resultar - to result
 caer - to fall
@@ -85,16 +89,12 @@ desarrollar - to develop
 necesitar - to need
 sacar - to take out
 establecer - to establish
-conseguir - to get
 indicar - to indicate
 formar - to form
 reconocer - to recognize
 dirigir - to direct (to address)
 servir - to serve
-alcanzar - to reach
-cumplir - to achieve (to accomplish)
 leer - to read
-obtener - to obtain
 ayudar - to help
 usar - to use
 observar - to observe
