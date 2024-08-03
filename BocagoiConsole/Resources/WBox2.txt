@@ -19,10 +19,10 @@ hallar - to find (to discover)
 seguir - to follow
 poner - to put
 quedar - to stay
-parecer - to seem
+parecer - to seem (to look like)
 hablar - to speak
 pensar - to think
-volver - to return (go back)
+volver - to return (go back to place)
 conocer - to know (know or recognize someone)
 salir - to leave (to exit, leave home etc)
 realizar - to make
@@ -57,17 +57,18 @@ conseguir - to get (a thing or object)
 obtener - to obtain
 empezar - to start (less formal)
 comenzar - to begin (more formal)
+iniciar - to start (formal, to initiate)
 recordar - to remember
 pedir - to ask for (something or order food etc)
 preguntar - to ask (a question)
 producir - to produce
 convertir - to convert
 entrar - to enter
-mostrar - to show
 señalar - to point out
 escribir - to write
 utilizar - to utilize
-entender - to understand
+entender - to understand (surface level meaning)
+comprender - to understand (deeper meaning)
 terminar - to finish (a task etc)
 acabar - to end (to finish, having done something)
 ganar - to win
@@ -114,7 +115,6 @@ representar - to represent
 tocar - to touch
 informar - to inform
 destacar - to highlight (distinguish, stand out)
-iniciar - to start
 dedicar - to dedicate
 oír - to hear
 acompañar - to accompany
@@ -137,11 +137,13 @@ traer - to bring
 anunciar - to announce
 descubrir - to discover
 construir - to build
-detener - to stop
+detener - to stop (arrest, formal)
+parar - to stop (informal)
 aceptar - to accept
 meter - to put (stick, fit something into)
 ocupar - to occupy
-demostrar - to show
+demostrar - to show (to prove)
+mostrar - to show (like a thing or object)
 proponer - to propose
 estudiar - to study
 comprar - to buy
@@ -149,7 +151,7 @@ expresar - to express
 olvidar - to forget
 aumentar - to increase
 definir - to define
-regresar - to return
+regresar - to return (objects)
 mover - to move
 entregar - to deliver
 sostener - to hold
@@ -163,7 +165,6 @@ compartir - to share
 enfrentar - to confront
 imaginar - to imagine
 crecer - to grow
-comprender - to understand
 apoyar - to support
 comentar - to comment
 vender - to sell
@@ -180,20 +181,20 @@ relacionar - to link
 marcar - to mark
 desear - to wish
 significar - to mean
-caminar - to walk
+caminar - to walk (the action of walking)
+andar - to walk (to walk around, stroll)
 superar - to get over (to beat, to pass)
 organizar - to organize
 registrar - to register
-andar - to walk
 identificar - to identify
 elegir - to choose
 abandonar - to leave (to abandon)
 soler - to be used to (usually)
-plantear - to raise
+plantear - to bring up (to raise)
 ubicar - to locate
 requerir - to request
 partir - to cut (to break off)
-reunir - to gather
+reunir - to gather (together)
 actuar - to act
 lanzar - to throw (to launch)
 importar - to import
@@ -219,7 +220,6 @@ advertir - to warn
 imponer - to impose
 integrar - to integrate
 recoger - to pick up (to collect)
-parar - to stop
 proteger - to protect
 depender - to depend
 negar - to deny
@@ -306,3 +306,4 @@ cuidar - to care
 someter - to subjugate (to subdue)
 avisar - to warn
 emplear - to employ
+lavar - to wash
