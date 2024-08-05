@@ -1,0 +1,110 @@
+el padre - father
+la madre - mother
+los padres - parents
+el papá - dad
+la mamá - mom
+el chico - boy
+la chica - girl
+el hermano - brother
+la hermana - sister
+el hijo - son
+la hija - daughter
+los hijos - children
+el abuelo - grandfather
+la abuela - grandmother
+el nieto - grandson
+la nieta - granddaughter
+el tío - uncle
+la tía - aunt
+el sobrino - nephew
+la sobrina - niece
+el primo - cousin (male)
+la prima - cousin (female)
+la familia - family
+el desván - attic
+el sótano - basement
+el baño - bathroom
+el dormitorio - bedroom
+el clóset - closet
+el comedor - dining room
+la puerta - door
+la entrada - entryway
+el garaje - garage
+el pasillo - hall
+la casa - house
+la cocina - kitchen
+la sala - living room
+el despacho - office
+el porche - porch
+el cuarto - room
+la ducha - shower
+la ventana - window
+el jardín - yard (garden)
+el oso - bear
+el pájaro - bird
+el toro - bull
+el gato - cat
+el pollo - chicken
+la vaca - cow
+el perro - dog
+el burro - donkey
+el pato - duck
+el elefante - elephant
+sh el pez - fi
+el caballo - horse
+el canguro - kangaroo
+el cordero - lamb
+el león - lion
+el mono - monkey
+el ratón - mouse
+el cerdo - pig
+el conejo - rabbit
+la rata - rat
+el gallo - rooster
+la oveja - sheep
+el tigre - tiger
+el pavo - turkey
+el lobo - wolf
+la tarea - assignment
+la mochila - backpack
+el libro - book
+la silla - chair
+la tiza - chalk
+la pizarra - chalkboard
+la sala de clase - classroom
+el reloj - clock
+el escritorio - desk
+el diccionario - dictionary
+el borrador - eraser
+la lección - lesson
+el mapa - map
+el cuaderno - notebook
+el papel - paper
+la pluma - pen
+el lápiz - pencil
+la regla - ruler
+la escuela - school
+el estudiante - student (male)
+el maestro - teacher (male)
+la pared - wall
+cada - each
+bailar - to dance
+caminar - to walk
+cantar - to sing
+comprar - to buy
+escuchar - to listen (to)
+estudiar - to study
+mirar - to watch, to look (at)
+pagar - to pay
+tocar - to play (a musical instrument), to touch
+trabajar - to work
+mucho - a lot
+porque - because
+porqué - why
+el lunes - Monday
+el martes - Tuesday
+el miércoles - Wednesday
+el jueves - Thursday
+el viernes - Friday
+el sábado - Saturday
+el domingo - Sunday
