@@ -50,7 +50,7 @@ el perro - dog
 el burro - donkey
 el pato - duck
 el elefante - elephant
-sh el pez - fi
+el pez - fish
 el caballo - horse
 el canguro - kangaroo
 el cordero - lamb
