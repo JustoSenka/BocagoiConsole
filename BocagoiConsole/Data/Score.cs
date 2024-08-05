@@ -16,7 +16,7 @@ public class Score
 
     public int DecimalScore()
     {
-        var score = (int)(100f * m_Correct / (m_Correct + m_Incorrect));
+        var score = (int)(100f * (m_Correct - m_Incorrect) / (m_Correct * 1f));
         return Math.Max(0, Math.Min(100, score));
     }
 }
