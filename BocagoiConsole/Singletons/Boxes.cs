@@ -1,5 +1,4 @@
-﻿using BocagoiConsole.Core;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,20 +10,40 @@ public class Boxes
     public static void Init() { Instance = new Boxes(); }
     public static Boxes Instance { get; private set; }
 
-    private IDictionary<int, List<(string Left, string Right)>> Words { get; }
+    public IDictionary<int, Box> BoxList { get; }
 
-    public string GetBoxName(int index) => string.Format("WBox{0}.txt", index);
+    public const string ResourceDir = "Resources";
 
     private Boxes()
     {
-        CreateBoxIfNotExist(1);
-        CreateBoxIfNotExist(2);
-
-        Words = new Dictionary<int, List<(string, string)>>();
+        BoxList = new Dictionary<int, Box>();
         ReloadWords();
     }
 
-    public IDictionary<int, List<(string Left, string Right)>> GetAllWords() => Words;
+    private void ReloadWords()
+    {
+        BoxList.Clear();
+
+        int i = 1;
+        foreach (var boxName in GetFilesInResourceFolder())
+        {
+            var pairs = File.ReadAllLines($"{ResourceDir}/{boxName}")
+                .Where(line => !string.IsNullOrWhiteSpace(line)) // Skipping whitespace
+                .Select(line => line.Trim(' ', '\r', '\t').Split('_', '-', '–'))
+                .Where(words => words.Length > 1)
+                .Select(words => (words[0].Trim(), words[1].Trim()))
+                .ToList();
+
+            BoxList[i] = new Box
+            {
+                Index = i,
+                Name = boxName,
+                Words = pairs
+            };
+
+            i++;
+        }
+    }
 
     public List<(string Left, string Right)> GetWords(int boxIndex)
     {
@@ -40,58 +59,40 @@ public class Boxes
                 .Select(word => (word.Left, word.Right))
                 .ToList();
 
-        return Words[boxIndex];
+        return BoxList[boxIndex].Words;
     }
 
-    private void CreateBoxIfNotExist(int index)
+    public string GetBoxName(int boxIndex)
     {
-        var fileName = GetBoxName(index);
-        if (!File.Exists(fileName))
-            File.Create(fileName);
+        if (boxIndex == 101)
+            return "MostFailed";
+
+        if (boxIndex == 102)
+            return "LeastPracticed";
+
+        return BoxList[boxIndex].Name;
     }
 
-    private void ReloadWords()
+    public IList<string> GetFilesInResourceFolder()
     {
-        Words.Clear();
-
-        int i = 1;
-        foreach (var boxName in GetAllBoxNames())
-        {
-            var pairs = File.ReadAllLines(boxName)
-                .Where(line => !string.IsNullOrWhiteSpace(line)) // Skipping whitespace
-                .Select(line => line.Trim(' ', '\r', '\t').Split('_', '-', '–'))
-                .Where(words => words.Length > 1)
-                .Select(words => (words[0].Trim(), words[1].Trim()))
-                .ToList();
-
-            Words[i] = pairs;
-            i++;
-        }
-    }
-
-    public IEnumerable<string> GetAllBoxNames()
-    {
-        int i = 1;
-        var boxName = GetBoxName(i);
-
-        while (File.Exists(boxName))
-        {
-            yield return boxName;
-            boxName = GetBoxName(++i);
-        }
-    }
-
-    public int CreateNewBox()
-    {
-        var index = GetAllBoxNames().Count() + 1;
-        File.WriteAllText(GetBoxName(index), Strings.AddingWordsToBoxExample);
-        ReloadWords();
-        return index;
+        var resourcesDir = new DirectoryInfo(ResourceDir);
+        return resourcesDir.GetFiles("*.txt", SearchOption.TopDirectoryOnly)
+            .Select(file => file.Name)
+            .OrderBy(s => s)
+            .ToList();
     }
 
     public string BuildBoxNameListWithWordCount()
-        => string.Join(Environment.NewLine, Words.Keys.Select(index => $"{index}. {GetBoxName(index)} ({Words[index].Count})"));
+        => string.Join(Environment.NewLine, BoxList.Keys.Select(index => $"{index}. {BoxList[index].Name} ({BoxList[index].Words.Count})"));
 
     public string BuildBoxNameList()
-        => string.Join(Environment.NewLine, Words.Keys.Select(index => $"{index}. {GetBoxName(index)}"));
+        => string.Join(Environment.NewLine, BoxList.Keys.Select(index => $"{index}. {BoxList[index].Name}"));
+}
+
+public class Box
+{
+    public int Index { get; set; }
+    public string Name { get; set; }
+    public string Path => $"{Boxes.ResourceDir}/{Name}";
+    public List<(string Left, string Right)> Words { get; set; }
 }

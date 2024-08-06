@@ -11,19 +11,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resources\WBox1.txt">
+    <None Update="Resources\Top_Nouns.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\WBox2.txt">
+    <None Update="Resources\Top_Verbs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\WBox5.txt">
+    <None Update="Resources\Book_2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\WBox4.txt">
+    <None Update="Resources\Book_1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\WBox3.txt">
+    <None Update="Resources\Top_Adjectives.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -97,8 +97,9 @@ public class StateMachine
             {
                 StateID.CreateBox, new SingleActionState(action: () =>
                 {
-                    var index = Boxes.Instance.CreateNewBox();
-                    Bocagoi.Instance.TryOpenBox(index);
+                    // TODO: Create new box
+                    // var index = Boxes.Instance.CreateNewBox();
+                    // Bocagoi.Instance.TryOpenBox(index);
 
                 }, funcNextState: () => StateID.Menu)
             },
@@ -109,21 +110,21 @@ public class StateMachine
                     var str = Console.ReadLine();
                     Console.WriteLine();
 
-                    var wordBoxesMap = Boxes.Instance.GetAllWords()
-                        .Select(pairarray => (pairarray.Key, Words: pairarray.Value
-                        .Where(pair => pair.Left.Contains(str) || pair.Right.Contains(str))
-                        .ToList()));
+                    var wordBoxesMap = Boxes.Instance.BoxList.Values.Select(box =>
+                       (box.Index,
+                        box.Name,
+                        box.Words.Where(tuple => tuple.Left.Contains(str) || tuple.Right.Contains(str)).ToList()));
 
                     var sb = new StringBuilder();
-                    foreach(var (box, wordsFound) in wordBoxesMap)
+                    foreach(var (index, boxName, wordsFound) in wordBoxesMap)
                     {
                         if (wordsFound.Count == 0)
                             continue;
 
-                        sb.AppendLine(Boxes.Instance.GetBoxName(box) + ":");
+                        sb.AppendLine(boxName + ":");
                         sb.AppendLine();
-                        foreach(var word in wordsFound)
-                            sb.AppendLine(word.Item1 + " - " + word.Item2);
+                        foreach(var (Left, Right) in wordsFound)
+                            sb.AppendLine(Left + " - " + Right);
 
                         sb.AppendLine();
                     }

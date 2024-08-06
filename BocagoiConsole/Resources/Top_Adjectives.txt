@@ -1,0 +1,348 @@
+nuevo - new
+grande - big
+bueno - good
+último - last
+mayor - greater
+nacional - national
+social - social
+mejor - better
+propio - own
+importante - important
+público - public
+alto - high
+político - political
+pequeño - small
+único - unique
+largo - long
+humano - human
+económico - economic
+posible - possible
+general - general
+internacional - international
+diferente - different
+solo - only
+español - Spanish
+principal - main
+más - more
+apenas - hardly
+también - also
+ya - already
+muy - very
+básicamente - basically
+solo - only
+después - later
+ahora - now
+así - thus
+bien - well
+siempre - always
+antes - before
+tan - so
+cómo - how
+sí - yes
+hoy - today
+entonces - then
+luego - then
+además - in addition
+nunca - never
+casi - almost
+poco - sparsely
+aquí - here
+menos - least
+necesario - required
+próximo - next
+distinto - different
+claro - light
+siguiente - following
+malo - bad
+anterior - previous
+especial - special
+natural - natural
+cultural - cultural
+bajo - low
+actual - current
+blanco - white
+fuerte - strong
+difícil - difficult
+menor - lesser
+viejo - old
+real - real
+local - local
+negro - black
+europeo - European
+diverso - various
+libre - free
+seguro - safe
+común - common
+tanto - such
+sin embargo - however
+mucho - a lot
+aún - still
+dentro - within
+ayer - yesterday
+allí - there
+incluso - inclusive
+ahí - there
+ruidosamente - loudly
+todavía - still
+hasta - even
+tampoco - nor
+cerca - near
+allá - there
+apenas - barely
+a lo mejor - perhaps
+cuidadosamente - carefully
+pronto - soon
+normalmente - normally
+fuera - out
+atrás - behind
+encima - above
+tarde - afternoon
+finalmente - finally
+privado - private
+central - central
+popular - popular
+dicho - such
+físico - physical
+superior - top
+joven - young
+personal - personal
+capaz - capable
+antiguo - old
+histórico - historical
+cierto - certain
+técnico - technical
+presente - present
+oficial - official
+mexicano - Mexican
+fácil - easy
+militar - military
+contrario - contrary
+civil - civil
+verdadero - true
+lleno - full
+suficiente - enough
+rápido - fast
+científico - scientific
+especialmente - especially
+tal vez - maybe
+lejos - far
+demasiado - too
+quizá - maybe
+mal - badly
+perfectamente - perfectly
+bastante - quite a lot
+diariamente - daily
+adelante - forward
+detrás - back
+igual - likewise
+ni siquiera - not even
+primero - first
+actualmente - currently
+así como - as well as
+precisamente - precisely
+arriba - up
+realmente - actually
+jamás - never
+quizás - maybe
+recién - just
+asimismo - also
+no obstante - however
+difícilmente - with difficulty
+directo - direct
+completo - complete
+interno - internal
+fundamental - fundamental
+comercial - commercial
+familiar - familiar
+amplio - extensive
+educativo - educational
+vivo - live, alive
+similar - similar
+rojo - red
+financiero - financial
+medio - medium
+enorme - huge
+total - total
+profesional - professional
+adecuado - suitable
+médico - doctor
+grave - serious
+tradicional - traditional
+electoral - electoral
+básico - basic
+igual - same
+duro - hard
+profundo - deep
+alrededor - around
+solamente - only
+aun - even
+por supuesto - of course
+delante - in front
+abajo - below
+para nada - not at all
+fácilmente - easily
+simplemente - simply
+directamente - directly
+lentamente - slowly
+debajo - under
+por tanto - therefore
+principalmente - mainly
+por lo tanto - therefore
+totalmente - totally
+a menudo - often
+por lo menos - at least
+acá - here
+probablemente - probably
+prácticamente - practically
+seguramente - surely
+frecuentemente - frequently
+aproximadamente - approximately
+completamente - completely
+final - last
+municipal - municipal
+inmediato - immediate
+junto - together
+argentino - Argentinean
+peor - worse
+francés - French
+corto - short
+oscuro - dark
+estadounidense - American
+cercano - near
+regional - regional
+feliz - happy
+positivo - positive
+máximo - maximum
+serio - serious
+laboral - labor
+imposible - impossible
+simple - simple
+pobre - poor
+reciente - recent
+extraño - strange
+ambiental - environmental
+específico - specific
+normal - normal
+posteriormente - later
+nuevamente - again
+por fin - finally
+igualmente - equally
+jamás - never
+acaso - perhaps
+justo - just
+recientemente - recently
+por favor - kindly
+rápidamente - quickly
+únicamente - only
+afuera - outside
+respectivamente - respectively
+inmediatamente - immediately
+exactamente - exactly
+claramente - clearly
+generalmente - generally
+perfectamente - perfectly
+enseguida - right away
+temprano - early
+adentro - inside
+sobre - about
+entre - between
+sin - without
+desde - from
+determinado - determined
+moderno - modern
+urbano - urban
+mínimo - minimum
+musical - musical
+deportivo - sporty
+federal - federal
+frío - cold
+legal - legal
+verde - green
+interesante - interesting
+artístico - artistic
+judicial - judicial
+particular - particular
+colombiano - Colombian
+previo - previous
+cubano - Cuban
+pleno - full
+eléctrico - electric
+tecnológico - technology
+abierto - open
+global - global
+infantil - childish
+absoluto - absolute
+definitivo - definitive
+hasta - to, until
+durante - during
+ante - before
+contra - against
+según - according to
+tras - after
+bajo - under
+a través de - through
+a partir de - as of
+frente a - in front of
+además de - in addition to
+a pesar de - in spite of
+mediante - through
+junto a - together with
+debido a - due to
+gracias a - thanks to
+pese a - despite
+de acuerdo con - in accordance with
+en cuanto a - in regard to
+junto con - together with
+acerca de - about
+respecto a - with respect to
+en torno a - around
+en lugar de - instead of
+de acuerdo a - according to
+complejo - complex
+estatal - statewide
+rico - rich
+raro - rare
+significativo - significant
+sencillo - simple
+perfecto - perfect
+permanente - permanent
+religioso - religious
+activo - active
+famoso - famous
+numeroso - numerous
+rural - rural
+tranquilo - quiet
+extranjero - foreign
+democrático - democratic
+azul - blue
+femenino - female
+escaso - scarce
+intenso - intense
+puro - pure
+unido - joined
+universitario - academic
+original - original
+exterior - outside
+seco - dry
+digital - digital
+alemán - German
+literario - literary
+independiente - independent
+armado - armed
+sanitario - sanitary
+electrónico - electronic
+indígena - indigenous
+concreto - concrete
+fiscal - fiscal
+clásico - classic
+evidente - clear
+individual - individual
+colectivo - collective
+negativo - negative
+productivo - productive
+doble - double
+anual - annual
+efectivo - effective
+habitual - usual
+inicial - initial
+débil - weak

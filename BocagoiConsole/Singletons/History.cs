@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace BocagoiConsole.Singletons;
 
@@ -26,6 +27,24 @@ public class History
 
         var text = File.ReadAllText(m_FilePath);
         Runs = JsonConvert.DeserializeObject<IList<Run>>(text) ?? new List<Run>();
+
+        // Backwards compatability with number based box serialization instead of file name based.
+        if (int.TryParse(Runs.First().Box, out _))
+        {
+            text = text.Replace("\"Box\": 1,", "\"Box\": \"Top_Nouns.txt\",");
+            text = text.Replace("\"Box\": 2,", "\"Box\": \"Top_Verbs.txt\",");
+            text = text.Replace("\"Box\": 3,", "\"Box\": \"Top_Adjectives.txt\",");
+            text = text.Replace("\"Box\": 4,", "\"Box\": \"Book_1.txt\",");
+            text = text.Replace("\"Box\": 5,", "\"Box\": \"Book_2.txt\",");
+            text = text.Replace("\"Box\": 101,", "\"Box\": \"MostFailed\",");
+            text = text.Replace("\"Box\": 102,", "\"Box\": \"LeastPracticed\",");
+
+            Runs = JsonConvert.DeserializeObject<IList<Run>>(text) ?? new List<Run>();
+
+            File.Copy(m_FilePath, m_FilePath.Replace(".json", "-old.json"));
+            Save();
+        }
+
         // TODO: make sure to not override Runs
     }
 
@@ -55,7 +74,7 @@ public class History
 
 public struct Run
 {
-    public int Box { get; set; }
+    public string Box { get; set; }
     public int Score { get; set; }
     public int From { get; set; }
     public int To { get; set; }
@@ -65,12 +84,13 @@ public struct Run
 
     public override string ToString()
     {
-        return string.Format("{0, -16} | WBox{1, -3} | {2,4} - {3,-4} | Duration: {4,3} mins | Mode: {5,1} | Score: {6,3}%",
+        var boxName = Box.Replace(".txt", "");
+        return string.Format("{0, -16} | {1, -9} | {2,4} - {3,-4} | {4,3} mins | {5,1} | Score: {6,3}%",
             Time.ToString("yyyy-MM-dd HH:mm"),
-            Box,
+            boxName[..Math.Min(boxName.Length, 9)],
             From,
             To,
-            (int)Duration.TotalMinutes,
+            (int)Math.Round(Duration.TotalMinutes),
             Mode.ToString()[0],
             Score);
     }

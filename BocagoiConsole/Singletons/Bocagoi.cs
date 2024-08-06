@@ -139,7 +139,7 @@ public class Bocagoi
 
         return new Run()
         {
-            Box = Settings.Box,
+            Box = Boxes.Instance.GetBoxName(Settings.Box),
             From = Settings.WordsMin,
             To = Settings.WordsMax,
             Score = score.DecimalScore(),
@@ -167,7 +167,7 @@ public class Bocagoi
     {
         try
         {
-            Process.Start(new ProcessStartInfo("cmd", $"/c start {Boxes.Instance.GetBoxName(num)}"));
+            Process.Start(new ProcessStartInfo("cmd", $"/c start {Boxes.Instance.BoxList[Settings.Box].Path}"));
         }
         catch (Exception e)
         {
