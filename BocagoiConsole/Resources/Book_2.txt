@@ -82,8 +82,8 @@ pequeño - small
 largo - long
 bonito - pretty
 rico - rich
-bajo - short
-corto - short
+bajo - short (in height)
+corto - short (in length)
 alto - tall
 delgado - thin
 feo - ugly
