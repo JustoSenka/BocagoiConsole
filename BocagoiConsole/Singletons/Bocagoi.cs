@@ -20,7 +20,7 @@ public class Bocagoi
         Settings = new PracticeSettings();
     }
 
-    public Run RunGame()
+    public void RunGame()
     {
         var totalWordsForPractice = Boxes.Instance.GetWords(Settings.Box)
             .Skip(Settings.WordsMin - 1)
@@ -39,16 +39,16 @@ public class Bocagoi
             RunGameWithPartitionedWords(rand, score, wordsLeft);
         }
 
-        var result = CreateAndPrintResults(score, startTime, endTime: DateTime.Now);
+        var runResult = CreateAndPrintResults(score, startTime, endTime: DateTime.Now);
 
         SaveRedBox(score);
+        History.Instance.Runs.Add(runResult);
+        History.Instance.Save();
 
         Console.WriteLine("Press enter to continue...");
         Console.ReadLine();
 
         ConsoleControl.Instance.ResetTitle();
-
-        return result;
     }
 
     private void RunGameWithPartitionedWords(Random rand, Score score, IList<(string, string)> wordsLeft)

@@ -20,7 +20,7 @@ public class Boxes
         ReloadWords();
     }
 
-    private void ReloadWords()
+    public void ReloadWords()
     {
         BoxList.Clear();
 

@@ -32,6 +32,7 @@ public class StateMachine
             {
                 StateID.PracticeSelectBox, new MenuState(actionBeforePrint: () =>
                 {
+                    Boxes.Instance.ReloadWords();
                     var availableBoxes = Boxes.Instance.BuildBoxNameListWithWordCount();
                     Console.Write(string.Format(Strings.PracticeSelectBox, availableBoxes));
 
@@ -75,9 +76,7 @@ public class StateMachine
                 StateID.RunPractice, new SingleActionState(
                     action: () =>
                     {
-                        var run = Bocagoi.Instance.RunGame();
-                        History.Instance.Runs.Add(run);
-                        History.Instance.Save();
+                        Bocagoi.Instance.RunGame();
                     },
                     funcNextState: () => StateID.Menu)
             },
