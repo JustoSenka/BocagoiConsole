@@ -1,0 +1,102 @@
+el invierno - winter
+la primavera - spring
+el verano - summer
+el otoño - fall
+la ventisca - blizzard
+el clima - climate
+la nube - cloud
+el terremoto - earthquake
+la helada - frost
+el granizo - hail
+el huracán - hurricane
+el hielo - ice
+el relámpago - lightning
+el monzón - monsoon
+la lluvia - rain
+el arco iris - rainbow
+la sombra - shade
+el chaparrón - shower (heavy rain)
+el cielo - sky
+la nieve - snow
+la nevada - snowfall
+la tormenta - storm
+el trueno - thunder
+el ciclón - tornado
+el tsunami - tsunami
+todo el tiempo - all the time
+comienza - begins
+termina - ends
+cada vez - every time
+por primera vez - for the first time
+por la última vez - for the last time
+nunca - never
+ahora - now
+ahora mismo - right now
+varias veces - several times
+de vez en cuando - from time to time
+una y otra vez - time after time
+los bolos - bowling
+el bádminton - badminton
+el béisbol - baseball
+el baloncesto - basketball
+los naipes - cards
+las damas - checkers
+el ajedrez - chess
+el fútbol americano - football
+el hockey - hockey
+el billar - pool (billiards)
+el rugby - rugby
+el fútbol - soccer
+el tenis - tennis
+el voleibol - volleyball
+el avión - airplane
+la bicicleta - bicycle
+la bici - bike
+el barco - boat
+el autobús - bus
+el coche - car (Spain)
+el carro - car (Latin)
+el ferry - ferry
+la limusina - limousine
+la motocicleta - motorcycle
+el buque - ship
+la nave - spaceship
+el tren - train
+el tranvía - trolley
+el yate - yacht
+montar - ride
+conducir - drive
+de pie - by foot
+conducir un coche - drive a car
+montar en bici - ride a bike
+viajar por tren - travel by train
+oír - to hear
+oler - to smell
+probar - to taste
+tocar - to touch
+ver - to see
+el atlas - atlas
+la biografía - biography
+el libro cómico - comic book
+el diario - diary
+la enciclopedia - encyclopedia
+la fábula - fable
+el cuento de hadas - fairy tale
+la ficción - fiction
+el libro de tapa dura - hardback book
+la historia de horror - horror story
+la revista - magazine
+el misterio - mystery
+el mito - myth
+el periódico - newspaper
+la nota - note
+la novela - novel
+la página - page
+el libro en rústica - paperback book
+el párrafo - paragraph
+el drama - play (theater show)
+el poema - poem
+la poesía - poetry
+la ciencia - science
+el cuento corto - short story
+el libro de texto - textbook
