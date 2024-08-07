@@ -66,16 +66,16 @@ el traje - suit
 la sudadera - sweatshirt
 el traje de baño - swimsuit
 la corbata - tie
-tortuga - turtle
+la tortuga - turtle
 la ropa interior - underwear
 el chaleco - vest
 viejo - old
-twenty - veinte
-thirty - treinta
-forty - cuarenta
-fifty - cincuenta
-sixty - sesenta
-seventy - setenta
-eighty - ochenta
-ninety - noventa
-hundred - cien
+veinte - twenty
+treinta - thirty
+cuarenta - forty
+cincuenta - fifty
+sesenta - sixty
+setenta - seventy
+ochenta - eighty
+noventa - ninety
+cien - hundred

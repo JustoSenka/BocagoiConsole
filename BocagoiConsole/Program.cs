@@ -2,6 +2,7 @@
 using BocagoiConsole.Singletons;
 using BocagoiConsole.States;
 using System;
+using System.IO;
 using System.Runtime.InteropServices;
 
 namespace BocagoiConsole
@@ -10,27 +11,34 @@ namespace BocagoiConsole
     {
         static void Main(string[] args)
         {
-            GlobalSettings.Init();
-
-            Boxes.Init();
-            History.Init();
-            RedBox.Init();
-            Bocagoi.Init();
-
-            ConsoleControl.Init();
-            ConsoleControl.Instance.UpdateTitle();
-
-            if (GlobalSettings.Instance.Data.RememberConsoleFontSize)
+            try
             {
-                handler = new ConsoleEventDelegate(ConsoleEventCallback);
-                SetConsoleCtrlHandler(handler, true);
+                GlobalSettings.Init();
+
+                Boxes.Init();
+                History.Init();
+                RedBox.Init();
+                Bocagoi.Init();
+
+                ConsoleControl.Init();
+                ConsoleControl.Instance.UpdateTitle();
+
+                if (GlobalSettings.Instance.Data.RememberConsoleFontSize)
+                {
+                    handler = new ConsoleEventDelegate(ConsoleEventCallback);
+                    SetConsoleCtrlHandler(handler, true);
+                }
+
+                var stateMap = StateMachine.Generate();
+                var walker = new ConsoleStateMachineWalker(stateMap);
+                walker.Start();
+
+                ConsoleControl.Instance.Dispose();
             }
-
-            var stateMap = StateMachine.Generate();
-            var walker = new ConsoleStateMachineWalker(stateMap);
-            walker.Start();
-
-            ConsoleControl.Instance.Dispose();
+            catch (Exception e)
+            {
+                File.WriteAllText(e.ToString(), $"CrashLog_{DateTime.Now}.txt");
+            }
         }
 
         static bool ConsoleEventCallback(int eventType)

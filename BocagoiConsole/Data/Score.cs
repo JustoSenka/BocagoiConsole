@@ -28,7 +28,7 @@ public class Score
 
     public void SaveMistakesToFile()
     {
-        if (Mistakes.Count == 0)
+        if (Mistakes.Count <= 5)
             return;
 
         if (File.Exists(LastRunFile2))

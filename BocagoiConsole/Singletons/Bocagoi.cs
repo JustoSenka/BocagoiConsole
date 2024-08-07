@@ -54,7 +54,7 @@ public class Bocagoi
         ConsoleControl.Instance.ResetTitle();
     }
 
-    private void RunGameWithPartitionedWords(Random rand, Score score, IList<(string, string)> wordsLeft)
+    private void RunGameWithPartitionedWords(UniqueRandom rand, Score score, IList<(string, string)> wordsLeft)
     {
         while (wordsLeft.Count > 0)
         {
@@ -112,7 +112,7 @@ public class Bocagoi
         return answer;
     }
 
-    private (string, string) SelectRandomWord(Random rand, IList<(string, string)> wordsLeft)
+    private (string, string) SelectRandomWord(UniqueRandom rand, IList<(string, string)> wordsLeft)
     {
         var nextWordIndex = rand.Next(0, wordsLeft.Count - 1);
         return wordsLeft[nextWordIndex % wordsLeft.Count];

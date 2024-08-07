@@ -5,7 +5,7 @@ namespace BocagoiConsole.Common;
 
 public static class ListExtensions
 {
-    public static IList<T> PartitionListElements<T>(this List<T> list, int elementsInPartition, Random rand = null)
+    public static IList<T> PartitionListElements<T>(this List<T> list, int elementsInPartition, UniqueRandom rand = null)
     {
         rand ??= new UniqueRandom();
 
