@@ -37,15 +37,15 @@ el principal - principal (male)
 el profesor - professor (male)
 el dependiente - salesperson (male)
 el secretario - secretary (male)
-el militar - serviceman (male)
+el militar - serviceman (soldier, male)
 el cantante - singer (male)
 el camionero - truck driver (male)
 el mesero - waiter (male)
 el escritor - writer (male)
 el sillón - armchair
-la tina - bathtub
+la tina de baño - bathtub
 la cama - bed
-el estante - bookcase
+el estante - bookcase (shelf)
 el gabinete - cabinet
 la mesa de centro - coffee table
 la alacena - cupboard
@@ -56,7 +56,6 @@ la lámpara - lamp
 el espejo - mirror
 la mecedora - rocking chair
 la carpeta - rug
-la ducha - shower
 el lavabo - sink (bathroom)
 el fregadero - sink (kitchen)
 el sofá - sofa

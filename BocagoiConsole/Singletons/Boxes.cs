@@ -83,10 +83,14 @@ public class Boxes
     }
 
     public string BuildBoxNameListWithWordCount()
-        => string.Join(Environment.NewLine, BoxList.Keys.Select(index => $"{index}. {BoxList[index].Name} ({BoxList[index].Words.Count})"));
+    {
+        var boxes = BoxList.Keys.Select(index => $"{index}. {BoxList[index].Name} ({BoxList[index].Words.Count})").ToList();
+        var index = boxes.FindIndex(line => line.Contains("zLastRunMistakes1"));
+        if (index != -1)
+            boxes.Insert(index, string.Empty);
 
-    public string BuildBoxNameList()
-        => string.Join(Environment.NewLine, BoxList.Keys.Select(index => $"{index}. {BoxList[index].Name}"));
+        return string.Join(Environment.NewLine, boxes);
+    }
 }
 
 public class Box

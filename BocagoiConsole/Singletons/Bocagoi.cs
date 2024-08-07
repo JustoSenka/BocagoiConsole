@@ -41,9 +41,12 @@ public class Bocagoi
 
         var runResult = CreateAndPrintResults(score, startTime, endTime: DateTime.Now);
 
-        SaveRedBox(score);
         History.Instance.Runs.Add(runResult);
         History.Instance.Save();
+
+        SaveRedBox(score);
+
+        score.SaveMistakesToFile();
 
         Console.WriteLine("Press enter to continue...");
         Console.ReadLine();
