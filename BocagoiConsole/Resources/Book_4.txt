@@ -1,0 +1,81 @@
+el aeropuerto - airport
+el granero - barn
+la iglesia - church
+la embajada - embassy
+la gasolinera - gas station
+el gimnasio - gymnasium
+el hotel - hotel
+la biblioteca - library
+la mezquita - mosque
+el cine - movie theater
+el museo - museum
+el parque - park
+el restaurante - restaurant
+el centro comercial - shopping mall
+el estadio - stadium
+la tienda - store
+la sinagoga - synagogue
+el templo - temple
+el teatro - theater
+la torre - tower
+la estación de tren - train station
+casi - almost
+alguien - someone
+ansioso - anxious
+aburrido - bored
+desilusionado - disappointed
+emocionado - excited
+frustrado - frustrated
+furioso - furious
+feliz - happy
+de mal humor - in a bad mood
+de buen humor - in a good mood
+celoso - jealous
+nervioso - nervous
+orgulloso - proud
+triste - sad
+asustado - scared (afraid)
+sorprendido - surprised
+aquí - here
+allí - there
+nadie - nobody (no one)
+dolorido - achy (sore)
+vertiginoso - dizzy
+lleno - full
+sano - healthy
+miserable - miserable
+relajado - relaxed
+mareado - seasick
+enfermo - sick
+así así - so so
+cansado - tired
+alerto - wide awake (alert)
+preocupado - worried
+la bata - bathrobe
+los vaqueros - jeans
+las botas - boots
+los guantes - gloves
+la chaqueta - jacket
+las manoplas - mittens
+el impermeable - raincoat
+las sandalias - sandals
+la bufanda - scarf
+los pantalones cortos - shorts
+las zapatillas - slippers
+el traje - suit
+la sudadera - sweatshirt
+el traje de baño - swimsuit
+la corbata - tie
+tortuga - turtle
+la ropa interior - underwear
+el chaleco - vest
+viejo - old
+twenty - veinte
+thirty - treinta
+forty - cuarenta
+fifty - cincuenta
+sixty - sesenta
+seventy - setenta
+eighty - ochenta
+ninety - noventa
+hundred - cien

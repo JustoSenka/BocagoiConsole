@@ -121,8 +121,12 @@ public static class ConsoleHelper
             }
         }
 
+        bool rewriteFullString = true;
         void ConsoleRewriteFullString()
         {
+            if (!rewriteFullString)
+                return;
+
             MoveToOrigin();
 
             foreach (char c in GetFullStringChars())
@@ -141,6 +145,7 @@ public static class ConsoleHelper
         while (true)
         {
             ConsoleRewriteFullString();
+            rewriteFullString = true;
 
             ConsoleKeyInfo keyInfo = Console.ReadKey(true);
             if (keyInfo.Key is ConsoleKey.Enter)
@@ -314,6 +319,8 @@ public static class ConsoleHelper
                         ConsoleWriteChar(keyInfo.KeyChar);
                         Append(keyInfo.KeyChar);
                         position++;
+
+                        rewriteFullString = false;
                     }
                     else
                     {

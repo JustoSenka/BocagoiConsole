@@ -20,6 +20,14 @@ más - more
 algo - something
 a veces - sometimes
 cuando - when
+ganar - to win
+gritar - to shout
+llegar - to arrive
+llorar - to cry
+necesitar - to need
+preparar - prepare
+tirar - to throw (away)
+usar - to use
 el pan - bread
 el cereal - cereal
 el queso - cheese
@@ -96,5 +104,3 @@ valiente - brave
 amable - nice, kind
 abajo - downstairs
 arriba - upstairs
-o - or
-muy - very

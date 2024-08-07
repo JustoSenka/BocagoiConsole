@@ -1,0 +1,64 @@
+abrir - to open
+cubrir - to cover
+decidir - to decide
+describir - to describe
+descubrir - to discover
+escribir - to write
+recibir - to receive
+subir - to climb
+sufrir - to suffer
+vivir - to live
+nadar - to swim
+limpiar - to clean
+meter - to put (stick, fit something into)
+suspender - to suspend
+admitir - to admit
+discutir - to argue
+el cumpleaños - birthday
+la carta - letter
+al lado de - next to
+demasiado - too (too much)
+después de - after
+antes de - before
+durante - during
+el negociante - businessperson (male)
+el programador - programmer (male)
+el dentista - dentist (male)
+el médico - doctor (physician, male)
+el electricista - electrician (male)
+el granjero - farmer (male)
+el abogado - lawyer (attorney, male)
+el músico - musician (male)
+el enfermero - nurse (male)
+el plomero - plumber (male)
+el policía - policeman (male)
+el político - politician (male)
+el principal - principal (male)
+el profesor - professor (male)
+el dependiente - salesperson (male)
+el secretario - secretary (male)
+el militar - serviceman (male)
+el cantante - singer (male)
+el camionero - truck driver (male)
+el mesero - waiter (male)
+el escritor - writer (male)
+el sillón - armchair
+la tina - bathtub
+la cama - bed
+el estante - bookcase
+el gabinete - cabinet
+la mesa de centro - coffee table
+la alacena - cupboard
+la cortina - curtain
+la cómoda - dresser
+la chimenea - fireplace
+la lámpara - lamp
+el espejo - mirror
+la mecedora - rocking chair
+la carpeta - rug
+la ducha - shower
+el lavabo - sink (bathroom)
+el fregadero - sink (kitchen)
+el sofá - sofa
+el inodoro - toilet
+el muro - brick wall
