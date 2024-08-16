@@ -1,7 +1,7 @@
 el invierno - winter
 la primavera - spring
 el verano - summer
-el otoño - fall
+el otoño - fall (autumn)
 la ventisca - blizzard
 el clima - climate
 la nube - cloud
@@ -28,7 +28,7 @@ comienza - begins
 termina - ends
 cada vez - every time
 por primera vez - for the first time
-por la última vez - for the last time
+por última vez - for the last time
 nunca - never
 ahora - now
 ahora mismo - right now
