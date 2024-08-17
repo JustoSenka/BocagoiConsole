@@ -1,0 +1,45 @@
+el contador - accountant (male)
+el actor - actor (male)
+la actriz - actor (female)
+el arquitecto - architect (male)
+el conductor - driver (male)
+el carnicero - butcher (male)
+el carpintero - carpenter (male)
+el cocinero - cook (male)
+el químico - chemist (male)
+el jardinero - gardener (male)
+el joyero - jeweler (male)
+el periodista - journalist (male)
+el juez - judge (male)
+el bibliotecario - librarian (male)
+el cartero - mailman (male)
+el mecánico - mechanic (male)
+el farmacéutico - pharmacist (male)
+el reportero - reporter (male)
+el científico - scientist (male)
+el espía - spy (male)
+el taxista - taxi driver (male)
+el veterinario - veterinarian (male)
+la estrella - star
+casado - married
+el ciudadano - citizen
+el conocimiento - knowledge
+el foco - focus
+lo contrario - the opposite
+odiar - to hate
+propio - own (adj.)
+el agente - agent
+la apariencia - appearance
+el apodo - nickname
+el arpa - harp
+así que - so that
+el bigote - moustache
+el cigarro - cigar
+cualquier - any
+de niño - as a child
+distinto - distinct (different)
+el esmoquin - tuxedo
+fumar - to smoke
+las gafas - glasses (eye glasses)
+los negocios - business
+seco - dry

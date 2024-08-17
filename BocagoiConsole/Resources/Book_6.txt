@@ -6,7 +6,7 @@ absolutamente - absolutely
 claramente - clearly
 fácilmente - easily
 extremadamente - extremely
-rápidamente - fast
+rápidamente - fast (quickly)
 finalmente - finally
 frecuentemente - frequently
 felizmente - happily
@@ -16,12 +16,10 @@ perfectamente - perfectly
 probablemente - probably
 raramente - rarely
 tristemente - sadly
-lentamente - slowly
 usualmente - usually
 unas cuantas veces - a few times
 por un rato - for a while
 a menudo - often
-raramente - rarely
 tantas veces - so many times
 el tocino - bacon
 el brócoli - broccoli
