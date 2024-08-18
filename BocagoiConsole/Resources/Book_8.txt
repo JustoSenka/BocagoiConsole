@@ -43,3 +43,124 @@ fumar - to smoke
 las gafas - glasses (eye glasses)
 los negocios - business
 seco - dry
+acostarse (o > ue) - to go to bed
+afeitarse - to shave oneself
+aplicarse - to apply to oneself
+bañarse - to bathe, take a bath
+casarse - get married
+cepillarse - to brush (hair, teeth)
+despertarse (e > ie) - to wake up
+dormirse (o > ue) - to fall asleep
+ducharse - to take a shower
+lavarse - to wash oneself
+levantarse - to get out of bed (stand up)
+llamarse - to call oneself (be named)
+maquillarse - to apply makeup to oneself
+mirarse - to look at oneself
+peinarse - to comb one’s hair
+secarse - to dry oneself
+sentarse (e > ie) - to sit down (be seated)
+sentirse (e > ie) - to feel (how you feel)
+verse - to see oneself
+la barba - beard
+el cuerpo - body
+el cepillo - brush
+el peine - comb
+la seda dental - dental floss
+el pelo - hair
+el lápiz labial - lipstick
+el maquillaje - make up
+el rímel - mascara
+el espejo - mirror
+la afeitadora - razor
+el champú - shampoo
+el jabón - soap
+el cepillo de dientes - toothbrush
+la pasta de dientes - toothpaste
+la toalla - towel
+competir (e > i) - to compete
+despedir (e > i) - to fire (from a job)
+freír (e > i) - to fry
+gemir (e > i) - to groan
+impedir (e > i) - to prevent
+medir (e > i) - to measure (be of length)
+pedir (e > i) - to request (ask for)
+reír (e > i) - to laugh
+repetir (e > i) - to repeat
+servir (e > i) - to serve
+la pulgada - inch
+el metro - meter
+bendecir (e > i) - bless
+conseguir (e > i) - to get (a thing or object)
+corregir (e > i) - to correct
+decir (e > i) - to say (tell)
+elegir (e > i) - to choose
+maldecir (e > i) - to swear
+seguir (e > i) - to follow
+el saco - blazer
+la bolsa - purse (shopping bag)
+los zapatos deportivos - sneakers
+la almohada - pillow
+enviar - to send
+la galletita - cookie
+la joya - jewel
+el santo - saint
+el baterista - drummer (male)
+enseñar - to teach
+peligroso - dangerous
+la sugerencia - suggestion
+el regalo - gift
+temprano - early
+hace frío - it is cold
+hace calor - it is hot (warm)
+el enojo - anger
+la desilusión - disappointment
+el miedo - fear
+la gratitud - gratitude
+la felicidad - happiness
+el odio - hatred
+la envidia - jealousy
+el amor - love
+el orgullo - pride
+el respeto - respect
+la tristeza - sadness
+por supuesto - of course
+por lo menos - at least
+por separado - separately
+por fin - finally (it ended)
+el tobillo - ankle
+el brazo - arm
+la espalda - back
+el pecho - chest
+el mentón - chin
+el oído - ear interior
+la oreja - ear exterior
+el codo - elbow
+el ojo - eye
+la cara - face
+el dedo - finger
+el pie - foot
+la mano - hand
+la cabeza - head
+la cadera - hip
+la rodilla - knee
+la pierna - leg
+la boca - mouth
+el cuello - neck
+la nariz - nose
+el hombro - shoulder
+el estómago - stomach
+el pulgar - thumb
+el dedo de pie - toe
+la cintura - waist
+la muñeca - wrist
+hoy - today
+más tarde - later
+el mes que viene - next month
+la semana que viene - next week
+el año que viene - next year
+el próximo día - the next day
+esta tarde - this afternoon
+mañana por la mañana - tomorrow morning
+mañana por la tarde - tomorrow afternoon
+mañana por la noche - tomorrow night
