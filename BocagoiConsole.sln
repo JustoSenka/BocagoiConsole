@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30204.135
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BocagoiConsole", "BocagoiConsole\BocagoiConsole.csproj", "{56E4A2D8-7252-414C-93C5-2F31F3832C42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BocagoiConsole", "BocagoiConsole\BocagoiConsole.csproj", "{56E4A2D8-7252-414C-93C5-2F31F3832C42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{482FAE19-F083-4796-BA92-3E3CBC2BDF34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{482FAE19-F083-4796-BA92-3E3CBC2BDF34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F1F41C58-5D85-4434-B43B-5F3AFA4CF17E}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
