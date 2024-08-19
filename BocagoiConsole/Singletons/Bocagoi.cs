@@ -90,7 +90,9 @@ public class Bocagoi
             score.CorrectWords.Add(word);
 
             Console.WriteLine();
-            Console.WriteLine("Correct!");
+            Console.WriteLine($"  {word.Right(Settings.Mode)}");
+            Console.WriteLine();
+            Console.WriteLine("  Correct!");
             Console.WriteLine();
         }
         else
@@ -99,7 +101,7 @@ public class Bocagoi
             score.Mistakes.Add(word);
 
             Console.WriteLine();
-            Console.WriteLine($"Incorrect! It was: {word.Right(Settings.Mode)}");
+            Console.WriteLine($"  Incorrect! It was: {word.Right(Settings.Mode)}");
             Console.WriteLine();
         }
     }
@@ -107,7 +109,7 @@ public class Bocagoi
     private string AskToInputAnswer((string, string) word)
     {
         Console.WriteLine();
-        Console.Write($"     {word.Left(Settings.Mode)} - ");
+        Console.Write($"  {word.Left(Settings.Mode)} - ");
         var answer = ConsoleHelper.ReadLine();
         return answer;
     }
