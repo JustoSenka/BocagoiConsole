@@ -25,12 +25,12 @@ el horno - oven, stove
 el impresor - printer
 la librería - bookstore
 la realización - accomplishment
-devolver - to return (an item)
+devolver - to give back (return item)
 envolver - to wrap (up)
 morder - to bite
 mover - to move (an item)
 resolver - to solve
-volver - to return (to a place)
+volver - to return (to a place or time)
 dormir - to sleep
 morir - to die
 de promedio - on average

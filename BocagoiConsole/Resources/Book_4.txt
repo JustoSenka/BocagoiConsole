@@ -70,6 +70,16 @@ la tortuga - turtle
 la ropa interior - underwear
 el chaleco - vest
 viejo - old
+aparecer - to appear
+asistir - to attend
+lavar - to wash
+limpiar - to clean
+preparar - to prepare
+regresar - to return (objects or self)
+la isla - island
+la celda - cell (prison)
+el faro - lighthouse
+la bahía - bay
 veinte - twenty
 treinta - thirty
 cuarenta - forty
