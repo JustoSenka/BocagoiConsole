@@ -188,9 +188,13 @@ public class Bocagoi
         {
             Console.Write(Strings.PracticeSelectWords2);
             int.TryParse(Console.ReadLine(), out from);
+            if (from <= 0)
+                return;
 
             Console.Write(Strings.PracticeSelectWords3);
             int.TryParse(Console.ReadLine(), out to);
+            if (to <= 0)
+                return;
 
             if (!IsWordSelectionInBounds(wordCount, from, to))
             {

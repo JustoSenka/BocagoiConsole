@@ -57,7 +57,10 @@ public class StateMachine
                     Bocagoi.Instance.Settings.WordsMax = to;
                     Bocagoi.Instance.Settings.WordsMin = from;
 
-                }, funcNextState: () => Bocagoi.Instance.Settings.WordsMin == -1 ? StateID.Exit : StateID.PracticeSelectMode)
+                }, funcNextState: () => 
+                    Bocagoi.Instance.Settings.WordsMin <= 0 || Bocagoi.Instance.Settings.WordsMax <= 0 
+                        ? StateID.Exit 
+                        : StateID.PracticeSelectMode)
             },
             {
                 StateID.PracticeSelectMode, new MenuState(textToPrint: Strings.PracticeSelectMode,
