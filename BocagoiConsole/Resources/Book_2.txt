@@ -14,7 +14,6 @@ los calcetines - socks
 el suéter - sweater
 la camiseta - T shirt
 llevar - to wear
-mucho - a lot of
 siempre - always
 más - more
 algo - something
@@ -74,7 +73,7 @@ café - brown (latin)
 marrón - brown (spain)
 gris - gray
 verde - green
-anaranjado - orange
+anaranjado - orange (color)
 morado - purple
 rojo - red
 blanco - white
@@ -85,7 +84,7 @@ gordo - fat
 amistoso - friendly
 cómico - funny
 bueno - good
-guapo - handsome
+guapo - handsome (or pretty)
 pequeño - small
 largo - long
 bonito - pretty
