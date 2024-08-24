@@ -10,7 +10,6 @@ propio - own
 importante - important
 público - public
 alto - high
-político - political
 pequeño - small
 único - unique
 largo - long
@@ -20,8 +19,7 @@ posible - possible
 general - general
 internacional - international
 diferente - different
-solo - only
-español - Spanish
+solo - alone (single, only, just)
 principal - main
 más - more
 apenas - hardly
@@ -29,134 +27,144 @@ también - also
 ya - already
 muy - very
 básicamente - basically
-solo - only
-después - later
+después de - after
 ahora - now
 así - thus
 bien - well
 siempre - always
-antes - before
+antes de - before
 tan - so
 cómo - how
 sí - yes
 hoy - today
-entonces - then
-luego - then
-además - in addition
-nunca - never
+entonces - then (therefore, so then)
+luego - then (later on)
+además - in addition to
 casi - almost
-poco - sparsely
-aquí - here
-menos - least
+poco - not much (very little)
+menos - less
 necesario - required
 próximo - next
-distinto - different
-claro - light
+distinto - distinct (different)
+claro - clear (light in color)
 siguiente - following
 malo - bad
-anterior - previous
+anterior - previous (informal)
+previo - previous (formal)
 especial - special
 natural - natural
 cultural - cultural
 bajo - low
+abajo - below
+debajo - under
 actual - current
 blanco - white
 fuerte - strong
 difícil - difficult
 menor - lesser
-viejo - old
+mayores - older people
+tercera edad - senior citizens
+viejo - old (thing or object)
+antiguo - old (antique)
 real - real
 local - local
 negro - black
 europeo - European
-diverso - various
+diverso - diverse (various, different)
 libre - free
-seguro - safe
 común - common
-tanto - such
-sin embargo - however
-mucho - a lot
-aún - still
-dentro - within
-ayer - yesterday
-allí - there
-incluso - inclusive
-ahí - there
-ruidosamente - loudly
-todavía - still
-hasta - even
-tampoco - nor
+tanto - so much (so often)
+sin embargo - however (nevertheless, less formal)
+no obstante - however (nevertheless, more formal)
+dentro de - inside of (place or thing)
+adentro - inside (just inside, at home or other place)
+afuera - outside
+aquí - here (right here exactly)
+acá - here (around here somewhere)
+ahí - there (not close but not that far)
+allí - there (something that is pretty far)
+allá - there (way over there, completely out of reach)
+todavía - still (not aún)
+aún - still (not todavía)
+aun - even
+incluso - including (even)
+hasta - until (to, till)
+ni siquiera - not even
+tampoco - nor (negative also)
 cerca - near
-allá - there
 apenas - barely
-a lo mejor - perhaps
-cuidadosamente - carefully
 pronto - soon
+fuera - outside
+atrás - behind (just behind as a place)
+detrás de - behind (something)
+con cuidado - carefully
+mucho - a lot
+ayer - yesterday
 normalmente - normally
-fuera - out
-atrás - behind
-encima - above
+encima de - on top of (above)
+ruidosamente - loudly
 tarde - afternoon
 finalmente - finally
 privado - private
 central - central
 popular - popular
-dicho - such
 físico - physical
-superior - top
+superior - top (upper)
 joven - young
 personal - personal
 capaz - capable
-antiguo - old
 histórico - historical
-cierto - certain
+cierto - true (certain, adj.)
+falso - false (not true, adj.)
+la verdad - truth (noun)
+la mentira - lie (noun)
+verdadero - true (real, genuine, adj.)
+seguro - safe (sure, certain)
 técnico - technical
 presente - present
 oficial - official
-mexicano - Mexican
 fácil - easy
 militar - military
-contrario - contrary
+contrario - opposing (opposite)
 civil - civil
-verdadero - true
 lleno - full
-suficiente - enough
-rápido - fast
+suficiente - enough (the right amount)
+bastante - enough (quite a lot, more than enough)
+rápido - fast (adj.)
 científico - scientific
 especialmente - especially
-tal vez - maybe
+tal vez - maybe (2 word phrase)
+quizás - maybe (perhaps, adv.)
+a lo mejor - maybe (perhaps, for the better, i hope so)
+acaso - maybe (perhaps, formal)
 lejos - far
-demasiado - too
-quizá - maybe
+demasiado - too (too much)
 mal - badly
 perfectamente - perfectly
-bastante - quite a lot
 diariamente - daily
 adelante - forward
-detrás - back
-igual - likewise
-ni siquiera - not even
+igual - equal (the same, maybe)
 primero - first
 actualmente - currently
 así como - as well as
 precisamente - precisely
-arriba - up
-realmente - actually
-jamás - never
-quizás - maybe
-recién - just
-asimismo - also
-no obstante - however
+arriba - above (upstairs, up)
+realmente - really (actually, adj.)
+nunca - never (so far never, or happen to never do etc.)
+jamás - never (very strong reason to never ever do etc.)
+recién - just (recently, newly)
+asimismo - likewise (also, in the same way)
 difícilmente - with difficulty
 directo - direct
 completo - complete
-interno - internal
-fundamental - fundamental
+interno - internal (intern)
+fundamental - fundamental (basic)
+básico - basic
 comercial - commercial
 familiar - familiar
-amplio - extensive
+amplio - wide (spacious, loose, extensive)
 educativo - educational
-vivo - live, alive
+vivo - alive
 similar - similar
 rojo - red
 financiero - financial
@@ -164,51 +172,37 @@ medio - medium
 enorme - huge
 total - total
 profesional - professional
-adecuado - suitable
-médico - doctor
-grave - serious
+adecuado - suitable (appropriate, sufficient)
+grave - serious (life threatening serious etc)
 tradicional - traditional
-electoral - electoral
-básico - basic
-igual - same
 duro - hard
 profundo - deep
-alrededor - around
-solamente - only
-aun - even
+alrededor - around (time or place)
 por supuesto - of course
-delante - in front
-abajo - below
-para nada - not at all
+delante de - in front of (the front inside a place or ahead in place)
+para nada - at all (not at all)
 fácilmente - easily
 simplemente - simply
 directamente - directly
 lentamente - slowly
-debajo - under
 por tanto - therefore
+por lo menos - at least
 principalmente - mainly
-por lo tanto - therefore
 totalmente - totally
 a menudo - often
-por lo menos - at least
-acá - here
 probablemente - probably
 prácticamente - practically
 seguramente - surely
 frecuentemente - frequently
 aproximadamente - approximately
 completamente - completely
-final - last
 municipal - municipal
 inmediato - immediate
 junto - together
-argentino - Argentinean
 peor - worse
-francés - French
 corto - short
 oscuro - dark
-estadounidense - American
-cercano - near
+cercano - nearby
 regional - regional
 feliz - happy
 positivo - positive
@@ -220,30 +214,28 @@ simple - simple
 pobre - poor
 reciente - recent
 extraño - strange
-ambiental - environmental
+ambiental - ambient (environmental)
 específico - specific
 normal - normal
 posteriormente - later
-nuevamente - again
-por fin - finally
+nuevamente - again (newly or more formal again)
+de nuevo - again (again from scratch or all over again)
+otra vez - again (one more time, informal)
 igualmente - equally
-acaso - perhaps
-justo - just
+justo - just (fair, right, according to justice)
 recientemente - recently
 por favor - kindly
 rápidamente - quickly
-únicamente - only
-afuera - outside
+únicamente - only (uniquely)
 respectivamente - respectively
 inmediatamente - immediately
+enseguida - right away
 exactamente - exactly
 claramente - clearly
 generalmente - generally
 perfectamente - perfectly
-enseguida - right away
 temprano - early
-adentro - inside
-sobre - about
+sobre - about (on, above, over)
 entre - between
 sin - without
 desde - from
@@ -251,9 +243,7 @@ determinado - determined
 moderno - modern
 urbano - urban
 mínimo - minimum
-musical - musical
 deportivo - sporty
-federal - federal
 frío - cold
 legal - legal
 verde - green
@@ -261,42 +251,32 @@ interesante - interesting
 artístico - artistic
 judicial - judicial
 particular - particular
-colombiano - Colombian
-previo - previous
-cubano - Cuban
-pleno - full
+pleno - full (plain, broad)
 eléctrico - electric
-tecnológico - technology
 abierto - open
 global - global
 infantil - childish
 absoluto - absolute
 definitivo - definitive
-hasta - to, until
 durante - during
-ante - before
 contra - against
 según - according to
-tras - after
-bajo - under
-a través de - through
-a partir de - as of
-frente a - in front of
-además de - in addition to
+de acuerdo - all right (I agree)
+tras - immediately after
+a través de - across (through)
+a partir de - as of (as part of)
+enfrente de - in front of (facing opposite of location or thing)
 a pesar de - in spite of
-mediante - through
-junto a - together with
-debido a - due to
-gracias a - thanks to
 pese a - despite
+mediante - by means of
+junto a - by (next to, close to, together with)
+debido a - due to
 de acuerdo con - in accordance with
 en cuanto a - in regard to
-junto con - together with
-acerca de - about
+acerca de - about (formal)
 respecto a - with respect to
-en torno a - around
+en torno a - around (revolved, centered around place or subject)
 en lugar de - instead of
-de acuerdo a - according to
 complejo - complex
 estatal - statewide
 rico - rich
@@ -334,7 +314,7 @@ indígena - indigenous
 concreto - concrete
 fiscal - fiscal
 clásico - classic
-evidente - clear
+evidente - clear (evident)
 individual - individual
 colectivo - collective
 negativo - negative

@@ -125,7 +125,7 @@ comer - to eat
 bajar - to lower
 descargar - to download
 cargar - to load
-suceder - to succeed
+suceder - to succeed (to happen)
 dormir - to sleep
 preparar - to prepare
 agregar - to add (to aggregate)
@@ -193,7 +193,7 @@ soler - to be used to (usually)
 plantear - to bring up (to raise)
 ubicar - to locate
 requerir - to request
-partir - to cut (to break off)
+partir - to cut (to break off, to split)
 reunir - to gather (together)
 actuar - to act
 lanzar - to throw (to launch)
@@ -205,7 +205,7 @@ pretender - to pretend
 enviar - to send
 declarar - to declare
 manifestar - to manifest
-atender - to attend
+atender - to attend to (to serve, to look after)
 basar - to base
 recuperar - to retrieve
 aprovechar - to make good use of
@@ -280,7 +280,7 @@ mandar - to send
 asociar - to link
 aportar - to provide
 acudir - to go to
-asistir - to attend
+asistir - to attend (to treat wounds)
 firmar - to sign
 pertenecer - to belong to
 solicitar - to request

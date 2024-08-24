@@ -1,5 +1,8 @@
 using BocagoiConsole.Core;
 using NUnit.Framework;
+using NUnit.Framework.Internal;
+using System;
+using System.Diagnostics;
 
 namespace Tests
 {
@@ -21,7 +24,8 @@ namespace Tests
                 else
                     s.Correct();
             }
-
+            
+            Console.WriteLine("Test AAAAAAAAAAAAAAA");
             return s.DecimalScore();
         }
     }
