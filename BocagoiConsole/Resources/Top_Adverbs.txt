@@ -1,5 +1,5 @@
 más - more
-apenas - hardly
+apenas - hardly (barely)
 también - also
 ya - already
 muy - very
@@ -23,9 +23,14 @@ menos - less
 tanto - so much (so often)
 sin embargo - however (nevertheless, less formal)
 no obstante - however (nevertheless, more formal)
-dentro de - inside of (place or thing)
-adentro - inside (just inside, at home or other place)
-afuera - outside
+debajo de - under (immediately below other object)
+abajo - below (somewhere below)
+dentro de - inside (of another object)
+adentro - inside (the place itself)
+fuera de - outside (of another object)
+afuera - outside (the place itself)
+detrás de - behind (some another object)
+atrás - behind (the place itself)
 aquí - here (right here exactly)
 acá - here (around here somewhere)
 ahí - there (not close but not that far)
@@ -39,11 +44,7 @@ hasta - until (to, till)
 ni siquiera - not even
 tampoco - nor (negative also)
 cerca - near
-apenas - barely
 pronto - soon
-fuera - outside
-atrás - behind (just behind as a place)
-detrás de - behind (something)
 con cuidado - carefully
 mucho - a lot
 ayer - yesterday
@@ -72,8 +73,7 @@ arriba - above (upstairs, up)
 realmente - really (actually, adj.)
 nunca - never (so far never, or happen to never do etc.)
 jamás - never (very strong reason to never ever do etc.)
-recién - just (recently, newly)
-asimismo - likewise (also, in the same way)
+recién - recently (just, newly)
 difícilmente - with difficulty
 alrededor - around (time or place)
 por supuesto - of course
@@ -94,7 +94,7 @@ seguramente - surely
 frecuentemente - frequently
 aproximadamente - approximately
 completamente - completely
-posteriormente - later
+posteriormente - later (afterwards, subsequently)
 nuevamente - again (newly or more formal again)
 de nuevo - again (again from scratch or all over again)
 otra vez - again (one more time, informal)
@@ -132,6 +132,6 @@ debido a - due to
 de acuerdo con - in accordance with
 en cuanto a - in regard to
 acerca de - about (formal)
-respecto a - with respect to
+con respecto a - with regard to
 en torno a - around (revolved, centered around place or subject)
 en lugar de - instead of

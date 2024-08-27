@@ -33,8 +33,6 @@ especial - special
 natural - natural
 cultural - cultural
 bajo - low
-abajo - below
-debajo - under
 actual - current
 blanco - white
 fuerte - strong
@@ -114,7 +112,8 @@ máximo - maximum
 serio - serious
 laboral - labor
 imposible - impossible
-simple - simple
+simple - simple (not complex, close to normal)
+sencillo - simple (easy, not difficult, not fancy)
 pobre - poor
 reciente - recent
 extraño - strange
@@ -145,7 +144,6 @@ estatal - statewide
 rico - rich
 raro - rare
 significativo - significant
-sencillo - simple
 perfecto - perfect
 permanente - permanent
 religioso - religious
@@ -177,7 +175,7 @@ indígena - indigenous
 concreto - concrete
 fiscal - fiscal
 clásico - classic
-evidente - clear (ec)
+evidente - evident (obvious, clear)
 individual - individual
 colectivo - collective
 negativo - negative
