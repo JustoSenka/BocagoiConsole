@@ -38,7 +38,7 @@ blanco - white
 fuerte - strong
 difícil - difficult
 menor - lesser
-mayores - older people
+los mayores - older people
 tercera edad - senior citizens
 viejo - old (thing or object)
 antiguo - old (antique)
@@ -162,7 +162,7 @@ puro - pure
 unido - joined
 universitario - academic
 original - original
-exterior - outside
+exterior - outside (outer, exterior)
 seco - dry
 digital - digital
 alemán - German

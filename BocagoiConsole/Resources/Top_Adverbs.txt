@@ -9,7 +9,7 @@ ahora - now
 así - thus
 bien - well
 siempre - always
-antes de - before
+antes - before
 tan - so
 cómo - how
 sí - yes
@@ -73,7 +73,8 @@ arriba - above (upstairs, up)
 realmente - really (actually, adj.)
 nunca - never (so far never, or happen to never do etc.)
 jamás - never (very strong reason to never ever do etc.)
-recién - recently (just, newly)
+recién - just (just or recently happened, an hour ago etc.)
+recientemente - recently (recently can be within hour, day or week etc.)
 difícilmente - with difficulty
 alrededor - around (time or place)
 por supuesto - of course
@@ -100,7 +101,6 @@ de nuevo - again (again from scratch or all over again)
 otra vez - again (one more time, informal)
 igualmente - equally
 justo - just (fair, right, according to justice)
-recientemente - recently
 por favor - kindly
 rápidamente - quickly
 únicamente - only (uniquely)
@@ -115,7 +115,7 @@ temprano - early
 sobre - about (on, above, over)
 entre - between
 sin - without
-desde - from
+desde - from (from physical place or point in time)
 durante - during
 contra - against
 según - according to
