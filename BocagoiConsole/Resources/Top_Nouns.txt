@@ -39,7 +39,7 @@ el cambio - change
 el hijo - son
 el centro - center
 el servicio - service
-la empresa - company
+la empresa - company (as in business or enterprise)
 la cuenta - account
 la mano - hand
 el nivel - level
@@ -190,7 +190,7 @@ la fuente - fountain
 la duda - doubt
 el aspecto - aspect
 el miembro - member
-la compañía - company
+la compañía - company (not necessarily a business)
 el jefe - boss
 el jugador - player
 la vista - view
