@@ -32,7 +32,7 @@ namespace BocagoiConsole
                 var stateMap = StateMachine.Generate();
                 var walker = new ConsoleStateMachineWalker(stateMap);
                 walker.Start();
-
+                 
                 ConsoleControl.Instance.Dispose();
             }
             catch (Exception e)

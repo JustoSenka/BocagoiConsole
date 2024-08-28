@@ -22,10 +22,8 @@ public class Bocagoi
 
     public void RunGame()
     {
-        var totalWordsForPractice = Boxes.Instance.GetWords(Settings.Box)
-            .Skip(Settings.WordsMin - 1)
-            .Take(Settings.WordsMax - Settings.WordsMin + 1)
-            .ToList();
+        var totalWordsForPractice = GetWordsForPractice();
+        ConsoleControl.Instance.TitlePracticeTotalWordsSelected = totalWordsForPractice.Count;
 
         var rand = new UniqueRandom();
         var score = new Score();
@@ -52,6 +50,32 @@ public class Bocagoi
         Console.ReadLine();
 
         ConsoleControl.Instance.ResetTitle();
+    }
+
+    public List<(string Left, string Right)> GetWordsForPractice()
+    {
+        var redBoxWords = RedBox.Instance.Words;
+
+        var words = Boxes.Instance.GetWords(Settings.Box)
+            .Skip(Settings.WordsMin - 1)
+            .Take(Settings.WordsMax - Settings.WordsMin + 1)
+            .Where(word =>
+            {
+                if (redBoxWords.TryGetValue(word.Left, out var redWord))
+                {
+                    // Always include word if less than 3 times it was seen
+                    if (redWord.Correct < 3)
+                        return true;
+
+                    var successScore = (int) Math.Round(redWord.Correct * 1f / (redWord.Correct + redWord.Fails) * 100f);
+                    return GlobalSettings.Instance.Data.Difficulty >= successScore;
+                }
+
+                return true;
+            })
+            .ToList();
+
+        return words;
     }
 
     private void RunGameWithPartitionedWords(UniqueRandom rand, Score score, IList<(string, string)> wordsLeft)

@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.IO;
+using System.Runtime;
 
 namespace BocagoiConsole.Singletons;
 
@@ -35,5 +37,6 @@ public class GlobalSettings
     {
         public bool UseDoubleSpaceConsole { get; set; } = true;
         public bool RememberConsoleFontSize { get; set; } = true;
+        public int Difficulty { get; set; } = 100;
     }
 }

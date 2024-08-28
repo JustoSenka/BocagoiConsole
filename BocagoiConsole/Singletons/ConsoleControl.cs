@@ -17,6 +17,7 @@ public class ConsoleControl : IDisposable
     public string TitlePracticeBoxName { get; set; }
     public int TitlePracticeWordsFrom { get; set; }
     public int TitlePracticeWordsTo { get; set; }
+    public int TitlePracticeTotalWordsSelected { get; set; }
     public int TitlePracticeWordsCompleted { get; set; }
     public int TitlePracticeWordsFailed { get; set; }
 
@@ -96,7 +97,7 @@ public class ConsoleControl : IDisposable
         var title = m_DefaultTitle;
 
         if (m_PracticeTitle)
-            title = $"{m_DefaultTitle} | {TitlePracticeBoxName} | {TitlePracticeWordsFrom} - {TitlePracticeWordsTo} | {TitlePracticeWordsCompleted} / {TitlePracticeWordsTo - TitlePracticeWordsFrom + 1} | Mistakes: {TitlePracticeWordsFailed}";
+            title = $"{m_DefaultTitle} | {TitlePracticeBoxName} | {TitlePracticeWordsFrom} - {TitlePracticeWordsTo} | {TitlePracticeWordsCompleted} / {TitlePracticeTotalWordsSelected} | Mistakes: {TitlePracticeWordsFailed}";
 
         Console.Title = title;
     }

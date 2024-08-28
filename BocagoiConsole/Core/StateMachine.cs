@@ -57,21 +57,49 @@ public class StateMachine
                     Bocagoi.Instance.Settings.WordsMax = to;
                     Bocagoi.Instance.Settings.WordsMin = from;
 
-                }, funcNextState: () => 
-                    Bocagoi.Instance.Settings.WordsMin <= 0 || Bocagoi.Instance.Settings.WordsMax <= 0 
-                        ? StateID.Exit 
+                }, funcNextState: () =>
+                    Bocagoi.Instance.Settings.WordsMin <= 0 || Bocagoi.Instance.Settings.WordsMax <= 0
+                        ? StateID.Exit
                         : StateID.PracticeSelectMode)
             },
             {
-                StateID.PracticeSelectMode, new MenuState(textToPrint: Strings.PracticeSelectMode,
-                    actionAfterUserInput: (op) =>
+                StateID.PracticeSelectMode,
+                new MenuState(actionAfterPrint: () =>
                 {
-                    Bocagoi.Instance.Settings.Mode = op == 1 ? PracticeSettings.PracticeMode.Normal : PracticeSettings.PracticeMode.Reverse;
+                    var textToWrite = string.Format(Strings.PracticeSelectMode,
+                        Bocagoi.Instance.GetWordsForPractice().Count,
+                        (Bocagoi.Instance.Settings.WordsMax - Bocagoi.Instance.Settings.WordsMin + 1),
+                        GlobalSettings.Instance.Data.Difficulty,
+                        Bocagoi.Instance.Settings.Mode);
+
+                    Console.Write(textToWrite);
+                }, actionAfterUserInput: (op) =>
+                {
+                    if (op == 2)
+                    {
+                        GlobalSettings.Instance.Data.Difficulty -= 10;
+                        GlobalSettings.Instance.Data.Difficulty = Math.Clamp(GlobalSettings.Instance.Data.Difficulty, 0, 100);
+                        GlobalSettings.Instance.Save();
+                    }
+                    if (op == 3)
+                    {
+                        GlobalSettings.Instance.Data.Difficulty += 10;
+                        GlobalSettings.Instance.Data.Difficulty = Math.Clamp(GlobalSettings.Instance.Data.Difficulty, 0, 100);
+                        GlobalSettings.Instance.Save();
+                    }
+                    if (op == 4)
+                    {
+                        Bocagoi.Instance.Settings.Mode = Bocagoi.Instance.Settings.Mode == PracticeSettings.PracticeMode.Normal
+                            ? PracticeSettings.PracticeMode.Reverse
+                            : PracticeSettings.PracticeMode.Normal;
+                    }
 
                 }, transitions: new Dictionary<int, StateID>
                 {
                     {1,  StateID.RunPractice },
-                    {2,  StateID.RunPractice },
+                    {2,  StateID.PracticeSelectMode },
+                    {3,  StateID.PracticeSelectMode },
+                    {4,  StateID.PracticeSelectMode },
                     {0,  StateID.Exit },
                 })
             },

@@ -44,10 +44,14 @@ There are {0} words in total, enter a range which ones you would like to practic
 
     public const string PracticeSelectMode = @"Bocagoi Language Learning by Justas Glodenis
 
-Select translation style:
+Total words selected {0}/{1}.
 
-1. Native -> Foreign
-2. Foreign -> Native
+Word difficulty setting: {2}%
+
+1. Go!
+2. Drop down easy word count.
+3. Bring back up easy word count.
+4. Swap word sides, currently: {3}
 
 0. Go back
 
