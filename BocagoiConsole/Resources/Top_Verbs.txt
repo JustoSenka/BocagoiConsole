@@ -194,7 +194,7 @@ plantear - to bring up (to raise)
 ubicar - to locate
 requerir - to request
 partir - to cut (to break off, to split)
-reunir - to gather (together)
+reunir - to gather (together, to meet)
 actuar - to act
 lanzar - to throw (to launch)
 importar - to import
@@ -202,17 +202,17 @@ analizar - to analyze
 mencionar - to mention
 sumar - to add up
 pretender - to pretend
-enviar - to send
-declarar - to declare
-manifestar - to manifest
+enviar - to send (more formal)
+declarar - to declare (give evidence, declare goods or taxes)
+manifestar - to declare (to show, to reveal, to express)
 atender - to attend to (to serve, to look after)
 basar - to base
 recuperar - to retrieve
 aprovechar - to make good use of
 asumir - to assume
 desaparecer - to disappear
-funcionar - to work (to not be broken electronics etc)
-permanecer - to stay
+funcionar - to work (to not be broken, electronics etc)
+permanecer - to stay (to remain, formal)
 preocupar - to worry
 preferir - to prefer
 confirmar - to confirm
@@ -225,8 +225,7 @@ depender - to depend
 negar - to deny
 resolver - to solve
 surgir - to come up (arise, emerge, appear)
-corresponder - to correspond
-determinar - to determine
+determinar - to determine (to state)
 concluir - to conclude
 visitar - to visit
 exigir - to demand
@@ -239,7 +238,7 @@ interesar - to interest
 defender - to defend
 avanzar - to advance
 prever - to foresee
-implicar - to involve
+implicar - to imply (to involve)
 apuntar - to point out
 invitar - to invite
 causar - to cause
@@ -247,7 +246,7 @@ vestir - to dress
 controlar - to control
 adquirir - to acquire (to purchase)
 incorporar - to incorporate
-guardar - to save
+guardar - to save (to keep safe, to put away safely)
 insistir - to insist
 conducir - to drive
 acordar - to agree
@@ -276,11 +275,11 @@ instalar - to install
 notar - to note
 sonar - to sound
 convencer - to convince
-mandar - to send
+mandar - to send (less formal)
 asociar - to link
 aportar - to provide
-acudir - to go to
-asistir - to attend (to treat wounds)
+acudir - to go to (an event or an appointment)
+asistir - to attend (an event or to treat wounds)
 firmar - to sign
 pertenecer - to belong to
 solicitar - to request
@@ -306,4 +305,3 @@ cuidar - to care
 someter - to subjugate (to subdue)
 avisar - to warn
 emplear - to employ
-lavar - to wash

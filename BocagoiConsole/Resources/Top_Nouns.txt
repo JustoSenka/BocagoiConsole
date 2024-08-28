@@ -218,23 +218,23 @@ la causa - cause
 el sitio - site
 la figura - figure
 el consejo - advice
-el cargo - position
+el cargo - position (at work or being in charge of something)
 el profesor - professor
 la propuesta - proposal
 el cine - cinema
 la escuela - school
-el público - public
+el público - public (the public as in people)
 el objeto - object
 los recursos - resources
 el tratamiento - treatment
 el compañero - colleague
 la libertad - freedom
 la participación - participation
-el asunto - subject
+el asunto - subject (matter, issue, affair)
 el interés - interest
 la unidad - unit
 el banco - bank
-la vuelta - turn
+la vuelta - turn (turn around)
 la posición - position
 la carrera - career
 la planta - plant
@@ -261,15 +261,14 @@ el estudiante - student (male)
 el título - title
 el origen - source
 el médico - doctor
-la formación - training
+la formación - formation (training, education, squad, group)
 la fecha - date
 la boca - mouth
 el sol - sun
 el éxito - success
 la entrada - entry
-la sala - room
 el crecimiento - growth
-la reunión - meeting (unite)
+la reunión - meeting (organized meeting or gathering)
 el animal - animal
 el informe - report
 el hospital - hospital
@@ -283,9 +282,10 @@ la carta - letter
 el departamento - department
 el material - material
 la estrategia - strategy
-la construcción - construction
 la televisión - television
 el color - color
 la estructura - structure
 el general - general
 el cabo - cape
+la construcción - construction
+el edificio - building

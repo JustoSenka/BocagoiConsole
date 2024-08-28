@@ -1,9 +1,9 @@
-apnuñalar - stab
+apnuñalar - to stab
 agredir - to attack
-huir - escape (run away)
+huir - to escape (run away)
 herir - to wound
 la herida - wound (open bleeding wound or not yet treated)
-lesión - injury (medical term for a wound or treated injury)
+la lesión - injury (medical term for a wound or treated injury)
 el transeúnte - passerby (male)
 en torno - around (time or place)
 el testigo - witness (male)
@@ -15,12 +15,47 @@ las lágrimas - tears
 acudir - to attend (go, come, participate)
 la cifra - figure (number, code)
 la reyerta - brawl (quarrel)
-localizar - locate
-droga - drug
-consentimiento - consent
-vivienda - housing (dwelling)
+localizar - to locate
+la droga - drug
+el consentimiento - consent
+la vivienda - housing (dwelling)
 el damnificado - victim (male)
 el varón - male
 los antecedentes - record (criminal records or history)
 tuvieron lugar - took place
 la desaparición - disappearence
+
+las sobras - leftovers (scraps)
+al fin y al cabo - after all
+insustuible - irreplaceable
+remplazar - replace
+soltar (o ue) - drop (release, let go)
+mear - to pee
+así como así - just like that
+pilladar - to catch
+remolino - to swirl
+alucinar - to hallucinate
+la aroma - smell
+el tramposo - cheating
+de eso nada - nothing of that
+enfadado - angry 
+insensato - senseless
+emprender - to undertake
+el propósito - purpose
+diantres - heck (why the heck are you ..)
+atroz - atrocious
+empapar - to soak
+la cima - top (peak, summit, mountain top) 
+retar - to challenge
+callar - to shut up
+ahorrar - to save
+luchar - to fight
+la pelea - fight (combat)
+la rencilla - quarrel
+dirimirse - to settle
+mediante - through
+habitar - to inhabit (dwell)
+
+
+
+haré lo que sea que me pidas - I will do whatever you ask me to do
