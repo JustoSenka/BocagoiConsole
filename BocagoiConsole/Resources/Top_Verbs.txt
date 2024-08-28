@@ -177,7 +177,7 @@ disponer - to arrange
 obligar - to force
 celebrar - to celebrate
 echar - to throw out (to expel)
-relacionar - to link
+relacionar - to link (to connect)
 marcar - to mark
 desear - to wish
 significar - to mean
@@ -192,7 +192,7 @@ abandonar - to leave (to abandon)
 soler - to be used to (usually)
 plantear - to bring up (to raise)
 ubicar - to locate
-requerir - to request
+requerir - to request (to need, informal)
 partir - to cut (to break off, to split)
 reunir - to gather (together, to meet)
 actuar - to act
@@ -216,13 +216,14 @@ permanecer - to stay (to remain, formal)
 preocupar - to worry
 preferir - to prefer
 confirmar - to confirm
-advertir - to warn
 imponer - to impose
 integrar - to integrate
 recoger - to pick up (to collect)
 proteger - to protect
 depender - to depend
-negar - to deny
+rechazar - to reject
+denegar - to deny
+negar - to negate
 resolver - to solve
 surgir - to come up (arise, emerge, appear)
 determinar - to determine (to state)
@@ -276,13 +277,13 @@ notar - to note
 sonar - to sound
 convencer - to convince
 mandar - to send (less formal)
-asociar - to link
+asociar - to link (to associate)
 aportar - to provide
 acudir - to go to (an event or an appointment)
 asistir - to attend (an event or to treat wounds)
 firmar - to sign
 pertenecer - to belong to
-solicitar - to request
+solicitar - to request (to ask for documents etc, formal)
 enseñar - to teach (to show)
 cortar - to cut (with sharp objects)
 recorrer - to tour (to travel)
@@ -291,7 +292,7 @@ promover - to promote
 describir - to describe
 revelar - to reveal
 retirar - to take away (to withdraw)
-contemplar - to observe (to consider)
+contemplar - to gaze (observer, indulge, consider)
 elaborar - to elaborate
 ordenar - to order
 reflejar - to reflect
@@ -303,5 +304,6 @@ llenar - to fill
 consistir - to consist of
 cuidar - to care
 someter - to subjugate (to subdue)
-avisar - to warn
+avisar - to advise (inform or notify)
+advertir - to warn (advise on potential danger etc)
 emplear - to employ
