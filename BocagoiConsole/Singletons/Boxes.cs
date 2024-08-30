@@ -11,18 +11,21 @@ public class Boxes
     public static Boxes Instance { get; private set; }
 
     public IDictionary<int, Box> BoxList { get; }
+    public IDictionary<string, IList<int>> WordToBoxIndex { get; }
 
     public const string ResourceDir = "Resources";
 
     private Boxes()
     {
         BoxList = new Dictionary<int, Box>();
+        WordToBoxIndex = new Dictionary<string, IList<int>>();
         ReloadWords();
     }
 
     public void ReloadWords()
     {
         BoxList.Clear();
+        WordToBoxIndex.Clear();
 
         int i = 1;
         foreach (var boxName in GetFilesInResourceFolder())
@@ -42,6 +45,14 @@ public class Boxes
             };
 
             i++;
+        }
+
+        foreach (var tuple in BoxList.Values.SelectMany(box => box.Words.Select(word => (box.Index, word.Left))))
+        {
+            if (!WordToBoxIndex.ContainsKey(tuple.Left))
+                WordToBoxIndex[tuple.Left] = new List<int>();
+
+            WordToBoxIndex[tuple.Left].Add(tuple.Index);
         }
     }
 

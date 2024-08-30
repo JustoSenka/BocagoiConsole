@@ -15,6 +15,8 @@ public class RedBox
     private const string m_FilePath = "RedBox.txt";
     private const string m_FilePathBackup = "RedBox-Backup.txt";
 
+    public static bool ForceSaveAfterMigration = false;
+
     private RedBox()
     {
         if (!File.Exists(m_FilePath))
@@ -33,6 +35,9 @@ public class RedBox
             var word = new Word(line);
             Words[word.Left] = word;
         }
+
+        if (ForceSaveAfterMigration)
+            Save();
     }
 
     public void Fail((string, string) word)
@@ -42,6 +47,8 @@ public class RedBox
 
         Words[word.Item1].Fails++;
         Words[word.Item1].Correct--;
+
+        Words[word.Item1].LastPracticed = DateOnly.FromDateTime(DateTime.Now);
     }
 
     public void Succeed((string, string) word)
@@ -50,6 +57,8 @@ public class RedBox
             Words[word.Item1] = new Word(word);
 
         Words[word.Item1].Correct++;
+
+        Words[word.Item1].LastPracticed = DateOnly.FromDateTime(DateTime.Now);
     }
 
     public void Save()
@@ -82,6 +91,7 @@ public class Word
     public string Right { get; set; }
     public int Fails { get; set; }
     public int Correct { get; set; }
+    public DateOnly LastPracticed { get; set; }
 
     public Word((string, string) pair)
     {
@@ -89,6 +99,7 @@ public class Word
         Right = pair.Item2;
         Fails = 0;
         Correct = 0;
+        LastPracticed = DateOnly.FromDateTime(DateTime.Now);
     }
 
     public Word(string line)
@@ -98,10 +109,43 @@ public class Word
         Right = parts[1].Trim();
         Fails = int.Parse(parts[2].Trim());
         Correct = int.Parse(parts[3].Trim());
+
+        // TODO: backwards compatibility to convert from old format. Delete once not needed
+        if (parts.Length < 5)
+        {
+            RedBox.ForceSaveAfterMigration = true;
+
+            // This can happen if words were deleted in boxes but not in red box. In that case we do not care about timestamp
+            if (!Boxes.Instance.WordToBoxIndex.ContainsKey(Left))
+            {
+                LastPracticed = DateOnly.FromDateTime(DateTime.Now).AddDays(-30);
+                return;
+            }
+
+            var boxes = Boxes.Instance.WordToBoxIndex[Left];
+
+            var lastRunForThisWord = History.Instance.Runs.Reverse()
+                .Select(run => (run, box: Boxes.Instance.BoxList.Values.FirstOrDefault(box => box.Name.Trim() == run.Box)))
+                .Where(tuple => tuple.box != default)
+                .FirstOrDefault(tuple => boxes.Contains(tuple.box.Index)).run;
+
+            if (string.IsNullOrEmpty(lastRunForThisWord.Box))
+            {
+                LastPracticed = DateOnly.FromDateTime(DateTime.Now).AddDays(-30);
+                return;
+            }
+
+            LastPracticed = DateOnly.FromDateTime(lastRunForThisWord.Time);
+        }
+
+        else
+        {
+            LastPracticed = DateOnly.ParseExact(parts[4].Trim(), "yyyy_MM_dd");
+        }
     }
 
     public override string ToString()
     {
-        return $"{Left} - {Right} - {Fails} - {Correct}";
+        return $"{Left} - {Right} - {Fails} - {Correct} - {LastPracticed:yyyy_MM_dd}";
     }
 }
