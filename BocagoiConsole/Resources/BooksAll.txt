@@ -1,0 +1,807 @@
+el padre - father
+la madre - mother
+los padres - parents
+el papá - dad
+la mamá - mom
+el chico - boy
+la chica - girl
+el hermano - brother
+la hermana - sister
+el hijo - son
+la hija - daughter
+los hijos - children
+el abuelo - grandfather
+la abuela - grandmother
+el nieto - grandson
+la nieta - granddaughter
+el tío - uncle
+la tía - aunt
+el sobrino - nephew
+la sobrina - niece
+el primo - cousin (male)
+la prima - cousin (female)
+la familia - family
+el desván - attic
+el sótano - basement
+el baño - bathroom
+el dormitorio - bedroom
+el clóset - closet
+el comedor - dining room
+la puerta - door
+la entrada - entryway
+el garaje - garage
+el pasillo - hall
+la casa - house
+la cocina - kitchen
+la sala - living room
+el despacho - office
+el porche - porch
+el cuarto - room
+la ducha - shower
+la ventana - window
+el jardín - yard (garden)
+el oso - bear
+el pájaro - bird
+el toro - bull
+el gato - cat
+el pollo - chicken
+la vaca - cow
+el perro - dog
+el burro - donkey
+el pato - duck
+el elefante - elephant
+el pez - fish
+el caballo - horse
+el canguro - kangaroo
+el cordero - lamb
+el león - lion
+el mono - monkey
+el ratón - mouse
+el cerdo - pig
+el conejo - rabbit
+la rata - rat
+el gallo - rooster
+la oveja - sheep
+el tigre - tiger
+el pavo - turkey
+el lobo - wolf
+la tarea - assignment
+la mochila - backpack
+el libro - book
+la silla - chair
+la tiza - chalk
+la pizarra - chalkboard
+la sala de clase - classroom
+el reloj - clock
+el escritorio - desk
+el diccionario - dictionary
+el borrador - eraser
+la lección - lesson
+el mapa - map
+el cuaderno - notebook
+el papel - paper
+la pluma - pen
+el lápiz - pencil
+la regla - ruler
+la escuela - school
+el estudiante - student (male)
+el maestro - teacher (male)
+la pared - wall
+cada - each
+bailar - to dance
+caminar - to walk
+cantar - to sing
+comprar - to buy
+escuchar - to listen (to)
+estudiar - to study
+mirar - to watch, to look (at)
+pagar - to pay
+tocar - to play (a musical instrument), to touch
+trabajar - to work
+mucho - a lot
+porque - because
+el lunes - Monday
+el martes - Tuesday
+el miércoles - Wednesday
+el jueves - Thursday
+el viernes - Friday
+el sábado - Saturday
+el domingo - Sunday 
+el cinturón - belt
+la blusa - blouse
+la gorra - cap
+la ropa - clothing
+el abrigo - coat
+el vestido - dress
+el sombrero - hat
+los pijamas - pajamas
+los pantalones - pants
+la camisa - shirt
+el zapato - shoe
+la falda - skirt
+los calcetines - socks
+el suéter - sweater
+la camiseta - T shirt
+llevar - to wear
+siempre - always
+más - more
+algo - something
+a veces - sometimes
+cuando - when
+ganar - to win
+gritar - to shout
+llegar - to arrive
+llorar - to cry
+necesitar - to need
+preparar - prepare
+tirar - to throw (away)
+usar - to use
+el pan - bread
+el cereal - cereal
+el queso - cheese
+el pollo - chicken
+el huevo - egg
+las papas fritas - French fries
+la hamburguesa - hamburger
+el helado - ice cream
+la crema de cacahuete - peanut butter
+la pizza - pizza
+el arroz - rice
+la ensalada - salad
+el sándwich - sandwich
+la tostada - toast
+la leche chocolate - chocolate milk
+el café - coffee
+el jugo - juice (latin)
+el zumo - juice (spain)
+la limonada - lemonade
+la gaseosa - soda pop
+la cafetería - cafeteria
+el plato - plate
+el vaso - glass (cup)
+aprender - to learn
+beber - to drink
+comer - to eat
+comprender - to understand, comprehend
+correr - to run
+creer - to believe
+deber - to owe
+esconder - to hide
+leer - to read
+responder - to answer, respond
+romper - to break
+vender - to sell
+un poco - a little
+todo - everything
+encima de - on top of (above)
+solamente - only (just, adj.)
+debajo de - under
+negro - black
+azul - blue
+café - brown (latin)
+marrón - brown (spain)
+gris - gray
+verde - green
+anaranjado - orange (color)
+morado - purple
+rojo - red
+blanco - white
+amarillo - yellow
+enojado - angry
+malo - bad
+gordo - fat
+amistoso - friendly
+cómico - funny
+bueno - good
+guapo - handsome (or pretty)
+pequeño - small
+largo - long
+bonito - pretty
+rico - rich
+bajo - short (in height)
+corto - short (in length)
+alto - tall
+delgado - thin
+feo - ugly
+maravilloso - wonderful
+pobre - poor
+inteligente - smart
+fuerte - strong
+grande - big
+valiente - brave
+amable - nice, kind
+abajo - downstairs
+arriba - upstairs 
+abrir - to open
+cubrir - to cover
+decidir - to decide
+describir - to describe
+descubrir - to discover
+escribir - to write
+recibir - to receive
+subir - to climb
+sufrir - to suffer
+vivir - to live
+nadar - to swim
+limpiar - to clean
+meter - to put (stick, fit something into)
+suspender - to suspend
+admitir - to admit
+discutir - to argue
+el cumpleaños - birthday
+la carta - letter
+al lado de - next to
+demasiado - too (too much)
+después de - after
+antes de - before
+durante - during
+el negociante - businessperson (male)
+el programador - programmer (male)
+el dentista - dentist (male)
+el médico - doctor (physician, male)
+el electricista - electrician (male)
+el granjero - farmer (male)
+el abogado - lawyer (attorney, male)
+el músico - musician (male)
+el enfermero - nurse (male)
+el plomero - plumber (male)
+el policía - policeman (male)
+el político - politician (male)
+el principal - principal (male)
+el profesor - professor (male)
+el dependiente - salesperson (male)
+el secretario - secretary (male)
+el militar - serviceman (soldier, male)
+el cantante - singer (male)
+el camionero - truck driver (male)
+el mesero - waiter (male)
+el escritor - writer (male)
+el sillón - armchair
+la tina de baño - bathtub
+la cama - bed
+el estante - bookcase (shelf)
+el gabinete - cabinet
+la mesa de centro - coffee table
+la alacena - cupboard
+la cortina - curtain
+la cómoda - dresser
+la chimenea - fireplace
+la lámpara - lamp
+el espejo - mirror
+la mecedora - rocking chair
+la carpeta - rug
+el lavabo - sink (bathroom)
+el fregadero - sink (kitchen)
+el sofá - sofa
+el inodoro - toilet
+el muro - brick wall 
+el aeropuerto - airport
+el granero - barn
+la iglesia - church
+la embajada - embassy
+la gasolinera - gas station
+el gimnasio - gymnasium
+el hotel - hotel
+la biblioteca - library
+la mezquita - mosque
+el cine - movie theater
+el museo - museum
+el parque - park
+el restaurante - restaurant
+el centro comercial - shopping mall
+el estadio - stadium
+la tienda - store
+la sinagoga - synagogue
+el templo - temple
+el teatro - theater
+la torre - tower
+la estación de tren - train station
+casi - almost
+alguien - someone
+ansioso - anxious
+aburrido - bored
+desilusionado - disappointed
+emocionado - excited
+frustrado - frustrated
+furioso - furious
+feliz - happy
+de mal humor - in a bad mood
+de buen humor - in a good mood
+celoso - jealous
+nervioso - nervous
+orgulloso - proud
+triste - sad
+asustado - scared (afraid)
+sorprendido - surprised
+aquí - here
+allí - there
+nadie - nobody (no one)
+dolorido - achy (sore)
+vertiginoso - dizzy
+lleno - full
+sano - healthy
+miserable - miserable
+relajado - relaxed
+mareado - seasick
+enfermo - sick
+así así - so so
+cansado - tired
+alerto - wide awake (alert)
+preocupado - worried
+la bata - bathrobe
+los vaqueros - jeans
+las botas - boots
+los guantes - gloves
+la chaqueta - jacket
+las manoplas - mittens
+el impermeable - raincoat
+las sandalias - sandals
+la bufanda - scarf
+los pantalones cortos - shorts
+las zapatillas - slippers
+el traje - suit
+la sudadera - sweatshirt
+el traje de baño - swimsuit
+la corbata - tie
+la tortuga - turtle
+la ropa interior - underwear
+el chaleco - vest
+viejo - old
+aparecer - to appear
+asistir - to attend
+lavar - to wash
+limpiar - to clean
+preparar - to prepare
+regresar - to return (objects or self)
+la isla - island
+la celda - cell (prison)
+el faro - lighthouse
+la bahía - bay
+veinte - twenty
+treinta - thirty
+cuarenta - forty
+cincuenta - fifty
+sesenta - sixty
+setenta - seventy
+ochenta - eighty
+noventa - ninety
+cien - hundred 
+el invierno - winter
+la primavera - spring
+el verano - summer
+el otoño - fall (autumn)
+la ventisca - blizzard
+el clima - climate
+la nube - cloud
+el terremoto - earthquake
+la helada - frost
+el granizo - hail
+el huracán - hurricane
+el hielo - ice
+el relámpago - lightning
+el monzón - monsoon
+la lluvia - rain
+el arco iris - rainbow
+la sombra - shade
+el chaparrón - shower (heavy rain)
+el cielo - sky
+la nieve - snow
+la nevada - snowfall
+la tormenta - storm
+el trueno - thunder
+el ciclón - tornado
+el tsunami - tsunami
+todo el tiempo - all the time
+comienza - begins
+termina - ends
+cada vez - every time
+por primera vez - for the first time
+por última vez - for the last time
+nunca - never
+ahora - now
+ahora mismo - right now
+varias veces - several times
+de vez en cuando - from time to time
+una y otra vez - time after time
+los bolos - bowling
+el bádminton - badminton
+el béisbol - baseball
+el baloncesto - basketball
+los naipes - cards
+las damas - checkers
+el ajedrez - chess
+el fútbol americano - football
+el hockey - hockey
+el billar - pool (billiards)
+el rugby - rugby
+el fútbol - soccer
+el tenis - tennis
+el voleibol - volleyball
+el avión - airplane
+la bicicleta - bicycle
+la bici - bike
+el barco - boat
+el autobús - bus
+el coche - car (Spain)
+el carro - car (Latin)
+el ferry - ferry
+la limusina - limousine
+la motocicleta - motorcycle
+el buque - ship
+la nave - spaceship
+el tren - train
+el tranvía - trolley
+el yate - yacht
+montar - ride
+conducir - drive
+de pie - by foot
+conducir un coche - drive a car
+montar en bici - ride a bike
+viajar por tren - travel by train
+oír - to hear
+oler - to smell
+probar - to taste
+ver - to see
+el atlas - atlas
+la biografía - biography
+el libro cómico - comic book
+el diario - diary
+la enciclopedia - encyclopedia
+la fábula - fable
+el cuento de hadas - fairy tale
+la ficción - fiction
+el libro de tapa dura - hardback book
+la historia de horror - horror story
+la revista - magazine
+el misterio - mystery
+el mito - myth
+el periódico - newspaper
+la nota - note
+la novela - novel
+la página - page
+el libro en rústica - paperback book
+el párrafo - paragraph
+el drama - play (theater show)
+el poema - poem
+la poesía - poetry
+la ciencia - science
+el cuento corto - short story
+el libro de texto - textbook 
+amablemente - kindly
+intensamente - intensely
+lentamente - slowly
+seriamente - seriously
+absolutamente - absolutely
+claramente - clearly
+fácilmente - easily
+extremadamente - extremely
+rápidamente - quickly
+finalmente - finally
+frecuentemente - frequently
+felizmente - happily
+naturalmente - naturally
+obviamente - obviously
+perfectamente - perfectly
+probablemente - probably
+raramente - rarely
+tristemente - sadly
+usualmente - usually
+unas cuantas veces - a few times
+por un rato - for a while
+a menudo - often
+tantas veces - so many times
+el tocino - bacon
+el brócoli - broccoli
+la zanahoria - carrot
+la coliflor - cauliflower
+el apio - celery
+el maíz - corn
+el pescado - fish (prepared)
+el jamón - ham
+el perro caliente - hot dog
+la langosta - lobster
+la carne - meat
+la albóndiga - meatball
+la cebolla - onion
+el guisante - pea
+la papa - potato (Latin)
+la patata - potato (Spain)
+la calabaza - pumpkin
+el salmón - salmon
+la salchicha - sausage
+el camarón - shrimp
+el filete - steak
+el atún - tuna
+menos - less
+mejor - better
+peor - worse
+mayor - older
+menor - younger
+el aficionado - enthusiast, lover, amateur, fan
+la angustia - anguish, distress
+aunque - although
+el concurso - contest
+enterrar - to bury
+el éxito - success
+el gemelo - twin
+en vez de - instead of
+el aire acondicionador - air conditioner
+el cordón - cord (electrical)
+el puño - doorknob
+el felpudo - doormat
+el desagüe - drain
+el ventilador - fan (air)
+la leña - firewood
+la llave - key
+la bombilla - lightbulb
+el interruptor - light switch
+el buzón - mailbox
+la repisa - mantle (for fireplace)
+el basurero - garbage can
+la papelera - wastebasket
+el techo - ceiling
+el suelo - floor
+la escalera - staircase
+contener - to contain
+la creencia - belief
+golpear - to hit
+la justicia - justice
+molestoso - annoying
+la partera - midfwife
+la piedra - stone
+el dibujo - drawing
+la pintura - painting
+por eso - therefore
+la sabiduría - wisdom
+ 
+almorzar - to have lunch
+desayunar - to have breakfast
+cenar - to have dinner
+aprobar - to approve
+colgar - to hang, hang up
+contar - to count
+costar - to cost
+demostrar - to demonstrate
+encontrar - to find, to meet with someone
+mostrar - to show
+recordar - to remember
+rogar - to pray
+sonar - to sound, ring
+soñar - to dream
+tostar - to toast
+volar - to fly
+la aleta - fin (swimming)
+el bombero - fireman
+calentar - to heat
+el descubrimiento - discovery
+el dueño - owner
+el fundador - founder
+hasta - until
+el horno - oven, stove
+el impresor - printer
+la librería - bookstore
+la realización - accomplishment
+devolver - to give back (return item)
+envolver - to wrap (up)
+morder - to bite
+mover - to move (an item)
+resolver - to solve
+volver - to return (to a place or time)
+dormir - to sleep
+morir - to die
+de promedio - on average
+encender - to light, to switch on
+entender - to understand
+perder - to lose
+hervir - to boil
+mentir - to lie, tell a lie
+preferir - to prefer
+cerrar - to close
+comenzar - to begin (more formal)
+confesar - to confess
+empezar - to start (less formal)
+fregar - to wash, scrub (dishes)
+pensar en - to think about
+la campana - bell
+la vela - candle
+el fuego - fire
+el tenedor - fork
+el gancho - hook
+el cuchillo - knife
+la cuchara - spoon
+el té - tea
+los auriculares - headphones
+entonces - then
+el indicio - clue
+por ejemplo - for example
+en realidad - actually
+todo lo que - everything that
+el veneno - poison
+además - in addition to
+el aislamiento - seclusion
+al mismo tiempo - at the same time
+el apellido - last name, surname
+calcular - to calculate
+cambiar - to change
+el compositor - composer
+el corazón - heart
+durar - to last
+evocar - to evoke
+fenómeno - phenomenal
+la letra - lyrics
+nacer - to be born
+el poeta - poet
+la portada - front page, cover
+el recluso - prisoner
+saber - to know
+sin duda - without a doubt
+el trabajo duro - hard work
+único - unique
+el universitario - university student, graduate
+el valor - value 
+el contador - accountant (male)
+el actor - actor (male)
+la actriz - actor (female)
+el arquitecto - architect (male)
+el conductor - driver (male)
+el carnicero - butcher (male)
+el carpintero - carpenter (male)
+el cocinero - cook (male)
+el químico - chemist (male)
+el jardinero - gardener (male)
+el joyero - jeweler (male)
+el periodista - journalist (male)
+el juez - judge (male)
+el bibliotecario - librarian (male)
+el cartero - mailman (male)
+el mecánico - mechanic (male)
+el farmacéutico - pharmacist (male)
+el reportero - reporter (male)
+el científico - scientist (male)
+el espía - spy (male)
+el taxista - taxi driver (male)
+el veterinario - veterinarian (male)
+la estrella - star
+casado - married
+el ciudadano - citizen
+el conocimiento - knowledge
+el foco - focus
+lo contrario - the opposite
+odiar - to hate
+propio - own (adj.)
+el agente - agent
+la apariencia - appearance
+el apodo - nickname
+el arpa - harp
+así que - so that
+el bigote - moustache
+el cigarro - cigar
+cualquier - any
+de niño - as a child
+distinto - distinct (different)
+el esmoquin - tuxedo
+fumar - to smoke
+las gafas - glasses (eye glasses)
+los negocios - business
+seco - dry
+acostarse (o > ue) - to go to bed
+afeitarse - to shave oneself
+aplicarse - to apply to oneself
+bañarse - to bathe, take a bath
+casarse - get married
+cepillarse - to brush (hair, teeth)
+despertarse (e > ie) - to wake up
+dormirse (o > ue) - to fall asleep
+ducharse - to take a shower
+lavarse - to wash oneself
+levantarse - to get out of bed (stand up)
+llamarse - to call oneself (be named)
+maquillarse - to apply makeup to oneself
+mirarse - to look at oneself
+peinarse - to comb one’s hair
+secarse - to dry oneself
+sentarse (e > ie) - to sit down (be seated)
+sentirse (e > ie) - to feel (how you feel)
+verse - to see oneself
+la barba - beard
+el cuerpo - body
+el cepillo - brush
+el peine - comb
+la seda dental - dental floss
+el pelo - hair
+el lápiz labial - lipstick
+el maquillaje - make up
+el rímel - mascara
+el espejo - mirror
+la afeitadora - razor
+el champú - shampoo
+el jabón - soap
+el cepillo de dientes - toothbrush
+la pasta de dientes - toothpaste
+la toalla - towel
+competir (e > i) - to compete
+despedir (e > i) - to fire (from a job)
+freír (e > i) - to fry
+gemir (e > i) - to groan
+impedir (e > i) - to prevent
+medir (e > i) - to measure (be of length)
+pedir (e > i) - to request (ask for)
+reír (e > i) - to laugh
+repetir (e > i) - to repeat
+servir (e > i) - to serve
+la pulgada - inch
+el metro - meter
+bendecir (e > i) - bless
+conseguir (e > i) - to get (a thing or object)
+corregir (e > i) - to correct
+decir (e > i) - to say (tell)
+elegir (e > i) - to choose
+maldecir (e > i) - to swear
+seguir (e > i) - to follow
+el saco - blazer
+la bolsa - purse (shopping bag)
+los zapatos deportivos - sneakers
+la almohada - pillow
+enviar - to send (more formal)
+la galletita - cookie
+la joya - jewel
+el santo - saint
+el baterista - drummer (male)
+enseñar - to teach
+peligroso - dangerous
+la sugerencia - suggestion
+el regalo - gift
+temprano - early
+hace frío - it is cold
+hace calor - it is hot (warm)
+el enojo - anger
+la desilusión - disappointment
+el miedo - fear
+la gratitud - gratitude
+la felicidad - happiness
+el odio - hatred
+la envidia - envy (jealousy)
+el amor - love
+el orgullo - pride
+el respeto - respect
+la tristeza - sadness
+por supuesto - of course
+por lo menos - at least
+por separado - separately
+por fin - finally (it ended)
+el tobillo - ankle
+el brazo - arm
+la espalda - back
+el pecho - chest
+el mentón - chin
+el oído - ear interior
+la oreja - ear exterior
+el codo - elbow
+el ojo - eye
+la cara - face
+el dedo - finger
+el pie - foot
+la mano - hand
+la cabeza - head
+la cadera - hip
+la rodilla - knee
+la pierna - leg
+la boca - mouth
+el cuello - neck
+la nariz - nose
+el hombro - shoulder
+el estómago - stomach
+el pulgar - thumb
+el dedo de pie - toe
+la cintura - waist
+la muñeca - wrist
+hoy - today
+más tarde - later
+el mes que viene - next month
+la semana que viene - next week
+el año que viene - next year
+el próximo día - the next day
+esta tarde - this afternoon
+mañana por la mañana - tomorrow morning
+mañana por la tarde - tomorrow afternoon
+mañana por la noche - tomorrow night
