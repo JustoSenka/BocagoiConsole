@@ -151,7 +151,7 @@ expresar - to express
 olvidar - to forget
 aumentar - to increase
 definir - to define
-regresar - to return (objects)
+regresar - to return (objects or self)
 mover - to move
 entregar - to deliver
 sostener - to hold
