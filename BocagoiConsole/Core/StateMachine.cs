@@ -87,7 +87,7 @@ public class StateMachine
                         GlobalSettings.Instance.Data.Difficulty = Math.Clamp(GlobalSettings.Instance.Data.Difficulty, 0, 100);
                         GlobalSettings.Instance.Save();
                     }
-                    if (op == 4)
+                    if (op == 5)
                     {
                         Bocagoi.Instance.Settings.Mode = Bocagoi.Instance.Settings.Mode == PracticeSettings.PracticeMode.Normal
                             ? PracticeSettings.PracticeMode.Reverse
@@ -99,9 +99,22 @@ public class StateMachine
                     {1,  StateID.RunPractice },
                     {2,  StateID.PracticeSelectMode },
                     {3,  StateID.PracticeSelectMode },
-                    {4,  StateID.PracticeSelectMode },
+                    {4,  StateID.PrintSelectedWords },
+                    {5,  StateID.PracticeSelectMode },
                     {0,  StateID.Exit },
                 })
+            },
+            {
+                StateID.PrintSelectedWords, new MenuState(actionBeforePrint: () =>
+                {
+                    var words = string.Join(Environment.NewLine, 
+                        Bocagoi.Instance.GetWordsForPractice()
+                        .OrderByDescending(word => RedBox.Instance.Words.ContainsKey(word.Left) ? RedBox.Instance.Words[word.Left].SuccessScore : 0)
+                        .Select(word => $"{word.Left} - {word.Right}"));
+
+                    Console.Write(string.Format(Strings.PrintSelectedWords, words));
+
+                }, funcNextState: _ => StateID.PracticeSelectMode)
             },
             {
                 StateID.RunPractice, new SingleActionState(

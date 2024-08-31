@@ -51,7 +51,18 @@ Word difficulty setting: {2}%
 1. Go!
 2. Drop down easy word count.
 3. Bring back up easy word count.
-4. Swap word sides, currently: {3}
+4. Print selected words ordered by difficulty.
+5. Swap word sides, currently: {3}
+
+0. Go back
+
+...";
+
+    public const string PrintSelectedWords = @"Bocagoi Language Learning by Justas Glodenis
+
+Selected words:
+
+{0}
 
 0. Go back
 

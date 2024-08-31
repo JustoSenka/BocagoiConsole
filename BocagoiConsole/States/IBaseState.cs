@@ -9,7 +9,7 @@ public enum StateID
 {
     None,
     Menu,
-    PracticeSelectBox, PracticeSelectWords, PracticeSelectMode, RunPractice,
+    PracticeSelectBox, PracticeSelectWords, PracticeSelectMode, PrintSelectedWords, RunPractice,
     AddWords,
     CreateBox,
     Search,

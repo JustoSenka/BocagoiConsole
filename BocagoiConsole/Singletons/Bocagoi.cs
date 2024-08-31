@@ -63,12 +63,11 @@ public class Bocagoi
             {
                 if (redBoxWords.TryGetValue(word.Left, out var redWord))
                 {
-                    // Always include word if less than 3 times it was seen
+                    // Always include word if less than 3 times it was written correctly
                     if (redWord.Correct < 3)
                         return true;
 
-                    var successScore = (int) Math.Round(redWord.Correct * 1f / (redWord.Correct + redWord.Fails) * 100f);
-                    return GlobalSettings.Instance.Data.Difficulty >= successScore;
+                    return GlobalSettings.Instance.Data.Difficulty >= redWord.SuccessScore;
                 }
 
                 return true;

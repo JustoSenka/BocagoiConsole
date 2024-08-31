@@ -93,6 +93,9 @@ public class Word
     public int Correct { get; set; }
     public DateOnly LastPracticed { get; set; }
 
+    /// Gives score between 0-100, 100 means no failures, 0 means failed every time practiced or never practiced
+    public int SuccessScore => Correct + Fails == 0 ? 0 : (int) Math.Round(Correct * 100f / (Correct + Fails));
+
     public Word((string, string) pair)
     {
         Left = pair.Item1;
