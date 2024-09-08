@@ -78,7 +78,8 @@ morado - purple
 rojo - red
 blanco - white
 amarillo - yellow
-enojado - angry
+enojado - angry (Latin)
+enfadado - angry (Spain)
 malo - bad
 gordo - fat
 amistoso - friendly

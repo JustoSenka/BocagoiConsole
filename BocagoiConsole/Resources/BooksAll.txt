@@ -559,7 +559,7 @@ desayunar - to have breakfast
 cenar - to have dinner
 aprobar - to approve
 colgar - to hang, hang up
-contar - to count
+contar - to count, to tell
 costar - to cost
 demostrar - to demonstrate
 encontrar - to find, to meet with someone

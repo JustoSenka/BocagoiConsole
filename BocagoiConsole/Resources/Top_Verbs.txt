@@ -30,7 +30,7 @@ tomar - to take (to eat food or when ordering)
 tratar - to try (do smth, have an attempt at it)
 intentar - to try (have an intent of doing it)
 probar - to try (try out, test something)
-contar - to count
+contar - to count, to tell
 llamar - to call
 venir - to come
 mirar - to watch
@@ -88,7 +88,7 @@ resultar - to result
 caer - to fall
 desarrollar - to develop
 necesitar - to need
-sacar - to take out
+sacar - to take out ()
 establecer - to establish
 indicar - to indicate
 formar - to form
@@ -191,7 +191,7 @@ elegir - to choose
 abandonar - to leave (to abandon)
 soler - to be used to (usually)
 plantear - to bring up (to raise)
-ubicar - to locate
+ubicar - to locate (find, put it on the map)
 requerir - to request (to need, informal)
 partir - to cut (to break off, to split)
 reunir - to gather (together, to meet)

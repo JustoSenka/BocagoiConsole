@@ -123,7 +123,6 @@ el camino - path
 el plan - plan
 el arte - art
 la atención - attention
-el ciento - hundred
 la política - policy
 la decisión - decision
 la cultura - culture

@@ -12,7 +12,6 @@ tras - immediately after
 la derrota - defeat
 el atentado - offence (crime, assault, attempt)
 las lágrimas - tears
-acudir - to attend (go, come, participate)
 la cifra - figure (number, code)
 la reyerta - brawl (quarrel)
 localizar - to locate
@@ -24,22 +23,22 @@ el varón - male
 los antecedentes - record (criminal records or history)
 tuvieron lugar - took place
 la desaparición - disappearence
-
-las sobras - leftovers (scraps)
+las sobras - leftovers (surplus, scraps of food)
 al fin y al cabo - after all
-insustuible - irreplaceable
+insustituible - irreplaceable
 remplazar - replace
 soltar (o ue) - drop (release, let go)
+saltar - to jump
 mear - to pee
 así como así - just like that
 pilladar - to catch
-remolino - to swirl
-alucinar - to hallucinate
+remolino - swirl (whirlpool)
+alucinar - to hallucinate, to deceive
 la aroma - smell
-el tramposo - cheating
+el tramposo - cheat
 de eso nada - nothing of that
-enfadado - angry 
-insensato - senseless
+enfadado - angry (spain)
+insensato - senseless (foolish)
 emprender - to undertake
 el propósito - purpose
 diantres - heck (why the heck are you ..)
@@ -48,14 +47,31 @@ empapar - to soak
 la cima - top (peak, summit, mountain top) 
 retar - to challenge
 callar - to shut up
-ahorrar - to save
-luchar - to fight
-la pelea - fight (combat)
+ahorrar - to save (financial things or money)
+luchar - to fight, struggle (unbrella term, includes metaphoric fights)
+pelear - to fight (informal, physical or legal fights)
 la rencilla - quarrel
-dirimirse - to settle
+dirimir - to settle
 mediante - through
 habitar - to inhabit (dwell)
 animar - to cheer up
+despedir - to say goodbye to
+perezoso - lazy
+acostumbrado - used to (usual or customary formal, adj.)
+merendar - to have a picnic or a snack (to peep at some thing secretely)
+el tamaño - size (clothing)
+el carnet - card (identity card or drivers card etc)
+el horario - schedule
+la cita - appointment (a date)
+el alojamiento - accommodation (lodgings)
+vacío - empty
+el pabellón - pavilion
+la palmera - palm tree
+mágico - magic (adj.)
+flotar - to float
+la cartuja - monastery (spanish specific monastery)
+alargar - to extend (to lengthen)
+averiguar - to find out
 
 
 haré lo que sea que me pidas - I will do whatever you ask me to do
